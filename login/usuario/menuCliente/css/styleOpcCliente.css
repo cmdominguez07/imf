@@ -1,0 +1,21 @@
+#inicioBV{
+   
+        background:url("../img/fondo5.jpg") no-repeat fixed center;
+        background-size: cover;
+        backdrop-filter: brightness(60%);
+    
+}
+
+#pInicio {
+
+    padding-left: 200px;
+    padding-right: 200px;
+    text-align: justify;
+
+}
+#inicioBV2{
+padding-left: 80px;
+
+text-align: justify;
+
+}

@@ -1,0 +1,34 @@
+
+body, html{
+
+     height:100%;
+     
+}
+#contenido1{
+ 
+    min-height:92%;
+   
+
+ }
+
+
+.botonI{ 
+    width: 50px;
+}
+#footer {
+ margin:0;
+
+}
+#fotoInicio{
+
+    margin: 25%;
+}
+
+#fondo{
+    background: url("../img/depositphotos_1132122-stock-photo-beautiful-jasmine.jpg") no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: 600px;
+    
+    z-index: 3;
+}
