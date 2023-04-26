@@ -23,9 +23,13 @@ session_start();
           onclick=location.href="/TFG/proyectoGreen/login/usuario/menuAdministrador/adminOpciones/borrarPlantas.php">
         <input type="submit" class='btn btn-success botonI mt-4' name="submit" value="Registrar planta nueva"
           onclick=location.href="/TFG/proyectoGreen/login/usuario/menuAdministrador/adminOpciones/guardarPlantas.php">
+        <input type="submit" class='btn btn-success botonI mt-4' name="submit" value="Mensajes de Usuarios"
+          onclick=location.href="/TFG/proyectoGreen/login/usuario/menuAdministrador/adminOpciones/vermensajes.php">
+        <p>Codigo para añadir administador: '776655'</p>
       </div>
     </div>
   </div>
+
 </div>
 
 <?php

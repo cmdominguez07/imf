@@ -21,11 +21,13 @@ if (!isset($_POST["submit"])) {
                         <label>Contraseña</label>
                         <input type="password" name="passWordCliente" class="form-control" placeholder="Escribir contraseña"
                                 required />
+                        <label>Código nuevo Administrador</label>
+                        <input type="number" name="codigoAdmin" class="form-control" placeholder="123" />
                         <br>
                         <input type="submit" name="submit" class="btn btn-secondary w-25" value="Enviar">
                 </div>
         </form>
-<?php
+        <?php
 
 
 } else {
@@ -33,10 +35,17 @@ if (!isset($_POST["submit"])) {
         $N = $_POST["nombreCliente"];
         $A = $_POST["apellidoCliente"];
         $P = $_POST["passWordCliente"];
+        $Codigo = $_POST["codigoAdmin"];
 
-        $consulta = "INSERT INTO clientesclub (id_cliente,nombreCliente,apellidoCliente,tipoCliente,passWordCliente) VALUES (' ','$N','$A','Cliente','$P') ";
+        if ($Codigo == '776655') {
 
-        $paquete = $db->query($consulta);
+                $consulta = "INSERT INTO clientesclub (id_cliente,nombreCliente,apellidoCliente,tipoCliente,passWordCliente) VALUES (' ','$N','$A','Administrador','$P') ";
+                $paquete = $db->query($consulta);
+        } else {
+                $consulta = "INSERT INTO clientesclub (id_cliente,nombreCliente,apellidoCliente,tipoCliente,passWordCliente) VALUES (' ','$N','$A','Cliente','$P') ";
+                $paquete = $db->query($consulta);
+        }
+
 
 
         echo '<table>';

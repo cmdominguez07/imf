@@ -1,6 +1,6 @@
 <?php
 session_start();
-
+ob_start();
 include("conexion.php");
 include("./template/cabecera.php");
 
@@ -36,9 +36,11 @@ $_SESSION['id_cliente'];
       <table class="table table-striped">
         <thead class=" thead-inverse">
           <tr>
-            <th>Referencia</th>
+            <th>ID</th>
             <th>Nombre</th>
             <th>Código</th>
+            <th>Precio</th>
+            <th>Tipo</th>
           </tr>
         </thead>
         <tbody>
@@ -61,6 +63,7 @@ $_SESSION['id_cliente'];
               echo "<td><input type='text' name='nombre' value='" . $fila['nombrePlanta'] . "' readonly class='form-control-plaintext'></td>";
               echo "<td><input type='text' name='codigo' value='" . $fila['codigoPlanta'] . "'readonly class='form-control-plaintext'></td>";
               echo "<td><input type='text' name='precio' value='" . $fila['precio'] . "'readonly class='form-control-plaintext'></td>";
+              echo "<td><input type='text' name='TipoPlanta' value='" . $fila['TipoPlanta'] . "'readonly class='form-control-plaintext'></td>";
               echo "<td><img style='width:200px' src='" . $fila['ruta_imagen'] . "'></td>";
               echo "<td>", " <input type='submit' name='Editar' value='Editar' class='btn btn-info' >", " </td>";
 
@@ -91,6 +94,9 @@ $_SESSION['id_cliente'];
             $paquete = $db->query($consulta);
 
             ?>
+
+            <meta http-equiv="Refresh"
+              content="0.3;url=/TFG/proyectoGreen/login/usuario/menuAdministrador/adminOpciones/borrarPlantas.php">
             <div class="navbar-mx-5 VolverDerecha">
               <li>
                 <a href='./borrarPlantas.php' style='text-decoration:none;'><span
@@ -107,5 +113,6 @@ $_SESSION['id_cliente'];
 
 
           include("./template/pie.php");
+          ob_end_flush();
           $db->close();
           ?>

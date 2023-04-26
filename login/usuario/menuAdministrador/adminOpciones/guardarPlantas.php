@@ -54,15 +54,40 @@ if (!isset($_POST["submit"])) {
 
                 </div>
             </div>
-            <div class="form-group">
-                <label for="tipoPlanta" class="col-sm-2 control-label"> Tipo</label>
-                <div class="col-sm-10">
-                    <input type="text" class="form-control" id="tipoPlanta" name="tipoPlanta"
-                        pattern="Interior|Exterior|Medicinal" required>
 
+            <div class="form-group">
+                <label for="precio" class="col-sm-2 control-label"> Precio (€)</label>
+                <div class="col-sm-10">
+                    <input type="number" minlength="1" maxlength="5" class="form-control" id="precio" name="precio"
+                        required>
 
                 </div>
             </div>
+
+            <div class="form-group">
+                <legend class="mt-4">Tipo de planta</legend>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="tipoPlanta" id="optionsRadios1" value="Interior"
+                        checked="">
+                    <label class="form-check-label" for="optionsRadios1">
+                        Interior
+                    </label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="tipoPlanta" id="optionsRadios2" value="Exterior">
+                    <label class="form-check-label" for="optionsRadios2">
+                        Exterior
+                    </label>
+                </div>
+                <div class="form-check disabled">
+                    <input class="form-check-input" type="radio" name="tipoPlanta" id="optionsRadios3" value="Medicinal">
+                    <label class="form-check-label" for="optionsRadios3">
+                        Medicinal
+                    </label>
+                </div>
+            </div>
+
+
 
             <div class="form-group">
                 <label for="archivo" class="col-sm-2 control-label"> Archivo</label>
@@ -88,6 +113,7 @@ if (!isset($_POST["submit"])) {
         $T = $_POST["codigoPlanta"];
         $E = $_POST["numeroEjemplares"];
         $P = $_POST["tipoPlanta"];
+        $PRE = $_POST["precio"];
         $foto = $_FILES["archivo"]["name"];
         $nameTemporal = $_FILES["archivo"]["tmp_name"];
         $id_insert = $db->insert_id;
@@ -97,7 +123,7 @@ if (!isset($_POST["submit"])) {
 
 
 
-        $consulta = "INSERT INTO plantas (idplanta,nombrePlanta,codigoPlanta,numeroEjemplares,tipoPlanta,ruta_imagen) VALUES (' ','$N','$T','$E','$P','$archivo') ";
+        $consulta = "INSERT INTO plantas (idplanta,nombrePlanta,codigoPlanta,numeroEjemplares,tipoPlanta,precio,ruta_imagen) VALUES (' ','$N','$T','$E','$P','$PRE','$archivo') ";
         $paquete = $db->query($consulta);
 
 
@@ -123,10 +149,12 @@ if (!isset($_POST["submit"])) {
         echo "El archivo ya existe";
         }*/
     }
-
+    echo "</nav>";
 
     echo '<h3>Datos agregados</h3>';
-    echo "<a href='./guardarPlantas.php' style='text-decoration:none;'><span style='color: white; font-size: 20px;'>&#8592; Volver</span></a></li>";
+
+    echo " <meta http-equiv='Refresh'
+                  content='0.4;url=/TFG/proyectoGreen/login/usuario/menuAdministrador/adminOpciones/guardarPlantas.php'>";
 }
 include("./template/pie.php");
 $db->close();
