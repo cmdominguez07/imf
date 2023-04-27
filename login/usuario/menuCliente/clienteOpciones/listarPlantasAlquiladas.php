@@ -1,7 +1,7 @@
 <?php
-include("conexion.php");
+require_once("conexion.php");
 
-include("./template/cabecera.php");
+require_once("./template/cabecera.php");
 
 session_start();
 echo "Usuario: " . $_SESSION['nombreCliente'];
@@ -10,15 +10,11 @@ $_SESSION['id_cliente'];
 
 
 $N = $_SESSION['nombreCliente'];
-
 $C = $_SESSION['passWordCliente'];
-
 $idC = $_SESSION['id_cliente'];
-
 $contador = 0;
 
 ?>
-
 
 <div class="container mt-3">
   <div class="row">
@@ -34,20 +30,16 @@ $contador = 0;
         <tbody>
 
           <?php
+
           $consulta = "select * from clientes_plantasreservadas where id_cliente='$idC'";
           $paquete = $db->query($consulta);
 
-
-
           while ($fila = $paquete->fetch_array()) {
-            $contador = $contador + 1;
 
+            $contador = $contador + 1;
             $idplanta = $fila['idplanta'];
 
             ?>
-
-
-
 
             <tr>
               <td>
@@ -72,16 +64,17 @@ $contador = 0;
     <?php
 
     if ($contador == 0) {
-
-      echo ' <table>';
-      echo "<tr>";
-      echo "<td>No hay plantas en el carrito.</td>";
-      echo "<td><br> <a href='../menuCliente/menuClientes.php' style='text-decoration:none;'><span font-size: 20px;'>&#8592;</span></a></td>";
-      echo "</tr>";
-      echo "</table>";
+      ?>
+      <table>
+        <tr>
+          <td>No hay plantas en el carrito.</td>
+          <td><br> <a href='../menuCliente/menuClientes.php' style='text-decoration:none;'><span font-size:
+                20px;>&#8592;</span></a></td>
+        </tr>
+      </table>
+      <?php
     }
 
-
-    include("./template/pie.php");
+    require_once("./template/pie.php");
     $db->close();
     ?>

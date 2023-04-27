@@ -92,23 +92,23 @@ $C = $_SESSION['passWordCliente'];
               while ($fila = $paquete->fetch_array()) {
                 ?>
                 <td>
-                  <?php echo $fila['id_cliente']; ?>
+                  <?php echo $fila['id_cliente'] ; ?>
                 </td>
                 <td>
-                  <?php echo $fila['nombreCliente']; ?>
+                  <?php echo $fila['nombreCliente'] ; ?>
                 </td>
                 <td>
-                  <?php echo $fila['tipoCliente']; ?>
+                  <?php echo $fila['tipoCliente'] ; ?>
                 </td>
                 <td>
-                  <?php echo $fila['passWordCliente']; ?>
+                  <?php echo $fila['passWordCliente'] ; ?>
                 </td>
                 <td>
                   <h4> Actualizado </h4>
-                </td>";
+                </td>
                 </tr>
                 <td> <a href='../../loginCliente.php' style='text-decoration:none;'><span font-size:
-                      18px;>&#8592;</span></a> Reiniciar</td>";
+                      18px;>&#8592;</span></a> Reiniciar</td>
                 <?php
               }
           }

@@ -1,8 +1,9 @@
 <?php
-require_once("conexion.php");
-require_once("./template/cabecera.php");
-session_start();
+require("conexion.php");
 
+require("./template/cabecera.php");
+
+session_start();
 /*echo "Usuario: " . $_SESSION['nombreCliente'];*/
 $_SESSION['passWordCliente'];
 $idC = $_SESSION['id_cliente'];
@@ -15,7 +16,6 @@ if (!isset($_POST['submit'])) {
 
   $consulta = "select * from clientes_tablas where nombreCliente='$N' and passWordCliente='$C'";
   $paquete = $db->query($consulta);
-
   ?>
 
   <li class="mx-5">
@@ -23,6 +23,7 @@ if (!isset($_POST['submit'])) {
         Volver</span></a>
   </li>
   </div>
+
   </nav>
   <div class="container mt-2">
     <div class="row">
@@ -42,66 +43,93 @@ if (!isset($_POST['submit'])) {
             <?php
             while ($fila = $paquete->fetch_array()) {
               $contador = $contador + 1;
-
               ?>
-            <form method='POST' action='devolucionPlantas.php' >";
-             <tr>";
-            <td><input type='hidden' name='idplanta' value='<?php echo $fila['idplanta']; ?>' readonly class='form-control-plaintext'> </td>
-            <td><input type='text' name='nombrePlanta' value='<?php echo $fila['nombrePlanta']; ?>' readonly class='form-control-plaintext'></td>
-            <td><input type='text' name='codigoPlanta' value='<?php echo $fila['codigoPlanta']; ?>' readonly class='form-control-plaintext'></td>
-            <td><input type='text' name='precio' value='<?php echo $fila['precio']; ?>' readonly  class='form-control-plaintext'></td>
-            <td><input type='text' name='TipoPlanta' value='<?php echo  $fila['TipoPlanta']; ?>' readonly  class='form-control-plaintext'></td>
-            <td><input type='hidden' name='numeroEjemplares' value='<?php echo $fila['numeroEjemplares']; ?>' readonly  class='form-control-plaintext'></td>
-            <td><img style='width:200px' src='../../menuAdministrador/adminOpciones/ <?php echo $fila['ruta_imagen']; ?>'> </td>
-            <td><input type='hidden' style='width:15px' name='id_reservado' value='<?php echo  $fila['id_reservado']; ?>' readonly  class='form-control-plaintext'></td>
-            <td><input type='submit' class='btn btn-danger' name='Devolver' value='Eliminar del carrito'>", " </td>
-             </tr>
-<?php
+              <form method='POST' action='devolucionPlantas.php'>
+                <tr>
+                  <td> <input type='text' name='idplanta' value='<?php echo $fila['idplanta']
+                  ; ?>' readonly class='form-control-plaintext'> </td>
+                  <td><input type='text' name='nombre' value='<?php echo $fila['nombrePlanta']
+                  ; ?>' readonly class='form-control-plaintext'></td>
+                  <td><input type='text' name='codigo' value='<?php echo $fila['codigoPlanta']
+                  ; ?>' readonly class='form-control-plaintext'></td>
+                  <td><input type='text' name='precio' value='<?php echo $fila['precio']
+                  ; ?>' readonly class='form-control-plaintext'></td>
+                  <td><input type='text' name='TipoPlanta' value='<?php echo $fila['TipoPlanta']
+                  ; ?>' readonly class='form-control-plaintext'></td>
+                  <td><input type='hidden' name='numeroEjemplares' value='<?php echo $fila['numeroEjemplares']
+                  ; ?>' readonly class='form-control-plaintext'></td>
+                  <td><input type='hidden' name='id_reservado' value='<?php echo $fila['id_reservado']
+                  ; ?>' readonly class='form-control-plaintext'></td>
+                  <?php echo "<td><img style='width:200px' src='../../menuAdministrador/adminOpciones/" . $fila['ruta_imagen'] . "'</td>"; ?>
+                  <td>
+                    <input type='submit' name='Devolver' value='Devolver' class='btn btn-danger'>
+                  </td>
+                </tr>
+              </form>
+            </tbody>
+            <?php
             }
+            ?>
 
-            if ($contador > 0) {
-              $total = 0;
-              $consulta = $consulta = "SELECT precio FROM clientes_tablas WHERE id_cliente='$idC'";
-              $paquete = $db->query($consulta);
+        </table>
+      </div>
+    </div>
+  </div>
 
-              while ($fila = $paquete->fetch_array()) {
+  <?php
+  if ($contador == 0) {
 
-                $total = $total + $fila['precio'];
-              }
+    echo ' <table class="table table-striped">';
+    echo "<tr>";
+    echo "<td>No hay plantas en el carrito.</td>";
+    echo "</tr>";
+    echo "</tbody>";
+    echo "</table>";
+  }
 
-              ?>
+  if ($contador > 0) {
+    $total = 0;
+    $consulta = "SELECT precio FROM clientes_tablas WHERE id_cliente='$idC'";
+    $paquete = $db->query($consulta);
 
-              <div class="container mt-3">
-                <div class="row">
-                  <div class="col-12">
-                    <table class="table table-striped">
-                      <thead class=" thead-inverse">
-                        <tr>
-                          <th>Total:</th>
-                        </tr>
-                      </thead>
-                      <tbody>
-                        <td>
-                          <?php echo $total; ?> €
-                        </td>
+    while ($fila = $paquete->fetch_array()) {
 
-                        <?php
+      $total = $total + $fila['precio'];
+    }
 
-                        echo "<td>", " <input type='submit' class='btn btn-info' name='pagar' value='pagar'>", " </td>";
-            }
+    ?>
 
-            echo "</form>";
+    <div class="container mt-3">
+      <div class="row">
+        <div class="col-12">
+          <table class="table table-striped">
+            <thead class=" thead-inverse">
+              <tr>
+                <th>Total:</th>
+              </tr>
+            </thead>
+            <tbody>
+              <form method='POST' action='devolucionPlantas.php'>
+                <td>
+                  <?php echo $total; ?> €
+                </td>
+                <td>
+                  <input type='submit' name='pagar' value='pagar' class='btn btn-info'>
+                </td>
+              </form>
+              <?php
+  }
+  ?>
+            </form>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
 
-            echo "</tbody>";
-            echo "</table>";
-            echo "</div>";
-            echo "</div>";
-            echo "</div>";
-
-
+  <?php
 
 }
-
 
 if (isset($_POST['pagar'])) {
 
@@ -122,40 +150,15 @@ if (isset($_POST['Devolver'])) {
   $paquete = $db->query($consulta);
 
 
-  $consulta = "DELETE FROM conector WHERE id_reservado='$idAlqu' ";
+  $consulta = "DELETE FROM conector WHERE id_reservado='$idAlqu'";
   $paquete = $db->query($consulta);
-
-
-
-  ?>
-                </div>
-
-                </nav>
-                <h3>Producto Devuelto</h3>
-
-                <meta http-equiv="Refresh"
-                  content="0.3;url=/TFG/proyectoGreen/login/usuario/menuCliente/clienteOpciones/devolucionPlantas.php">
-                <?php
+  echo ' <meta http-equiv="Refresh" content="0.5;url=/TFG/proyectoGreen/login/usuario/menuCliente/clienteOpciones/devolucionPlantas.php">';
   //  ob_start();
   //  header("Location:/TFG/proyectoGreen/login/usuario/menuCliente/clienteOpciones/devolucionPlantas.php");
 
 }
 
-
-if ($contador == 0) {
-
-  echo ' <table class="table table-striped">';
-  echo "<tr>";
-  echo "<td>No hay plantas en el carrito.</td>";
-  echo "</tr>";
-  echo "</tbody>";
-  echo "</table>";
-}
-
-
-
-require_once("./template/pie.php");
-
+require("./template/pie.php");
 $db->close();
 
 ?>

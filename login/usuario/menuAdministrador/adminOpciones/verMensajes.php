@@ -36,16 +36,20 @@ $C = $_SESSION['passWordCliente'];
                         $paquete = $db->query($consulta);
 
                         while ($fila = $paquete->fetch_array()) {
-?>
-                            <form method='POST' action='verMensajes.php' >";
-                          <tr>
-                           <td> <input type='text' name='id' value='<?php echo $fila['id_mensaje']; ?>' readonly class='form-control-plaintext' > </td>
-                            <td><input type='text' name='email' value='<?php echo $fila['email']; ?>'  readonly class='form-control-plaintext' ></td>
-                           <td><input type='text' name='mensaje' value='<?php echo $fila['mensaje']; ?>'  readonly class='form-control-plaintext' ></td>
-                           <td><input type='text' name='nombreCM' value='<?php echo $fila['nombre_cliente_msj']; ?>' readonly class='form-control-plaintext' ></td>
-                          <td><input type='submit' class='btn btn-danger' name='submit' value='Contestar'></td>
+                            ?>
+                            <form method='POST' action='verMensajes.php'>";
+                                <tr>
+                                    <td> <input type='text' name='id' value='<?php echo $fila['id_mensaje']; ?>' readonly
+                                            class='form-control-plaintext'> </td>
+                                    <td><input type='text' name='email' value='<?php echo $fila['email']; ?>' readonly
+                                            class='form-control-plaintext'></td>
+                                    <td><input type='text' name='mensaje' value='<?php echo $fila['mensaje']; ?>' readonly
+                                            class='form-control-plaintext'></td>
+                                    <td><input type='text' name='nombreCM' value='<?php echo $fila['nombre_cliente_msj']; ?>'
+                                            readonly class='form-control-plaintext'></td>
+                                    <td><input type='submit' class='btn btn-danger' name='submit' value='Contestar'></td>
 
-<?php
+                                    <?php
                         }
 
                         ?>

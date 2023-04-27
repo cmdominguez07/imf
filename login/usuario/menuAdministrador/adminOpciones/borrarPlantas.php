@@ -46,7 +46,7 @@ $_SESSION['id_cliente'];
               ?>
               <form method='POST' action='borrarPlantas.php'>
                 <tr>
-                  <td> <input type='text' name='idplanta' value='<?php echo $fila[' idplanta']
+                  <td> <input type='text' name='idplanta' value='<?php echo $fila['idplanta']
                   ; ?>' readonly class='form-control-plaintext'> </td>
                   <td><input type='text' name='nombre' value='<?php echo $fila['nombrePlanta']
                   ; ?>' readonly class='form-control-plaintext'></td>
@@ -57,7 +57,7 @@ $_SESSION['id_cliente'];
                   <td><input type='text' name='TipoPlanta' value='<?php echo $fila['TipoPlanta']
                   ; ?>' readonly class='form-control-plaintext'></td>
                   <td><img style='width:200px' src='<?php
-                  $fila['ruta_imagen']; ?> '></td>
+                 echo $fila['ruta_imagen']; ?> '></td>
                   <td>
                     <input type='submit' name='Editar' value='Editar' class='btn btn-info'>
                   </td>
