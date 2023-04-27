@@ -1,17 +1,13 @@
 <?php
-include("conexion.php");
-include("./template/cabeceraLoginYGuardar.php");
+require_once("conexion.php");
+require_once("./template/cabeceraLoginYGuardar.php");
+
 if (!isset($_POST["submit"])) {
 
         ?>
-
-
         <form class="d-flex m-5" method="post" action="guardarCliente.php">
-
-
                 <img src="./img/Captura.png" class="w-25 m-5">
                 <div class="row d-flex justify-content-left align-items-center mx-5 my-2">
-
                         <h3 style="color:black"> Introduce aquí tus datos</h3>
                         <label>Nombre</label>
                         <input type="text" name="nombreCliente" class="form-control" placeholder="Nombre Usuario" required />
@@ -29,7 +25,6 @@ if (!isset($_POST["submit"])) {
         </form>
         <?php
 
-
 } else {
 
         $N = $_POST["nombreCliente"];
@@ -46,13 +41,17 @@ if (!isset($_POST["submit"])) {
                 $paquete = $db->query($consulta);
         }
 
-
-
-        echo '<table>';
-        echo '<tr><td><h3>Datos agregados</h3><br></tr></td>';
-        echo '</table>';
+        ?>
+        <table>
+                <tr>
+                        <td>
+                                <h3>Datos agregados</h3><br>
+                        </td>
+                </tr>
+        </table>
+        <?php
 }
 
-include("./template/pieLoginYGuardar.php");
+require_once("./template/pieLoginYGuardar.php");
 $db->close();
 ?>

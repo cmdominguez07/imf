@@ -1,25 +1,18 @@
 <?php
 session_start();
-include("conexion.php");
-include("./template/cabecera.php");
+require_once("conexion.php");
+require_once("./template/cabecera.php");
 /*echo "<h5 class='mt-2' style='color:white'>".$_SESSION['nombreCliente']."</h5>";*/
 $_SESSION['passWordCliente'];
 $_SESSION['id_cliente'];
 
-
-
 if (isset($_POST["submit"])) {
 
-
 	$N = $_POST["nombreCliente"];
-
-
-
 
 	if ($N != "") {
 		$consulta = "SELECT * FROM clientesclub WHERE nombreCliente LIKE '%$N%'";
 		$paquete = $db->query($consulta);
-
 
 	} else {
 		?>
@@ -29,30 +22,27 @@ if (isset($_POST["submit"])) {
 						Volver</span></a>
 			</li>
 			</li>
-
 		</div>
 		</nav>
 		<div class="container mt-3">
 			<div class="row">
 				<div class="col-12">
 					<h3>No disponible</h3>
-
 				</div>
 			</div>
 		</div>
 
 		<?php
 
-		echo "<p>No disponible</p>";
 	}
+
 	?>
+
 	<div class="navbar-mx-5 VolverDerecha">
 		<li>
 			<a href='./verClientes.php' style='text-decoration:none;'><span style='color: white; font-size: 20px;'>&#8592;
 					Volver</span></a>
 		</li>
-		</li>
-
 	</div>
 	</nav>
 	<div class="container mt-3">
@@ -70,25 +60,33 @@ if (isset($_POST["submit"])) {
 
 						<?php
 
-
 						while ($fila = $paquete->fetch_array()) {
 
-							echo "<tr>";
-							//echo "<td>".$fila['idplanta'],"</td>";
-							echo "<td >" . $fila['nombreCliente'], "</td>";
-							echo "<td>" . $fila['apellidoCliente'], "</td>";
-							echo "<td>" . $fila['passWordCliente'], "</td>";
-							echo "</tr>";
+							?>
+							<tr>
+								<!--echo "<td>".$fila['idplanta'],"</td>";-->
+								<td>
+									<?php echo $fila['nombreCliente']; ?>
+								</td>
+								<td>
+									<?php echo $fila['apellidoCliente']; ?>
+								</td>
+								<td>
+									<?php echo $fila['passWordCliente']; ?>
+								</td>
+							</tr>
+							<?php
 						}
+						?>
+						<td>Búsqueda finalizada</td>
+					</tbody>
+				</table>
+			</div>
+		</div>
+	</div>
 
-						echo '<td>Búsqueda finalizada</td>';
-						echo "</tbody>";
-
-						echo "</table>";
-						echo "</div>";
-						echo "</div>";
-						echo "</div>";
+	<?php
 }
-include("./template/pie.php");
+require_once("./template/pie.php");
 $db->close();
 ?>

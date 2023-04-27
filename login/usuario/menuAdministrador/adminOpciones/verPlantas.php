@@ -1,12 +1,11 @@
 <?php
-
-include("conexion.php");
-include("./template/cabecera.php");
+//////////////////////////////////////////////////////Ver si sirve----------------------
+require_once("conexion.php");
+require_once("./template/cabecera.php");
 session_start();
 echo "Usuario: " . $_SESSION['nombreCliente'];
 $_SESSION['passWordCliente'];
 $_SESSION['id_cliente'];
-
 
 $consulta = "select * from plantas";
 $paquete = $db->query($consulta);
@@ -27,6 +26,6 @@ while ($fila = $paquete->fetch_array()) {
 
 echo "</table> <br>";
 
-include("./template/pie.php");
+require_once("./template/pie.php");
 $db->close();
 ?>

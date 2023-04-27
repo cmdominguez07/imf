@@ -1,25 +1,16 @@
-
- 
- body, html{
- 
-     height:100%;margin: 0;
+ body,
+ html {
+     height: 100%;
+     margin: 0;
      padding: 0;
-     
  }
- #contenido1{
- 
-    min-height:97%;
- 
+
+ #contenido1 {
+     min-height: 97%;
  }
- 
- 
- 
 
  #footer {
-    width: 100%;
-        margin: 0;
-        padding: 0;
-    
-   }
-   
-   
+     width: 100%;
+     margin: 0;
+     padding: 0;
+ }

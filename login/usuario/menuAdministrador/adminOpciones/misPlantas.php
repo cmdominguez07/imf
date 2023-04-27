@@ -1,4 +1,9 @@
 <?php
+
+
+/**
+ *    no vale, borrar!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+ */
 include("conexion.php");
 include("./template/cabecera.php");
 session_start();

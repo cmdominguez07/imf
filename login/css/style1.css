@@ -1,30 +1,32 @@
-body{
+body {
     margin: 0;
     padding: 0;
-     height:100%;
-     
-}
-#caja1BV{
-    display: inline-block;
-  /*  background: url("../img/_import_60d03363031ba5.08549514.mov");
-    background-size: cover;*/
-  
+    height: 100%;
+
 }
 
-.image{
+#caja1BV {
+    display: inline-block;
+    /*  background: url("../img/_import_60d03363031ba5.08549514.mov");
+    background-size: cover;*/
+
+}
+
+.image {
     width: 1000px;
     height: 400px;
 }
-#parrafoInicio{
+
+#parrafoInicio {
     display: flex;
 
     text-align: justify;
 }
 
-#contenido1{
-    min-height:100%;
-    margin:0 auto -147px;
- }
+#contenido1 {
+    min-height: 100%;
+    margin: 0 auto -147px;
+}
 
 .pasarImg {
     position: relative;
@@ -48,7 +50,7 @@ body{
     margin: 5px 0 5px 0;
     padding: 0;
     color: white;
-    background:rgba(206, 114, 114, 0.424);
+    background: rgba(206, 114, 114, 0.424);
     font-size: 22px;
     line-height: 22px;
     text-align: center;
@@ -133,11 +135,11 @@ body{
 }
 
 #footer {
- width: 100%;
+    width: 100%;
 
-     margin: 0;
-     padding: 0;
- 
+    margin: 0;
+    padding: 0;
+
 }
 
 #video_background {
@@ -152,43 +154,43 @@ body{
     z-index: -1000;
     overflow: hidden;
     opacity: 0.9;
-    
-   
-    }
-    #video_pattern {
- 
+
+
+}
+
+#video_pattern {
+
     left: 0px;
     top: 0px;
     width: 90%;
     height: 900%;
-  
+
     margin-bottom: 120px;
     z-index: 2;
-   
- 
-    }
-    nav{
-        z-index: 5;
+
+
+}
+
+nav {
+    z-index: 5;
     opacity: 0.95;
-    }
+}
 
-    .letraBlanca{
-        color:white;
-    }
+.letraBlanca {
+    color: white;
+}
 
-   #cajaseg{
+#cajaseg {
     background-color: white;
     opacity: 0.95;
     z-index: 3;
 
-   }
+}
 
-   
-   #cajater{
+
+#cajater {
     background-color: white;
     opacity: 1;
     z-index: 4;
 
-   }
-
-  
+}

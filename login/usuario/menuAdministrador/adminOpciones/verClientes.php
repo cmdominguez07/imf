@@ -1,14 +1,11 @@
 <?php
 session_start();
-include("conexion.php");
-include("./template/cabecera.php");
-
-
+require_once("conexion.php");
+require_once("./template/cabecera.php");
 
 /*echo "<h5 style='color:white'>" . $_SESSION['nombreCliente'] . "</h5>";*/
 $_SESSION['passWordCliente'];
 $_SESSION['id_cliente'];
-
 
 $consulta = "select * from clientesclub";
 $paquete = $db->query($consulta);
@@ -19,22 +16,15 @@ $paquete = $db->query($consulta);
   <input type="text" class="form-control " name="nombreCliente" required>
   <input type="submit" class="btn btn-secondary mx-1" name="submit" value="Buscar Nombre">
 </form>
-
-
-
 <div class="navbar-mx-2 VolverDerecha">
   <li>
     <a href='../menuAdministrador.php' style='text-decoration:none;'><span
         style='color: white; font-size: 20px;'>&#8592; Volver</span></a>
   </li>
   </li>
-
 </div>
-
 </div>
 </nav>
-
-
 <div class="container mt-3">
   <div class="row">
     <div class="col-12">
@@ -48,20 +38,24 @@ $paquete = $db->query($consulta);
         </thead>
         <tbody>
 
-
           <?php
           while ($fila = $paquete->fetch_array()) {
 
-
             if ($fila['tipoCliente'] == 'Cliente') {
+              ?>
+              <tr>
+                <td>
+                  <?php echo $fila['id_cliente']; ?>
+                </td>
+                <td>
+                  <?php echo $fila['nombreCliente']; ?>
+                </td>
+                <td>
+                  <?php echo $fila['passWordCliente']; ?>
+                </td>
+              </tr>
 
-
-              echo "<tr>";
-              echo "<td>" . $fila['id_cliente'], "</td>";
-              echo "<td>" . $fila['nombreCliente'], "</td>";
-              echo "<td>" . $fila['passWordCliente'], "</td>";
-
-              echo "</tr>";
+              <?php
             }
           }
 
@@ -76,6 +70,6 @@ $paquete = $db->query($consulta);
 
 echo "</table></div>";
 
-include("./template/pie.php");
+require_once("./template/pie.php");
 $db->close();
 ?>

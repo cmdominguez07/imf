@@ -1,7 +1,7 @@
 <?php
-include("conexion.php");
+require_once("conexion.php");
 
-include("./template/cabecera.php");
+require_once("./template/cabecera.php");
 session_start();
 echo "<h5 style='color:white'>" . $_SESSION['nombreCliente'] . "</h5>";
 $_SESSION['passWordCliente'];
@@ -20,7 +20,6 @@ $C = $_SESSION['passWordCliente'];
             <table class="table table-striped">
                 <thead class=" thead-inverse">
                     <tr>
-
                         <th>ID</th>
                         <th>Email</th>
                         <th>Mensaje</th>
@@ -37,18 +36,18 @@ $C = $_SESSION['passWordCliente'];
                         $paquete = $db->query($consulta);
 
                         while ($fila = $paquete->fetch_array()) {
+?>
+                            <form method='POST' action='verMensajes.php' >";
+                          <tr>
+                           <td> <input type='text' name='id' value='<?php echo $fila['id_mensaje']; ?>' readonly class='form-control-plaintext' > </td>
+                            <td><input type='text' name='email' value='<?php echo $fila['email']; ?>'  readonly class='form-control-plaintext' ></td>
+                           <td><input type='text' name='mensaje' value='<?php echo $fila['mensaje']; ?>'  readonly class='form-control-plaintext' ></td>
+                           <td><input type='text' name='nombreCM' value='<?php echo $fila['nombre_cliente_msj']; ?>' readonly class='form-control-plaintext' ></td>
+                          <td><input type='submit' class='btn btn-danger' name='submit' value='Contestar'></td>
 
-                            echo "<form method='POST' action='verMensajes.php' >";
-                            echo "<tr>";
-                            echo "<td> <input type='text' name='id' value='" . $fila['id_mensaje'] . "'  readonly class='form-control-plaintext' > </td>";
-                            echo "<td><input type='text' name='email' value='" . $fila['email'] . "'  readonly class='form-control-plaintext' ></td>";
-                            echo "<td><input type='text' name='mensaje' value='" . $fila['mensaje'] . "'  readonly class='form-control-plaintext' ></td>";
-                            echo "<td><input type='text' name='nombreCM' value='" . $fila['nombre_cliente_msj'] . "'  readonly class='form-control-plaintext' ></td>";
-                            echo "<td>", " <input type='submit' class='btn btn-danger' name='submit' value='Contestar'>", " </td>";
-
-
-
+<?php
                         }
+
                         ?>
                         </form>
                     </tbody>
@@ -65,7 +64,7 @@ $C = $_SESSION['passWordCliente'];
 
                     }
 
-                    include("./template/pie.php");
+                    require_once("./template/pie.php");
 
                     $db->close();
                     ?>

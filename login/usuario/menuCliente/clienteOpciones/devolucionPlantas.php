@@ -1,9 +1,8 @@
 <?php
-include("conexion.php");
-
-include("./template/cabecera.php");
-
+require_once("conexion.php");
+require_once("./template/cabecera.php");
 session_start();
+
 /*echo "Usuario: " . $_SESSION['nombreCliente'];*/
 $_SESSION['passWordCliente'];
 $idC = $_SESSION['id_cliente'];
@@ -16,6 +15,7 @@ if (!isset($_POST['submit'])) {
 
   $consulta = "select * from clientes_tablas where nombreCliente='$N' and passWordCliente='$C'";
   $paquete = $db->query($consulta);
+
   ?>
 
   <li class="mx-5">
@@ -23,7 +23,6 @@ if (!isset($_POST['submit'])) {
         Volver</span></a>
   </li>
   </div>
-
   </nav>
   <div class="container mt-2">
     <div class="row">
@@ -43,38 +42,34 @@ if (!isset($_POST['submit'])) {
             <?php
             while ($fila = $paquete->fetch_array()) {
               $contador = $contador + 1;
-              echo "<form method='POST' action='devolucionPlantas.php' >";
-              echo "<tr>";
-              echo "<td><input type='hidden' name='idplanta' value='" . $fila['idplanta'] . "' readonly class='form-control-plaintext'> </td>";
-              echo "<td><input type='text' name='nombrePlanta' value='" . $fila['nombrePlanta'] . "'readonly class='form-control-plaintext'></td>";
-              echo "<td><input type='text' name='codigoPlanta' value='" . $fila['codigoPlanta'] . "'readonly class='form-control-plaintext'></td>";
-              echo "<td><input type='text' name='precio' value='" . $fila['precio'] . "'readonly  class='form-control-plaintext'></td>";
-              echo "<td><input type='text' name='TipoPlanta' value='" . $fila['TipoPlanta'] . "'readonly  class='form-control-plaintext'></td>";
-              echo "<td><input type='hidden' name='numeroEjemplares' value='" . $fila['numeroEjemplares'] . "'readonly  class='form-control-plaintext'></td>";
-              echo "<td><img style='width:200px' src='../../menuAdministrador/adminOpciones/" . $fila['ruta_imagen'] . "'</td>";
-              echo "<td><input type='hidden' style='width:15px' name='id_reservado' value='" . $fila['id_reservado'] . "'readonly  class='form-control-plaintext'></td>";
-              echo "<td>", " <input type='submit' class='btn btn-danger' name='Devolver' value='Eliminar del carrito'>", " </td>";
-              echo "</tr>";
 
+              ?>
+            <form method='POST' action='devolucionPlantas.php' >";
+             <tr>";
+            <td><input type='hidden' name='idplanta' value='<?php echo $fila['idplanta']; ?>' readonly class='form-control-plaintext'> </td>
+            <td><input type='text' name='nombrePlanta' value='<?php echo $fila['nombrePlanta']; ?>' readonly class='form-control-plaintext'></td>
+            <td><input type='text' name='codigoPlanta' value='<?php echo $fila['codigoPlanta']; ?>' readonly class='form-control-plaintext'></td>
+            <td><input type='text' name='precio' value='<?php echo $fila['precio']; ?>' readonly  class='form-control-plaintext'></td>
+            <td><input type='text' name='TipoPlanta' value='<?php echo  $fila['TipoPlanta']; ?>' readonly  class='form-control-plaintext'></td>
+            <td><input type='hidden' name='numeroEjemplares' value='<?php echo $fila['numeroEjemplares']; ?>' readonly  class='form-control-plaintext'></td>
+            <td><img style='width:200px' src='../../menuAdministrador/adminOpciones/ <?php echo $fila['ruta_imagen']; ?>'> </td>
+            <td><input type='hidden' style='width:15px' name='id_reservado' value='<?php echo  $fila['id_reservado']; ?>' readonly  class='form-control-plaintext'></td>
+            <td><input type='submit' class='btn btn-danger' name='Devolver' value='Eliminar del carrito'>", " </td>
+             </tr>
+<?php
             }
-
-
-
 
             if ($contador > 0) {
               $total = 0;
               $consulta = $consulta = "SELECT precio FROM clientes_tablas WHERE id_cliente='$idC'";
               $paquete = $db->query($consulta);
 
-
               while ($fila = $paquete->fetch_array()) {
-
 
                 $total = $total + $fila['precio'];
               }
 
               ?>
-
 
               <div class="container mt-3">
                 <div class="row">
@@ -82,9 +77,7 @@ if (!isset($_POST['submit'])) {
                     <table class="table table-striped">
                       <thead class=" thead-inverse">
                         <tr>
-
                           <th>Total:</th>
-
                         </tr>
                       </thead>
                       <tbody>
@@ -161,7 +154,7 @@ if ($contador == 0) {
 
 
 
-include("./template/pie.php");
+require_once("./template/pie.php");
 
 $db->close();
 
