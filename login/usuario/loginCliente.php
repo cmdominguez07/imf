@@ -6,7 +6,7 @@ require_once("./template/cabeceraLoginYGuardar.php");
 </nav>
 
 <div class="row d-flex justify-content-end align-items-center container-fluid" id="fondo">
-  <form class="d-flex justify-content-end align-items-center" method="post" action="loginCliente.php">
+  <form class="d-flex justify-content-end align-items-center" method="post" action="loginCliente.php" name="registration">
     <!-- <img id="fotoInicio" class="col-lg-3 col-md-6 col-sm-12 m-5" src="./img/a45161a849f445e9919ea1b911cbaac9.png" alt="">-->
     <div class="m-0 row justify-content-left">
       <label class="col-form-label mt-3" for="inputInicio">Nombre</label>

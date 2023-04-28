@@ -37,7 +37,7 @@ $C = $_SESSION['passWordCliente'];
 
                         while ($fila = $paquete->fetch_array()) {
                             ?>
-                            <form method='POST' action='verMensajes.php'>";
+                            <form method='POST' action='verMensajes.php'>
                                 <tr>
                                     <td> <input type='text' name='id' value='<?php echo $fila['id_mensaje']; ?>' readonly
                                             class='form-control-plaintext'> </td>

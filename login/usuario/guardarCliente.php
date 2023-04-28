@@ -5,20 +5,22 @@ require_once("./template/cabeceraLoginYGuardar.php");
 if (!isset($_POST["submit"])) {
 
         ?>
-        <form class="d-flex m-5" method="post" action="guardarCliente.php">
+
+        <form class="d-flex m-5" method="post" action="guardarCliente.php" name="registration">
                 <img src="./img/Captura.png" class="w-25 m-5">
                 <div class="row d-flex justify-content-left align-items-center mx-5 my-2">
                         <h3 style="color:black"> Introduce aquí tus datos</h3>
                         <label>Nombre</label>
-                        <input type="text" name="nombreCliente" class="form-control" placeholder="Nombre Usuario" required />
+                        <input type="text" name="nombreCliente" id="nombreCliente" class="form-control"
+                                placeholder="Nombre Usuario" required />
                         <label>Apellido</label>
-                        <input type="text" name="apellidoCliente" class="form-control" placeholder="Apellido Usuario"
-                                required />
+                        <input type="text" name="apellidoCliente" id="apellidoCliente" class="form-control"
+                                placeholder="Apellido Usuario" required />
                         <label>Contraseña</label>
-                        <input type="password" name="passWordCliente" class="form-control" placeholder="Escribir contraseña"
-                                required />
+                        <input type="password" name="passWordCliente" id="passWordCliente" class="form-control"
+                                placeholder="Escribir contraseña" required />
                         <label>Código nuevo Administrador</label>
-                        <input type="number" name="codigoAdmin" class="form-control" placeholder="123" />
+                        <input type="number" name="codigoAdmin" id="codigoAdmin" class="form-control" placeholder="123" />
                         <br>
                         <input type="submit" name="submit" class="btn btn-secondary w-25" value="Enviar">
                 </div>
@@ -45,10 +47,11 @@ if (!isset($_POST["submit"])) {
         <table>
                 <tr>
                         <td>
-                                <h3>Datos agregados</h3><br>
+                                <h3>Datos agregados</h3>
                         </td>
                 </tr>
         </table>
+
         <?php
 }
 

@@ -18,6 +18,11 @@
     </div>
   </nav>
 </footer>
+
+
+
+<script src="./template/jquery-validation-1.19.5/dist/jquery.validate.min.js"></script>
+<script src="./template/formValidation.js"></script>
 </body>
 
 </html>
