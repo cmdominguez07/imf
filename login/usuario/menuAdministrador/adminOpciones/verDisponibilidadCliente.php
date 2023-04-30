@@ -17,11 +17,8 @@ if (isset($_POST["submit"])) {
 	} else {
 		?>
 		<div class="navbar-mx-5 VolverDerecha">
-			<li>
 				<a href='./verClientes.php' style='text-decoration:none;'><span style='color: white; font-size: 20px;'>&#8592;
 						Volver</span></a>
-			</li>
-			</li>
 		</div>
 		</nav>
 		<div class="container mt-3">

@@ -11,8 +11,6 @@ $_SESSION['id_cliente'];
     <a href='../menuAdministrador.php' style='text-decoration:none;'><span
             style='color: white; font-size: 20px;'>&#8592; Volver</span></a>
 
-    </li>
-
 </div>
 </nav>
 

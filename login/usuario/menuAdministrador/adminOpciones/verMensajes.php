@@ -12,7 +12,10 @@ $N = $_SESSION['nombreCliente'];
 $C = $_SESSION['passWordCliente'];
 
 ?>
-
+	<div class="navbar-mx-5 VolverDerecha">
+				<a href='../menuAdministrador.php' style='text-decoration:none;'><span style='color: white; font-size: 20px;'>&#8592;
+						Volver</span></a>
+		</div>
 </nav>
 <div class="container mt-3">
     <div class="row">

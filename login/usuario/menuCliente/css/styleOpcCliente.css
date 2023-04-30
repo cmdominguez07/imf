@@ -19,3 +19,9 @@ padding-left: 80px;
 text-align: justify;
 
 }
+
+form .error {
+
+    color: #ff0000;
+  
+  }

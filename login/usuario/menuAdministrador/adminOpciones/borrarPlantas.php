@@ -14,11 +14,8 @@ $_SESSION['id_cliente'];
   <input type="submit" class="btn btn-secondary mx-1" name="submit" value="Buscar Planta">
 </form>
 <div class="navbar-mx-2 VolverDerecha">
-  <li>
     <a href='../menuAdministrador.php' style='text-decoration:none;'><span
         style='color: white; font-size: 20px;'>&#8592; Volver</span></a>
-  </li>
-  </li>
 </div>
 </div>
 </nav>

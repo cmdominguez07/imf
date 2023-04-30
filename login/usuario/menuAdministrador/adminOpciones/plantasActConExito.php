@@ -59,10 +59,8 @@ $paquete = $db->query($consulta);
 ?>
 
 <div class="navbar-mx-5 VolverDerecha">
-  <li>
     <a href='./borrarPlantas.php' style='text-decoration:none;'><span style='color: white; font-size: 20px;'>&#8592;
         Volver</span></a>
-  </li>
 </div>
 </nav>
 

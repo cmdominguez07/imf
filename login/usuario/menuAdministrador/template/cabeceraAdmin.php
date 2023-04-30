@@ -26,10 +26,7 @@
 </p>   
 </div>
       <div class="navbar-mx-5 VolverDerecha">
-        <li>
         <a href="../../index.php" style="text-decoration:none;"><span style="color: white; font-size: 16px;">&#8592; Volver</span></a>
-        </li>
-     
     </div>
  
 </nav>

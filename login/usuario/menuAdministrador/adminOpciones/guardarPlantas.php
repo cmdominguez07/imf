@@ -11,15 +11,13 @@ $_SESSION['id_cliente'];
 if (!isset($_POST["submit"])) {
     ?>
     <div class="navbar-mx-5 VolverDerecha">
-        <li>
             <a href='../menuAdministrador.php' style='text-decoration:none;'><span
                     style='color: white; font-size: 20px;'>&#8592; Volver</span></a>
-        </li>
     </div>
     </nav>
 
-    <form class="form-horizontal mx-3" method="post" action="guardarPlantas.php" enctype="multipart/form-data"
-        autocomplete="off">
+    <form id="form" class="form-horizontal mx-3" method="post" action="guardarPlantas.php" enctype="multipart/form-data"
+        autocomplete="off" name="introducirPlanta">
 
         <table>
             <h2 class="text-primary mt-4">Introduzca producto:</h2>

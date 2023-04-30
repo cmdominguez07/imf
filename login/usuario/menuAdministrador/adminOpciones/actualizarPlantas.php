@@ -12,12 +12,8 @@ $_SESSION['id_cliente'];
 
 ?>
 <div class="navbar-mx-5 VolverDerecha">
-  <li>
     <a href='../menuAdministrador.php' style='text-decoration:none;'><span
         style='color: white; font-size: 20px;'>&#8592; Volver</span></a>
-  </li>
-  </li>
-
 </div>
 
 
@@ -34,28 +30,29 @@ $_SESSION['id_cliente'];
 
       if (!isset($_POST["Actualizar"])) {
 
-        echo "holo " . $_GET['idplanta'];
+        /*echo "holo " . $_GET['idplanta'];*/
 
         $I = $_GET['idplanta'];
-        echo "<form method='POST' class='form-horizontal mx-3' action='actualizarPlantas.php'enctype='multipart/form-data' autocomplete='off' >";
-        echo "<tr>";
-
-        echo "<td> <input type='hidden' class='form-control' name='idplanta' value=" . $I . "> </td>";
-        echo "<label class='col-sm-2 control-label'>Nombre</label>";
-        echo "<td><input type='text' class='form-control' name='nombrePlanta'></td>";
-        echo "<label class='col-sm-2 control-label'>Código</label>";
-        echo "<td><input type='text' class='form-control' name='codigoPlanta'></td>";
-        echo "<label class='col-sm-2 control-label'>Cantidad</label>";
-        echo "<td><input type='text' class='form-control' name='numeroEjemplares'></td>";
-        echo "<label class='col-sm-2 control-label'>Tipo</label>";
-        echo "<td><input type='text' class='form-control' name='TipoPlanta'></td>";
-
-        echo '<input type="file" class="form-control" id="archivo" name="archivo" accept="image/*">';
-
-        echo "<td>", " <input type='submit' class='btn btn-success' name='Actualizar' value='Actualizar'>", " </td>";
-
         ?>
-        </tr>
+        <form method='POST' class='form-horizontal mx-3' action='actualizarPlantas.php' enctype='multipart/form-data'
+          autocomplete='off' name='registration'>
+          <tr>
+
+            <td><input type='hidden' class='form-control m-1' name='idplanta' value=" . $I . "> </td>
+            <br><td><label class='col-sm-2 control-label  m-1'>Nombre</label></td>
+            <td><input type='text' class='form-control m-1' name='nombrePlanta'></td>
+            <br><td><label class='col-sm-2 control-label  m-1'>Código</label></td>
+            <td><input type='text' class='form-control m-1' name='codigoPlanta'></td>
+            <br><td><label class='col-sm-2 control-label m-1'>Cantidad</label></td>
+            <td><input type='text' class='form-control m-1' name='numeroEjemplares'></td>
+            <br><td><label class='col-sm-2 control-label  m-1'>Tipo</label></td>
+            <td><input type='text' class='form-control  m-1' name='TipoPlanta'></td>
+
+            <input type="file" class="form-control m-1" id="archivo" name="archivo" accept="image/*">
+
+            <td><input type='submit' class='btn btn-success  m-1' name='Actualizar' value='Actualizar'> </td>
+
+          </tr>
         </form>
 
         </tbody>

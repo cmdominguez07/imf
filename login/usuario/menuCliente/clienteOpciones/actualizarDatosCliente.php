@@ -4,7 +4,7 @@ require_once("conexion.php");
 require_once("./template/cabecera1.php");
 session_start();
 
-echo "<h5 style='color:white'>" . $_SESSION['nombreCliente'] . "</h5>";
+
 $_SESSION['passWordCliente'];
 $_SESSION['id_cliente'];
 $N = $_SESSION['nombreCliente'];
@@ -12,7 +12,13 @@ $idC = $_SESSION['id_cliente'];
 $C = $_SESSION['passWordCliente'];
 
 ?>
-
+  <div>
+  <?php echo "<p style='color:white'>" . $_SESSION['nombreCliente'] . "</p>";?>
+  </div>
+<div>
+  <a href='../menuClientes.php' style='text-decoration:none; color:white'>&#8592;
+      Volver</span></a>
+</div>
 </nav>
 <div class="container-fluid mt-5">
   <div class="row">
@@ -37,15 +43,13 @@ $C = $_SESSION['passWordCliente'];
 
             while ($fila = $paquete->fetch_array()) {
               ?>
-              <form method='POST' action='actualizarDatosCliente.php'>
+              <form method='POST' action='actualizarDatosCliente.php' name="actualizarDatos">
                 <tr>
                   <td> <input type='hidden' name='id' value='<?php echo $fila['id_cliente']; ?>'> </td>
                   <td><input type='text' name='nombre' value='<?php echo $fila['nombreCliente']; ?>'></td>
                   <td><input type='text' name='apellido' value='<?php echo $fila['apellidoCliente']; ?>'></td>
                   <td><input type='text' name='passWord' value='<?php echo $fila['passWordCliente']; ?>'></td>
                   <td><input type='submit' class='btn btn-success' name='submit' value='Actualizar'></td>
-                  <td> <a href='../menuClientes.php' style='text-decoration:none;'><span font-size: 20px;'>&#8592;
-                        Volver</span></a></td>
 
                   <?php
             }
@@ -92,16 +96,16 @@ $C = $_SESSION['passWordCliente'];
               while ($fila = $paquete->fetch_array()) {
                 ?>
                 <td>
-                  <?php echo $fila['id_cliente'] ; ?>
+                  <?php echo $fila['id_cliente']; ?>
                 </td>
                 <td>
-                  <?php echo $fila['nombreCliente'] ; ?>
+                  <?php echo $fila['nombreCliente']; ?>
                 </td>
                 <td>
-                  <?php echo $fila['tipoCliente'] ; ?>
+                  <?php echo $fila['tipoCliente']; ?>
                 </td>
                 <td>
-                  <?php echo $fila['passWordCliente'] ; ?>
+                  <?php echo $fila['passWordCliente']; ?>
                 </td>
                 <td>
                   <h4> Actualizado </h4>

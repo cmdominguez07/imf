@@ -10,6 +10,7 @@
   <link rel="stylesheet" href="./css/bootstrap.css" />
   <link rel='stylesheet' type='text/css' media='screen' href='./css/style1OPCADM.css'>
   <link rel="icon" type="image/x-icon" href="./img/imagesFavicon.png">
+  <script src="../template/jquery-3.6.0.min.js"></script>
 </head>
 
 <body>
