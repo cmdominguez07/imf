@@ -1,7 +1,7 @@
 <?php
 
-require_once("conexion.php");
-require_once("./template/cabecera1.php");
+require("conexion.php");
+require("./template/cabecera1.php");
 session_start();
 
 
@@ -12,119 +12,84 @@ $idC = $_SESSION['id_cliente'];
 $C = $_SESSION['passWordCliente'];
 
 ?>
-  <div>
-  <?php echo "<p style='color:white'>" . $_SESSION['nombreCliente'] . "</p>";?>
-  </div>
 <div>
   <a href='../menuClientes.php' style='text-decoration:none; color:white'>&#8592;
-      Volver</span></a>
+    Volver</span></a>
 </div>
 </nav>
-<div class="container-fluid mt-5">
+<div class="container mt-5">
   <div class="row">
     <div class="col-12">
-      <table class="table table-striped">
-        <thead class=" thead-inverse">
-          <tr>
-            <th></th>
-            <th>Nombre</th>
-            <th>Apellido</th>
-            <th>Contraseña</th>
-          </tr>
-        </thead>
-        <tbody>
-
-          <?php
-
-          $consulta = "select * from clientesclub where nombreCliente='$N' and passWordCliente='$C'";
-          $paquete = $db->query($consulta);
-
-          if (!isset($_POST['submit'])) {
-
-            while ($fila = $paquete->fetch_array()) {
-              ?>
-              <form method='POST' action='actualizarDatosCliente.php' name="actualizarDatos">
-                <tr>
-                  <td> <input type='hidden' name='id' value='<?php echo $fila['id_cliente']; ?>'> </td>
-                  <td><input type='text' name='nombre' value='<?php echo $fila['nombreCliente']; ?>'></td>
-                  <td><input type='text' name='apellido' value='<?php echo $fila['apellidoCliente']; ?>'></td>
-                  <td><input type='text' name='passWord' value='<?php echo $fila['passWordCliente']; ?>'></td>
-                  <td><input type='submit' class='btn btn-success' name='submit' value='Actualizar'></td>
-
-                  <?php
-            }
-
-            ?>
-              </tr>
-            </form>
-          </tbody>
-          <div>
-          </div>
-      </div>
-
-      <?php
 
 
-          } else {
-            $I = $_POST["id"];
-            $N = $_POST["nombre"];
-            $A = $_POST["apellido"];
-            $P = $_POST["passWord"];
+      <tbody>
 
-            $consulta = "UPDATE clientesclub SET nombreCliente='$N',apellidoCliente='$A',passWordCliente='$P' WHERE id_cliente='$I' ";
-            $paquete = $db->query($consulta);
+        <?php
 
-            $consulta = "select * from clientesclub where id_cliente='$I'";
-            $paquete = $db->query($consulta);
+        $consulta = "select * from clientesclub where nombreCliente='$N' and passWordCliente='$C'";
+        $paquete = $db->query($consulta);
 
-            ?>
-
-      <div class="row">
-        <div class="col-12">
-          <table class="table table-striped">
-            <thead class=" thead-inverse">
-              <tr>
-                <th>Imagen</th>
-                <th>Nombre</th>
-                <th>Código</th>
-              </tr>
-            </thead>
-            <tbody>
-
-              <?php
-
-              while ($fila = $paquete->fetch_array()) {
-                ?>
-                <td>
-                  <?php echo $fila['id_cliente']; ?>
-                </td>
-                <td>
-                  <?php echo $fila['nombreCliente']; ?>
-                </td>
-                <td>
-                  <?php echo $fila['tipoCliente']; ?>
-                </td>
-                <td>
-                  <?php echo $fila['passWordCliente']; ?>
-                </td>
-                <td>
-                  <h4> Actualizado </h4>
-                </td>
-                </tr>
-                <td> <a href='../../loginCliente.php' style='text-decoration:none;'><span font-size:
-                      18px;>&#8592;</span></a> Reiniciar</td>
-                <?php
-              }
-          }
+        while ($fila = $paquete->fetch_array()) {
           ?>
+          <form method='POST' class='form-horizontal mx-3' action='actualizarDatosCliente.php'
+            enctype='multipart/form-data' autocomplete='off' name='registration'>
 
-          </tbody>
-          <div>
-          </div>
-      </div>
+            <tr>
+              <td> <input type='hidden' class='form-control' name='id' value='<?php echo $fila['id_cliente']; ?>'> </td>
 
-      <?php
-      require_once
-        ("./template/pie.php");
-      $db->close();
-      ?>
+
+
+              <td> <label class='col-sm-2 control-label  m-1'>Nombre</label></td>
+
+              <td><input type='text' class='form-control' name='nombreAct' value='<?php echo $fila['nombreCliente']; ?>'>
+              </td>
+
+              <br>
+              <td> <label class='col-sm-2 control-label  m-1'>Apellido</label></td>
+
+              <td><input type='text' class='form-control' name='apellidoAct'
+                  value='<?php echo $fila['apellidoCliente']; ?>'></td>
+
+              <br>
+              <td> <label class='col-sm-2 control-label  m-1'>Contraseña</label></td>
+
+              <td><input type='text' class='form-control' name='passWordAct'
+                  value='<?php echo $fila['passWordCliente']; ?>'></td>
+
+
+              <br>
+              <td><input type='submit' class='btn btn-success' name='submit' value='Actualizar'></td>
+            </tr>
+
+
+
+            <?php
+        }
+        ?>
+        </form>
+
+    </div>
+  </div>
+</div>
+<?php
+if (isset($_POST['submit'])) {
+  $I = $_POST["id"];
+  $N = $_POST["nombreAct"];
+  $A = $_POST["apellidoAct"];
+  $P = $_POST["passWordAct"];
+
+  $consulta = "UPDATE clientesclub SET nombreCliente='$N',apellidoCliente='$A',passWordCliente='$P' WHERE id_cliente='$I' ";
+  $paquete = $db->query($consulta);
+
+  $consulta = "select * from clientesclub where id_cliente='$I'";
+  $paquete = $db->query($consulta);
+
+  echo ' <meta http-equiv="Refresh" content=".51;url=/TFG/proyectoGreen/login/usuario/loginCliente.php">';
+
+
+
+}
+
+require("./template/pie.php");
+$db->close();
+?>

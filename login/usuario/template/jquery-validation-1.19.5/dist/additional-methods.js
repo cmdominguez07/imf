@@ -891,7 +891,7 @@ $.validator.addMethod( "lessThanEqual", function( value, element, param ) {
 }, "Please enter a lesser value." );
 
 $.validator.addMethod( "lettersonly", function( value, element ) {
-	return this.optional( element ) || /^[a-z]+$/i.test( value );
+	return this.optional( element ) || /^[a-z\s]+$/i.test( value );
 }, "Solo letras, por favor." );
 
 $.validator.addMethod( "letterswithbasicpunc", function( value, element ) {

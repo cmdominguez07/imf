@@ -81,7 +81,7 @@ if (!isset($_POST["submit"])) {
 
 } else {
     if ($_FILES["archivo"]["error"] > 0) {
-
+echo "</nav>";
         echo "Error al cargar archivo";
 
     } else {
@@ -98,8 +98,12 @@ if (!isset($_POST["submit"])) {
 
         $consulta = "INSERT INTO plantas (idplanta,nombrePlanta,codigoPlanta,numeroEjemplares,tipoPlanta,precio,ruta_imagen) VALUES (' ','$N','$T','$E','$P','$PRE','$archivo') ";
         $paquete = $db->query($consulta);
+    ?>
+        </nav>
 
-
+      
+        <h3>Datos agregados</h3>
+        <?php
         //$permitidos = array("image/gif", "image/png", "image/jpg"); 
 
         if (!file_exists($ruta)) {
@@ -108,11 +112,9 @@ if (!isset($_POST["submit"])) {
     }
 
     ?>
-      </nav>
-
-    <h3>Datos agregados</h3>
+  
     <meta http-equiv='Refresh'
-        content='0.4;url=/TFG/proyectoGreen/login/usuario/menuAdministrador/adminOpciones/guardarPlantas.php'>
+        content='4;url=/TFG/proyectoGreen/login/usuario/menuAdministrador/adminOpciones/guardarPlantas.php'>
    
    <?php
 
