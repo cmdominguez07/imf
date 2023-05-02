@@ -6,9 +6,9 @@ if (!isset($_POST["submit"])) {
 
         ?>
 
-        <form class="d-flex m-5" method="post" action="guardarCliente.php" name="registration">
+        <form class="d-flex justify-content-left align-items-center p-5" method="post" action="guardarCliente.php" name="registration">
                 <img src="./img/Captura.png" class="w-25 m-5">
-                <div class="row d-flex justify-content-left align-items-center mx-5 my-2">
+                <div class="row d-flex justify-content-left align-items-center m-5 py-2">
                         <h3 style="color:black"> Introduce aquí tus datos</h3>
                         <label>Nombre</label>
                         <input type="text" name="nombreCliente" id="nombreCliente" class="form-control"
@@ -25,6 +25,8 @@ if (!isset($_POST["submit"])) {
                         <input type="submit" name="submit" class="btn btn-secondary w-25" value="Enviar">
                 </div>
         </form>
+        </div>
+</div>
         <?php
 
 } else {
@@ -51,10 +53,11 @@ if (!isset($_POST["submit"])) {
                         </td>
                 </tr>
         </table>
-
+</div>
+</div>
         <?php
 }
 
-require_once("./template/pieLoginYGuardar.php");
+require("./template/pieLoginYGuardar.php");
 $db->close();
 ?>

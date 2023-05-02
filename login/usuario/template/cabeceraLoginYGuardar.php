@@ -14,8 +14,8 @@
 </head>
 
 <body>
-  <div id="contenido1">
-    <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+  <div id="contenido1" class="container-fluid m-0">
+    <nav class="container-fluid navbar navbar-expand-lg navbar-dark bg-primary position-fixed m-0">
       <div class="container-fluid">
         <img src="./img/1logoV.png" class="mx-2" style="width:150px"></td>
         <div class="navbar-mx-5" id="navbarColor01">
@@ -26,10 +26,8 @@
           </ul>
         </div>
         <div class="navbar-mx-5 VolverDerecha">
-          <li>
-            <a href='../index.php' style="text-decoration:none;"><span style="color: white; font-size: 20px;">&#8592;
-                Volver</span></a>
-          </li>
+            <a href='../index.php' style="text-decoration:none;"><span style="color: white; font-size: 18px;">&#8592;
+                Salir</span></a>
         </div>
       </div>
     </nav>

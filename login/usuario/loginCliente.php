@@ -3,7 +3,7 @@ session_start();
 require_once("conexion.php");
 require_once("./template/cabeceraLoginYGuardar.php");
 ?>
-</nav>
+
 
 <div class="row d-flex justify-content-end align-items-center container-fluid" id="fondo">
   <form class="d-flex justify-content-end align-items-center" method="post" action="loginCliente.php" name="registration">

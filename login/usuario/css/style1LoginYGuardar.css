@@ -5,7 +5,10 @@ html {
 }
 
 #contenido1 {
-    min-height: 92%;
+    min-height: 80%;
+    margin: 0;
+    padding: 0;
+
 }
 
 .botonI {
