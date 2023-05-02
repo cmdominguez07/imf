@@ -10,8 +10,12 @@
   <link rel="stylesheet" href="./css/bootstrap.css" />
   <link rel='stylesheet' type='text/css' media='screen' href='./css/style1.css'>
   <link rel="icon" type="image/x-icon" href="./img/imagesFavicon.png">
+  <!-- Replace "test" with your own sandbox Business account app client ID -->
+  <script src="https://www.paypal.com/sdk/js?client-id=<?php echo $_SESSION['id_cliente']; ?> &currency=€"></script>
+
   <script src="./template/jquery-3.6.0.min.js"></script>
 </head>
+
 <body>
   <div id="contenido1">
     <nav class="navbar navbar-expand-lg navbar-dark bg-primary">

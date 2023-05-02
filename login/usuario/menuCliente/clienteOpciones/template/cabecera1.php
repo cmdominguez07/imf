@@ -5,11 +5,14 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
+  <title>Green Leaves</title>
   <link rel="stylesheet" href="./css/bootstrap.min.css" />
   <link rel="stylesheet" href="./css/bootstrap.css" />
   <link rel='stylesheet' type='text/css' media='screen' href='./css/style1.css'>
-  <link rel="icon" type="image/x-icon" href="./img/imagesFavicon.png">
+  <link rel="icon" type="image/x-icon" href="/img/verde.png">
+  <!-- Replace "test" with your own sandbox Business account app client ID -->
+  <script src="https://www.paypal.com/sdk/js?client-id=<?php echo $_SESSION['id_cliente']; ?> &currency=€"></script>
+
   <script src="./template/jquery-3.6.0.min.js"></script>
 </head>
 

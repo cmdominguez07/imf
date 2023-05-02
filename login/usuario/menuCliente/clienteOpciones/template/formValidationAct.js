@@ -54,8 +54,6 @@ console.log("entra en validar");
       passWordAct:{
         minlength: "Introduzca al menos 4 caracteres"
       }
-
-
     },
 
     submitHandler: function (form) {
@@ -66,77 +64,5 @@ alert("Actualizado");
     }
   });
 });
-/*
-
-//archivo template/form-validation.js
 
 
-$(function () {
-
-  // Initialize form validation on the registration form.
-
-  // It has the name attribute "registration"
-
- 
-  $("form[name='registration']").validate({
-
-    // Specify validation rules
-
-    rules: {
-
-      // The key name on the left side is the name attribute
-
-      // of an input field. Validation rules are defined
-
-      // on the right side
-
-      nombreAct: {
-
-        lettersonly: true,
-
-        minlength: 3
-
-      },
-
-      apellidoAct: {
-        lettersonly: true,
-
-        minlength: 3
-        
-      },
-
-      passWordAct:{
-        minlength: 4
-      }
-
-    },
-
-    // Specify validation error messages
-
-    messages: {
-
-      nombreAct: {
-        lettersonly: "solo letras",
-        minlength: "Introduzca al menos 3 caracteres"
-      },
-
-      apellidoAct: {
-        lettersonly: "solo letras",
-        minlength: "Introduzca al menos 3 caracteres"
-      },
-
-      passWordAct:{
-        minlength: "Introduzca al menos 4 caracteres"
-      }
-
-    },
-
-    submitHandler: function (form) {
-
-      form.submit();
-
-    }
-
-  });
-
-});*/

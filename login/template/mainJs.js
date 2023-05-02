@@ -19,11 +19,11 @@ $(document).ready(function() {
     // animacion
     $(".parrafoFoto").hover(
       function() {
-        $(this).css("background-color", "rgba(4, 3, 3, 0.5)"); //cambia el fondo del parrafo de descripicion si pasa el raton por el.
-        $(this).fadeTo("slow", 0.7); //degradado de parrafo si ratón encima
+        $(this).css("background-color", "rgba(140, 87, 88, 0.584)"); //cambia el fondo del parrafo de descripicion si pasa el raton por el.
+        $(this).fadeTo("slow", 1); //degradado de parrafo si ratón encima
       },
       function() {
-        $(this).css("background-color", "rgba(206, 114, 114, 0.5)"); //Devuelve el fondo parrafo a su color si no esta el raton sobre el.
+        $(this).css("background-color", "#ef9798"); //Devuelve el fondo parrafo a su color si no esta el raton sobre el.
         $(this).fadeTo("slow", 1); //vuelve el parrafo a su nitidez
       }
     );
@@ -32,16 +32,16 @@ $(document).ready(function() {
   $(".tituloH4").hover(
     //animacion bground titulo
     function() {
-      $(this).css("background-color", "rgba(4, 3, 3, 0.424)"); //cambia color si pasa el raton sobre el
+      $(this).css("background-color", "rgba(140, 87, 88, 0.584)"); //cambia color si pasa el raton sobre el
     },
     function() {
-      $(this).css("background-color", "rgba(206, 114, 114, 0.424)"); //vuelve a su color de fondo
+      $(this).css("background-color", "#ef9798"); //vuelve a su color de fondo
     }
   );
   $(".pasarImg").hover(
     //animacion contenedor imagenes
     function() {
-      $(this).css("border-color", "rgba(206, 114, 114, 0.424)"); //apararece un borde si el raton pasa por el contenedor img
+      $(this).css("border-color", "#78c2ad"); //apararece un borde si el raton pasa por el contenedor img
       $(this).fadeTo("slow", 1); //nitidez si el raton está por el contenedor img
       $(".tituloH4").fadeTo("slow", 1);
       $(".parrafoFoto").fadeTo("slow", 1); //nitidez parrafo si raton en el contenedor img
