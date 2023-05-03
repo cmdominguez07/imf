@@ -6,14 +6,14 @@ body {
 }
 
 #caja1BV {
-    display:flex;
+    display: flex;
     /*  background: url("../img/_import_60d03363031ba5.08549514.mov");
     background-size: cover;*/
-    background-color:#faf8f844;
+    background-color: #faf8f844;
     margin-top: 220px;
     margin-left: 30px;
-      margin-right: 200px;
-      justify-content: center;
+    margin-right: 200px;
+    justify-content: center;
     align-items: center;
 
 }
@@ -63,8 +63,8 @@ body {
     overflow: hidden;
 }
 
-h4{
-    color:white;
+h4 {
+    color: white;
 }
 
 .curiosidad {
@@ -186,7 +186,7 @@ nav {
 
 .letraBlanca {
     color: white;
-    
+
     text-shadow: black 0.1em 0.1em 0.2em;
 }
 
@@ -205,12 +205,13 @@ nav {
 
 }
 
-.tarjetas:hover{
+.tarjetas:hover {
     transform: scale(1.05, 1.05);
-    box-shadow: 2px 2px 15px 8px rgba(15, 241, 101, 0.25), 
-      -2px -2px 15px 8px rgba(102, 250, 179, 0.322);
-      transition: 1s;
+    box-shadow: 2px 2px 15px 8px rgba(15, 241, 101, 0.25),
+        -2px -2px 15px 8px rgba(102, 250, 179, 0.322);
+    transition: 1s;
 }
-.tarjetas{
+
+.tarjetas {
     transition: 1s;
 }

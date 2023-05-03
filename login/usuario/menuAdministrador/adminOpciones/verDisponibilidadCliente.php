@@ -17,8 +17,8 @@ if (isset($_POST["submit"])) {
 	} else {
 		?>
 		<div class="navbar-mx-5 VolverDerecha">
-				<a href='./verClientes.php' style='text-decoration:none;'><span style='color: white; font-size: 20px;'>&#8592;
-						Volver</span></a>
+			<a href='./verClientes.php' style='text-decoration:none;'><span style='color: white; font-size: 18px;'>&#8592;
+					Volver</span></a>
 		</div>
 		</nav>
 		<div class="container mt-3">
@@ -36,10 +36,8 @@ if (isset($_POST["submit"])) {
 	?>
 
 	<div class="navbar-mx-5 VolverDerecha">
-		<li>
-			<a href='./verClientes.php' style='text-decoration:none;'><span style='color: white; font-size: 20px;'>&#8592;
-					Volver</span></a>
-		</li>
+		<a href='./verClientes.php' style='text-decoration:none;'><span style='color: white; font-size: 18px;'>&#8592;
+				Volver</span></a>
 	</div>
 	</nav>
 	<div class="container mt-3">

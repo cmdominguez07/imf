@@ -6,7 +6,7 @@ require_once("./template/cabecera.php");
 $_SESSION['passWordCliente'];
 $_SESSION['id_cliente'];
 
-if (isset($_POST["submit"])) {
+if (isset($_POST["buscar"])) {
 
 	$N = $_POST["nombrePlanta"];
 
@@ -18,11 +18,11 @@ if (isset($_POST["submit"])) {
 
 		?>
 		<div class="navbar-mx-5 VolverDerecha">
-				<a href='./borrarPlantas.php' style='text-decoration:none;'><span style='color: white; font-size: 20px;'>&#8592;
-						Volver</span></a>
+			<a href='./borrarPlantas.php' style='text-decoration:none;'><span style='color: white; font-size: 18px;'>&#8592;
+					Volver</span></a>
 		</div>
 		</nav>
-		<div class="container mt-3">
+		<div class="container pt-5">
 			<div class="row">
 				<div class="col-12">
 					<h3>No disponible</h3>
@@ -33,62 +33,78 @@ if (isset($_POST["submit"])) {
 		<?php
 
 		echo "<p>No disponible</p>";
-	}
 
+	}
 	?>
 
 	<div class="navbar-mx-5 VolverDerecha">
 		<li>
-			<a href='./borrarPlantas.php' style='text-decoration:none;'><span style='color: white; font-size: 20px;'>&#8592;
+			<a href='./borrarPlantas.php' style='text-decoration:none;'><span style='color: white; font-size: 18px;'>&#8592;
 					Volver</span></a>
 		</li>
 	</div>
 	</nav>
-	<div class="container mt-3">
+
+	<div class="container py-5 d-flex justify-content-center align-items-center h-100">
 		<div class="row">
-			<div class="col-12">
-				<table class="table table-striped">
-					<thead class=" thead-inverse">
+			<div class="col-12 my-5 py-5">
+				<table class="table table-striped mt-3 px-2">
+					<thead class=" thead-inverse pt-5">
 						<tr>
-							<th>Referencia</th>
+							<th>ID</th>
 							<th>Nombre</th>
 							<th>Código</th>
-							<th>Código</th>
+							<th>Precio</th>
+							<th>Tipo</th>
+							<th>Imagen</th>
 						</tr>
 					</thead>
 					<tbody>
-
 						<?php
 
 
 						while ($fila = $paquete->fetch_array()) {
 							?>
-							<tr>
-								<!--	<td>  php  echo $fila['idplanta']</td>-->
-								<td>
-									<?php echo $fila['nombrePlanta']; ?>
-								</td>
-								<td>
-									<?php echo $fila['codigoPlanta']; ?>
-								</td>
-								<td>
-									<?php echo $fila['numeroEjemplares']; ?>
-								</td>
-								<td><img style='width:150px' src='<?php echo $fila['ruta_imagen']; ?>'></td>
-							</tr>
-							<?php
+							<form method='POST' action='borrarPlantas.php'
+								class="container-fluid d-flex justify-content-center align-items-center mt-2">
+								<tr>
+									<td> <input type='text' name='idplanta' value='<?php echo $fila['idplanta']
+									; ?>' readonly class='form-control-plaintext'> </td>
+									<td><input type='text' name='nombre' value='<?php echo $fila['nombrePlanta']
+									; ?>' readonly class='form-control-plaintext'></td>
+									<td><input type='text' name='codigo' value='<?php echo $fila['codigoPlanta']
+									; ?>' readonly class='form-control-plaintext'></td>
+									<td><input type='text' name='precio' value='<?php echo $fila['precio']
+									; ?>' readonly class='form-control-plaintext'></td>
+									<td><input type='text' name='TipoPlanta' value='<?php echo $fila['TipoPlanta']
+									; ?>' readonly class='form-control-plaintext'></td>
+									<td><img style='width:100px' src='<?php
+									echo $fila['ruta_imagen']; ?> '></td>
+									<td>
+										<input type='submit' name='Editar' value='Editar' class='btn btn-info'>
+									</td>
+									<td>
+										<input type='submit' name='Borrar' value='Borrar' class='btn btn-danger'>
+									</td>
+								</tr>
+							</form>
+						</tbody>
+						<?php
+						}
+						if (isset($_POST['Editar'])) {
 
+							$IPP = $_POST['idplanta'];
+							header("Location:/TFG/proyectoGreen/login/usuario/menuAdministrador/adminOpciones/borrarPlantas.php?idplanta=$IPP");
 						}
 						?>
-						<td>Búsqueda finalizada</td>
-					</tbody>
 
 				</table>
 			</div>
 		</div>
-	</div>
-	
-	<?php
+
+		<?php
+
+
 }
 require_once("./template/pie.php");
 $db->close();

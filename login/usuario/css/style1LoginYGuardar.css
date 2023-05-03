@@ -1,4 +1,3 @@
-
 body,
 html {
     height: 100%;
@@ -18,8 +17,8 @@ html {
 #footer {
     margin: 0;
 }
- b
-#fotoInicio {
+
+b #fotoInicio {
     margin: 25%;
 }
 
@@ -30,8 +29,9 @@ html {
     height: 600px;
     z-index: 3;
 }
+
 form .error {
 
     color: #ff0000;
-  
-  }
+
+}

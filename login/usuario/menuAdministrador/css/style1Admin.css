@@ -1,25 +1,36 @@
+html {
+    margin: 0;
+    height: 50%;
 
-body, html{
-
-    height:100%;
-    
 }
-#contenido1{
 
-   min-height:92%;
-  
+#contenido1 {
+
+    min-height: 60%;
+
 }
 
 
 
 #footer {
-margin:0;
-
-}
-
-#menuAD{
-    background-color:white;
+    margin-bottom: 0;
+    height: 0;
 
 
 }
 
+#menuAD {
+    background-color: white;
+
+
+}
+
+.fd {
+    background: rgb(255, 255, 255);
+    background: linear-gradient(40deg, rgba(255, 255, 255, 0.5) 70%, rgba(120, 194, 173, 0.623) 30%);
+}
+
+.m-5 {
+    margin-left: 15rem !important;
+    margin-right: 15rem !important;
+}

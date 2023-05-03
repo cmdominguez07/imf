@@ -17,7 +17,7 @@ $C = $_SESSION['passWordCliente'];
     Volver</span></a>
 </div>
 </nav>
-<div class="container mt-5">
+<div class="container mt-5 w-50">
   <div class="row">
     <div class="col-12">
 

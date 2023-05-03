@@ -9,45 +9,57 @@ $_SESSION['passWordCliente'];
 $_SESSION['id_cliente'];
 
 $I = $_POST["idplanta"];
-$N = $_POST["nombrePlanta"];
-$P = $_POST["codigoPlanta"];
-$NE = $_POST["numeroEjemplares"];
-$TP = $_POST["TipoPlanta"];
-$AA = $_POST["archivo"];
 
 
-if ($N != "") {
 
+
+
+if (!empty($_POST["nombrePlanta"])) {
+  $N = $_POST["nombrePlanta"];
   $consulta = "UPDATE plantas SET nombrePlanta='$N' WHERE idplanta='$I' ";
   $paquete = $db->query($consulta);
 
 }
 
 
-if ($P != "") {
-
+if (!empty($_POST["codigoPlanta"])) {
+  $P = $_POST["codigoPlanta"];
   $consulta = "UPDATE plantas SET codigoPlanta='$P' WHERE idplanta='$I' ";
   $paquete = $db->query($consulta);
 
 }
-if ($NE != "") {
-
+if (!empty($_POST["numeroEjemplares"])) {
+  $NE = $_POST["numeroEjemplares"];
   $consulta = "UPDATE plantas SET numeroEjemplares='$NE' WHERE idplanta='$I' ";
   $paquete = $db->query($consulta);
 
 }
 
-if ($TP != "") {
-
+if (!empty($_POST["tipoPlanta"])) {
+  $TP = $_POST["tipoPlanta"];
   $consulta = "UPDATE plantas SET TipoPlanta='$TP' WHERE idplanta='$I' ";
   $paquete = $db->query($consulta);
 
 }
 
-if ($AA != "") {
+if (!empty($_POST["precio"])) {
+  $PRE = $_POST["precio"];
+  $consulta = "UPDATE plantas SET TipoPlanta='$PRE' WHERE idplanta='$I' ";
+  $paquete = $db->query($consulta);
+
+}
+
+$foto = $_FILES["archivo"]["name"];
+$nameTemporal = $_FILES["archivo"]["tmp_name"];
+$id_insert = $db->insert_id;
+$ruta = 'files/' . $id_insert . '/';
+$archivo = $ruta . $_FILES["archivo"]["name"];
+
+if ($archivo != "files/0/" || $_FILES["archivo"]["name"] != "") {
 
 
-  $consulta = "UPDATE plantas SET ruta_imagen='$AA' WHERE idplanta='$I' ";
+
+  $consulta = "UPDATE plantas SET ruta_imagen='$archivo' WHERE idplanta='$I' ";
   $paquete = $db->query($consulta);
 
 }
@@ -59,8 +71,8 @@ $paquete = $db->query($consulta);
 ?>
 
 <div class="navbar-mx-5 VolverDerecha">
-    <a href='./borrarPlantas.php' style='text-decoration:none;'><span style='color: white; font-size: 20px;'>&#8592;
-        Volver</span></a>
+  <a href='./borrarPlantas.php' style='text-decoration:none;'><span style='color: white; font-size: 18px;'>&#8592;
+      Volver</span></a>
 </div>
 </nav>
 
@@ -85,6 +97,10 @@ $paquete = $db->query($consulta);
           <td><input type='text' name='nombre' value=' <?php echo $fila['nombrePlanta'] ?>' readonly
               class='form-control-plaintext'></td>
           <td><input type='text' name='codigo' value=' <?php echo $fila['codigoPlanta'] ?>' readonly
+              class='form-control-plaintext'></td>
+          <td><input type='text' name='precio' value=' <?php echo $fila['precio'] ?>' readonly
+              class='form-control-plaintext'></td>
+          <td><input type='text' name='TipoPlanta' value=' <?php echo $fila['TipoPlanta'] ?>' readonly
               class='form-control-plaintext'></td>
           <td><img style='width:200px' src=' <?php echo $fila['ruta_imagen'] ?>'></td>
 

@@ -9,7 +9,7 @@
   <link rel="stylesheet" href="./css/bootstrap.min.css" />
   <link rel="stylesheet" href="./css/bootstrap.css" />
   <link rel='stylesheet' type='text/css' media='screen' href='./css/style1.css'>
-  <link rel="icon" type="image/x-icon" href="/img/verde.png">
+  <link rel="icon" type="image/x-icon" href="../img/favicon.ico">
   <!-- Replace "test" with your own sandbox Business account app client ID -->
   <script src="https://www.paypal.com/sdk/js?client-id=<?php echo $_SESSION['id_cliente']; ?> &currency=€"></script>
 
@@ -20,7 +20,7 @@
   <div id="contenido1">
     <nav class="navbar navbar-expand-lg navbar-dark bg-primary px-3">
       <div class="container-fluid">
-        <img src="./img/butterflies-gce6dcdf26_1280.jpg" style="width:50px"></td>
+        <img src="../img/1logoV.png" style="width:150px"></td>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarColor01"
           aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>

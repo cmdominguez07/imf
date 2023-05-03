@@ -14,18 +14,17 @@ $paquete = $db->query($consulta);
 
 <form method="post" class="d-flex justify-content-center align-items-center" action="verDisponibilidadCliente.php">
   <input type="text" class="form-control " name="nombreCliente" required>
-  <input type="submit" class="btn btn-secondary mx-1" name="submit" value="Buscar Nombre">
+  <input type="submit" class="btn btn-secondary mx-1 material-symbols-rounded" name="submit" value="search">
 </form>
 <div class="navbar-mx-2 VolverDerecha">
-    <a href='../menuAdministrador.php' style='text-decoration:none;'><span
-        style='color: white; font-size: 20px;'>&#8592; Volver</span></a>
-</div>
+  <a href='../menuAdministrador.php' style='text-decoration:none;'><span style='color: white; font-size: 18px;'>&#8592;
+      Volver</span></a>
 </div>
 </nav>
-<div class="container mt-3">
+<div class="container pt-5">
   <div class="row">
-    <div class="col-12">
-      <table class="table table-striped">
+    <div class="col-12 pt-5">
+      <table class="table table-striped pt-5">
         <thead class=" thead-inverse">
           <tr>
             <th>Referencia</th>
