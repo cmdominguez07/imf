@@ -9,7 +9,7 @@ $_SESSION['passWordCliente'];
 $_SESSION['id_cliente'];
 $N = $_SESSION['nombreCliente'];
 $idC = $_SESSION['id_cliente'];
-$C = $_SESSION['passWordCliente'];
+$C = md5($_SESSION['passWordCliente']);
 
 ?>
 <div>
@@ -17,9 +17,9 @@ $C = $_SESSION['passWordCliente'];
     Volver</span></a>
 </div>
 </nav>
-<div class="container mt-5 w-50">
+<div class="container pt-5 w-50">
   <div class="row">
-    <div class="col-12">
+    <div class="col-12 pt-5">
 
 
       <tbody>
@@ -53,8 +53,8 @@ $C = $_SESSION['passWordCliente'];
               <br>
               <td> <label class='col-sm-2 control-label  m-1'>Contraseña</label></td>
 
-              <td><input type='text' class='form-control' name='passWordAct'
-                  value='<?php echo $fila['passWordCliente']; ?>'></td>
+              <td><input type='password' class='form-control' name='passWordAct'
+                  value='<?php echo md5($fila['passWordCliente']); ?>'></td>
 
 
               <br>
@@ -76,7 +76,7 @@ if (isset($_POST['submit'])) {
   $I = $_POST["id"];
   $N = $_POST["nombreAct"];
   $A = $_POST["apellidoAct"];
-  $P = $_POST["passWordAct"];
+  $P = md5($_POST["passWordAct"]);
 
   $consulta = "UPDATE clientesclub SET nombreCliente='$N',apellidoCliente='$A',passWordCliente='$P' WHERE id_cliente='$I' ";
   $paquete = $db->query($consulta);

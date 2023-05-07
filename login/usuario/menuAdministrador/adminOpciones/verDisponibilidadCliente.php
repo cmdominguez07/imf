@@ -21,8 +21,8 @@ if (isset($_POST["submit"])) {
 					Volver</span></a>
 		</div>
 		</nav>
-		<div class="container mt-3">
-			<div class="row">
+		<div class="container pt-5">
+			<div class="row pt-5">
 				<div class="col-12">
 					<h3>No disponible</h3>
 				</div>
@@ -40,9 +40,9 @@ if (isset($_POST["submit"])) {
 				Volver</span></a>
 	</div>
 	</nav>
-	<div class="container mt-3">
-		<div class="row">
-			<div class="col-12">
+	<div class="container pt-5">
+		<div class="row pt-5">
+			<div class="col-12 pt5">
 				<table class="table table-striped">
 					<thead class=" thead-inverse">
 						<tr>

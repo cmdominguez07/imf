@@ -10,6 +10,8 @@
   <link rel="stylesheet" href="./css/bootstrap.css" />
   <link rel='stylesheet' type='text/css' media='screen' href='./css/style1.css'>
   <link rel="icon" type="image/x-icon" href="./img/imagesFavicon.png">
+  <!--iconos-->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
   <!-- Replace "test" with your own sandbox Business account app client ID -->
   <script src="https://www.paypal.com/sdk/js?client-id=<?php echo $_SESSION['id_cliente']; ?> &currency=€"></script>
 

@@ -31,29 +31,33 @@
       <div class="card-header">1</div>
       <div class="card-body">
         <h4 class="card-title">Aromatizantes naturales</h4>
-        <p class="card-text"> Es las forma más natural de aromatizar nuestro hogar, con lo que evitamos comprar aromatizantes artificiales que son contaminantes.
-         </p>
+        <p class="card-text"> Es las forma más natural de aromatizar nuestro hogar, con lo que evitamos comprar
+          aromatizantes artificiales que son contaminantes.
+        </p>
       </div>
     </div>
     <div class="col-lg-3 card text-white bg-primary tarjetas rounded-0 mb-3 m-2" style="max-width: 20rem;">
       <div class="card-header"> 2</div>
       <div class="card-body">
         <h4 class="card-title">Mejoran el estado anímico</h4>
-        <p class="card-text">Cuidar las plantas, regarlas, podarlas y verlas crecer y florecer mejoran notablemente el estado anímico y reduce la depresión.</p>
+        <p class="card-text">Cuidar las plantas, regarlas, podarlas y verlas crecer y florecer mejoran notablemente el
+          estado anímico y reduce la depresión.</p>
       </div>
     </div>
     <div class="col-lg-3 card text-white bg-primary tarjetas rounded-0 mb-3 m-2" style="max-width: 20rem;">
       <div class="card-header"> 3</div>
       <div class="card-body">
         <h4 class="card-title"> Ayudan a respirar mejor</h4>
-        <p class="card-text">Las plantas aumentan la humedad y reducen la sequedad del ambiente, por lo tanto, nos ayuda a respirar mejor.</p>
+        <p class="card-text">Las plantas aumentan la humedad y reducen la sequedad del ambiente, por lo tanto, nos ayuda
+          a respirar mejor.</p>
       </div>
     </div>
     <div class=" col-lg-3 card text-white bg-primary tarjetas rounded-0 mb-3 m-2" style="max-width: 20rem;">
       <div class="card-header"> 4</div>
       <div class="card-body">
         <h4 class="card-title">Remedios Naturales Eficaces</h4>
-        <p class="card-text justify-content-center">Algunas plantas tienen propiedades terapéuticas, como el aloe vera, o se pueden utilizar para sazonar las comidas, como el romero.</p>
+        <p class="card-text justify-content-center">Algunas plantas tienen propiedades terapéuticas, como el aloe vera,
+          o se pueden utilizar para sazonar las comidas, como el romero.</p>
       </div>
     </div>
   </div>
@@ -63,28 +67,32 @@
       <div class="card-header"> 5</div>
       <div class="card-body">
         <h4 class="card-title">Mejor productividad</h4>
-        <p class="card-text">Gracias al proceso de la fotosíntesis las plantas observen el dióxido de carbono y liberan oxígeno en presencia del sol, de esta manera pueden sintetizar glucosa</p>
+        <p class="card-text">Gracias al proceso de la fotosíntesis las plantas observen el dióxido de carbono y liberan
+          oxígeno en presencia del sol, de esta manera pueden sintetizar glucosa</p>
       </div>
     </div>
     <div class="col-lg-3 card text-white bg-primary tarjetas rounded-0 mb-3 m-2" style="max-width: 20rem;">
       <div class="card-header"> 6</div>
       <div class="card-body">
         <h4 class="card-title">Reducen el estrés</h4>
-        <p class="card-text"> Su color y su forma nos calma y relaja. Las plantas nos permiten recuperarnos de la fatiga mental, reducen la presión sanguínea y cuidarlas tiene un efecto relajante.</p>
+        <p class="card-text"> Su color y su forma nos calma y relaja. Las plantas nos permiten recuperarnos de la fatiga
+          mental, reducen la presión sanguínea y cuidarlas tiene un efecto relajante.</p>
       </div>
     </div>
     <div class="col-lg-3 card text-white bg-primary tarjetas rounded-0 mb-3 m-2" style="max-width: 20rem;">
       <div class="card-header"> 7</div>
       <div class="card-body">
         <h4 class="card-title">Reducen el ruido</h4>
-        <p class="card-text">Pueden desviar la energía del sonido incidente a través de la vibración de su estructura flexible, reduciendo así la intensidad de las ondas [sonoras] incidentes</p>
+        <p class="card-text">Pueden desviar la energía del sonido incidente a través de la vibración de su estructura
+          flexible, reduciendo así la intensidad de las ondas [sonoras] incidentes</p>
       </div>
     </div>
     <div class=" col-lg-3 card text-white bg-primary tarjetas rounded-0 mb-3 m-2" style="max-width: 20rem;">
       <div class="card-header"> 8</div>
       <div class="card-body">
         <h4 class="card-title">Purifican el aire</h4>
-        <p class="card-text">Durante el proceso de la fotosíntesis, las plantas absorben el dióxido de carbono y lo transforman en oxígeno, produciendo una energía limpia necesaria para el ser humano.</p>
+        <p class="card-text">Durante el proceso de la fotosíntesis, las plantas absorben el dióxido de carbono y lo
+          transforman en oxígeno, produciendo una energía limpia necesaria para el ser humano.</p>
       </div>
     </div>
   </div>
@@ -130,42 +138,30 @@
   </div>
 
 
-  <footer id="footer" class="bg-light text-center text-white">
+  <footer id="footer" class="bg-light text-center text-white m-0">
     <!-- Grid container -->
     <div class="container p-4 pb-0">
       <!-- Section: Social media -->
       <section class="m-4 p-0">
-        <!-- Facebook -->
-        <a class="btn btn-primary btn-floating m-1" style="background-color: #3b5998;" href="#!" role="button"><i
-            class="fab fa-facebook-f"></i></a>
+        <!-- RRSS -->
 
-        <!-- Twitter -->
-        <a class="btn btn-primary btn-floating m-1" style="background-color: #55acee;" href="#!" role="button"><i
-            class="fab fa-twitter"></i></a>
+        <ul class="socialIcons">
+          <li class="facebook"><a href="#"><i class="fa fa-fw fa-facebook"></i>Facebook</a></li>
+          <li class="twitter"><a href=""><i class="fa fa-fw fa-twitter"></i>Twitter</a></li>
+          <li class="instagram"><a href=""><i class="fa fa-fw fa-instagram"></i>Instagram</a></li>
+          <li class="pinterest"><a href=""><i class="fa fa-fw fa-pinterest-p"></i>Pinterest</a></li>
+          <li class="steam"><a href=""><i class="fa fa-fw fa-steam"></i>Steam</a></li>
+        </ul>
 
-        <!-- Google -->
-        <a class="btn btn-primary btn-floating m-1" style="background-color: #dd4b39;" href="#!" role="button"><i
-            class="fab fa-google"></i></a>
-
-        <!-- Instagram -->
-        <a class="btn btn-primary btn-floating m-1" style="background-color: #ac2bac;" href="#!" role="button"><i
-            class="fa-brands fa-instagram"></i></a>
-
-        <!-- Linkedin -->
-        <a class="btn btn-primary btn-floating m-1" style="background-color: #0082ca;" href="#!" role="button"><i
-            class="fab fa-linkedin-in"></i></a>
-        <!-- Github -->
-        <a class="btn btn-primary btn-floating m-1" style="background-color: #333333;" href="#!" role="button"><i
-            class="fab fa-github"></i></a>
       </section>
       <!-- Section: Social media -->
     </div>
     <!-- Grid container -->
 
     <!-- Copyright -->
-    <div class="text-center p-3 bg-primary ">
-      © 2020 Copyright:
-      <a class="text-white" href="https://mdbootstrap.com/">MDBootstrap.com</a>
+    <div class="text-center p-3 m-0 bg-primary ">
+      © 2023 Copyright:
+      <a class="text-white" href="https://mdbootstrap.com/">Cristina Martín Domínguez</a>
     </div>
     <!-- Copyright -->
   </footer>

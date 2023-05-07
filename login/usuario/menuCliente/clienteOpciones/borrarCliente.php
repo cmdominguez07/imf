@@ -8,7 +8,7 @@ $_SESSION['passWordCliente'];
 $idid = $_SESSION['id_cliente'];
 
 $N = $_SESSION['nombreCliente'];
-$C = $_SESSION['passWordCliente'];
+$C = md5($_SESSION['passWordCliente']);
 
 ?>
 
@@ -44,7 +44,7 @@ $C = $_SESSION['passWordCliente'];
                       class='form-control-plaintext'></td>
                   <td><input type='text' name='apellido' value='<?php echo $fila['apellidoCliente']; ?>' readonly
                       class='form-control-plaintext'></td>
-                  <td><input type='text' name='passWord' value='<?php echo $fila['passWordCliente']; ?>' readonly
+                  <td><input type='password' name='passWord' value='<?php echo md5($fila['passWordCliente']); ?>' readonly
                       class='form-control-plaintext'></td>
                   <td> <input type='submit' class='btn btn-danger' name='submit' value='Borrar'> </td>
                   <td> <a href='../menuClientes.php' style='text-decoration:none;'><span font-size: 18px;>&#8592;

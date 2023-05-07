@@ -16,14 +16,11 @@ if (!isset($_POST['submit'])) {
   $paquete = $db->query($consulta);
 
   ?>
-  <li class="mx-5">
-    <a href="../menuClientes.php" style="text-decoration:none;"><span style="color: white; font-size: 20px;">&#8592;
+    <a href="../menuClientes.php" style="text-decoration:none;"><span style="color: white; font-size: 18px;">&#8592;
         Volver</span></a>
-  </li>
   <!--<li>
       <a type="submit" class='btn btn-secondary mx-2' name="submit" value="Consultar" onclick=location.href="adminOpciones/verDisponibilidad.php">Consultar disponibilidad</a>
       </li>-->
-  </div>
   </nav>
 
   <div class="container-fluid mt-2">

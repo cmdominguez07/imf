@@ -1,8 +1,8 @@
 <?php
 
 
-require_once("conexion.php");
-require_once("./template/cabecera.php");
+require("conexion.php");
+require("template/cabecera.php");
 session_start();
 $_SESSION['nombreCliente'];
 $_SESSION['passWordCliente'];
@@ -11,7 +11,7 @@ $_SESSION['id_cliente'];
 
 ?>
 <div class="navbar-mx-5 VolverDerecha">
-  <a href='../menuAdministrador.php' style='text-decoration:none;'><span style='color: white; font-size: 20px;'>&#8592;
+  <a href='../menuAdministrador.php' style='text-decoration:none;'><span style='color: white; font-size: 18px;'>&#8592;
       Volver</span></a>
 </div>
 </nav>
@@ -35,8 +35,8 @@ $_SESSION['id_cliente'];
 
           while ($fila = $paquete->fetch_array()) {
             ?>
-            <form method='POST' class='form-vertical mx-5' action='plantasActConExito.php' enctype='multipart/form-data'
-              autocomplete='off' name='registration'>
+            <form method='POST'  name='actual' class='form-vertical mx-5' action='plantasActConExito.php' enctype='multipart/form-data'
+              autocomplete='off'>
               <tr>
 
                 <input type='hidden' class='form-control my-1' name='idplanta' value='<?php echo $I ?>'>
@@ -46,15 +46,15 @@ $_SESSION['id_cliente'];
                   value='<?php echo $fila['nombrePlanta']; ?>'>
                 <br>
                 <label class='col-sm-2 control-label  my-1'>Código</label>
-                <input type='text' class='form-control mt-1' name='codigoPlanta'
+                <input type='number' class='form-control mt-1' name='codigoPlanta'
                   value='<?php echo $fila['codigoPlanta']; ?>'>
                 <br>
                 <label class='col-sm-2 control-label my-1'>Cantidad</label>
-                <input type='text' class='form-control mt-1' name='numeroEjemplares'
+                <input type='number' class='form-control mt-1' name='numeroEjemplares'
                   value='<?php echo $fila['numeroEjemplares']; ?>'>
                 <br>
                 <label class='col-sm-2 control-label my-1'>Precio</label>
-                <input type='text' class='form-control mt-1' name='precio' value='<?php echo $fila['precio']; ?>'>
+                <input type='number' class='form-control mt-1' name='precio' value='<?php echo $fila['precio']; ?>'>
 
                 <legend class="mt-2">Tipo de planta</legend>
                 <div class="form-check">
@@ -89,76 +89,12 @@ $_SESSION['id_cliente'];
 <?php
 
 if (isset($_POST["Actualizar1"])) {
+
   $IPP = $_GET['idplanta'];
   header("Location:/TFG/proyectoGreen/login/usuario/menuAdministrador/adminOpciones/plantasActConExito.php?idplanta=$IPP");
 
-  /*
-  $I = $_POST["idplanta"];
-  $N = $_POST["nombrePlanta"];
-  $P = $_POST["codigoPlanta"];
-  $NE = $_POST["numeroEjemplares"];
-  $TP1 = $_POST["tipoPlanta"];
-  $foto = $_FILES["archivo"]["name"];
-  $nameTemporal = $_FILES["archivo"]["tmp_name"];
-  $id_insert = $db->insert_id;
-  $ruta = 'files/' . $id_insert . '/';
-  $archivo = $ruta . $_FILES["archivo"]["name"];
-  if ($N != "") {
-  $consulta = "UPDATE plantas SET nombrePlanta='$N' WHERE idplanta='$I' ";
-  $paquete = $db->query($consulta);
-  }
-  if ($P != "") {
-  $consulta = "UPDATE plantas SET codigoPlanta='$P' WHERE idplanta='$I' ";
-  $paquete = $db->query($consulta);
-  }
-  if ($NE != "") {
-  $consulta = "UPDATE plantas SET numeroEjemplares='$NE' WHERE idplanta='$I' ";
-  $paquete = $db->query($consulta);
-  }
-  if ($TP1 != "") {
-  $consulta = "UPDATE plantas SET TipoPlanta='$TP1' WHERE idplanta='$I' ";
-  $paquete = $db->query($consulta);
-  }
-  if ($archivo != "files/0/") {
-  $consulta = "UPDATE plantas SET ruta_imagen='$archivo' WHERE idplanta='$I' ";
-  $paquete = $db->query($consulta);
-  }
-  $consulta = "select * from plantas where idplanta='$I'";
-  $paquete = $db->query($consulta);
-  ?>
-  <div class="navbar-mx-5 VolverDerecha">
-  <a href='./borrarPlantas.php' style='text-decoration:none;'><span style='color: white; font-size: 18px;'>&#8592;
-  Volver</span></a>
-  </div>
-  </nav>
-  <div class="row">
-  <div class="col-12">
-  <table class="table table-striped">
-  <thead class=" thead-inverse">
-  <tr>
-  <th>ID</th>
-  <th>Nombre</th>
-  <th>Código</th>
-  </tr>
-  </thead>
-  <tbody>
-  <?php
-  while ($fila = $paquete->fetch_array()) {
-  echo "<td> <input type='text' name='idplanta' value='" . $fila['idplanta'] . "' readonly class='form-control-plaintext' > </td>";
-  echo "<td><input type='text' name='nombre' value='" . $fila['nombrePlanta'] . "' readonly class='form-control-plaintext'></td>";
-  echo "<td><input type='text' name='codigo' value='" . $fila['codigoPlanta'] . "'readonly class='form-control-plaintext'></td>";
-  echo "<td><img style='width:200px' src='" . $fila['ruta_imagen'] . "'></td>";
-  }
-  
-  ?>
-  </tbody>
-  <div>
-  </div>
-  </div>
-  
-  <?php*/
 }
-require_once("./template/pie.php");
+require("template/pie.php");
 
 $db->close();
 ?>

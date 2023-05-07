@@ -1,10 +1,10 @@
 <?php
 
 
-require_once("conexion.php");
-require_once("./template/cabecera.php");
+require("conexion.php");
+require("./template/cabecera.php");
 session_start();
-echo "Usuario: " . $_SESSION['nombreCliente'];
+/*echo "Usuario: " . $_SESSION['nombreCliente'];*/
 $_SESSION['passWordCliente'];
 $_SESSION['id_cliente'];
 
@@ -44,7 +44,7 @@ if (!empty($_POST["tipoPlanta"])) {
 
 if (!empty($_POST["precio"])) {
   $PRE = $_POST["precio"];
-  $consulta = "UPDATE plantas SET TipoPlanta='$PRE' WHERE idplanta='$I' ";
+  $consulta = "UPDATE plantas SET precio='$PRE' WHERE idplanta='$I' ";
   $paquete = $db->query($consulta);
 
 }
@@ -76,14 +76,16 @@ $paquete = $db->query($consulta);
 </div>
 </nav>
 
-<div class="row">
-  <div class="col-12">
-    <table class="table table-striped">
+<div class="row pt-5 alto">
+  <div class="col-12 pt-5 ">
+    <table class="table table-striped ">
       <thead class=" thead-inverse">
         <tr>
           <th>ID</th>
           <th>Nombre</th>
           <th>Código</th>
+          <th>Precio</th>
+          <th>Tipo</th>
         </tr>
       </thead>
       <tbody>
@@ -110,9 +112,10 @@ $paquete = $db->query($consulta);
 
         ?>
       </tbody>
+      </table>
       <div>
       </div>
-  </div>
+   
 
   <?php
 

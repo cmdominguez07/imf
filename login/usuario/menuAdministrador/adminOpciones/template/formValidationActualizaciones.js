@@ -1,10 +1,11 @@
-//archivo template/form-validation.js
-
 
 $(function () {
 
+  // Initialize form validation on the registration form.
 
-  $("form[name='introducirPlanta']").validate({
+  // It has the name attribute "registration"
+
+  $("form[name='actual']").validate({
 
     // Specify validation rules
 
@@ -18,7 +19,7 @@ $(function () {
 
       nombrePlanta: {
         lettersonly: true,
-        required: true,
+        required: false,
         number: false,
         minlength: 3,
         maxlength: 15
@@ -27,25 +28,17 @@ $(function () {
       },
 
       codigoPlanta: {
-        required: true,
+
         number: true,
         maxlength: 4
-      },
-
-      numeroEjemplares: {
-
-        number: true,
-        maxlength: 3
       },
 
       precio: {
 
         required: true,
         number: true,
-        maxlength: 8
+
       }
-
-
 
     },
 
@@ -54,28 +47,27 @@ $(function () {
     messages: {
 
       nombrePlanta: {
-        required: "Por favor, introduzca el nombre del producto",
+
         minlength: "El nombre debe tener al menos 3 caracteres.",
         maxlength: "El nombre debe tener máximo 15 caracteres."
 
       },
       codigoPlanta: {
-        required: "Por favor, introduzca el código del producto",
+
         number: "Por favor, intruduzca un valor numérico",
+        minlength: "El nombre debe tener al menos 3 caracteres.",
         maxlength: "El código debe tener máximo 4 dígitos."
 
       },
 
       numeroEjemplares: {
-        required: "Por favor, introduzca la cantidad disponible",
         number: "Por favor, intruduzca un valor numérico",
-        maxlength: "El código debe tener máximo 3 dígitos."
+        minlength: "El nombre debe tener al menos 3 caracteres.",
+        maxlength: "El código debe tener máximo 4 dígitos."
 
       },
       precio: {
-        required: "Por favor, introduzca el precio",
         number: "Por favor, intruduzca un valor numérico",
-        maxlength: "Precio no válido."
 
       },
 
@@ -87,6 +79,6 @@ $(function () {
       form.submit();
 
     }
-  });
 
+  });
 });

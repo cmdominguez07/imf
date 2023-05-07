@@ -8,8 +8,8 @@ if (!isset($_POST["submit"])) {
 
         <form class="d-flex justify-content-left align-items-center p-5" method="post" action="guardarCliente.php"
                 name="registration">
-                <img src="./img/Captura.png" class="w-25 m-5">
-                <div class="row d-flex justify-content-left align-items-center m-5 py-2">
+                <img src="./img/Captura.png" class="w-25 p-5 m-5">
+                <div class="row d-flex justify-content-left align-items-center p-5 py-2">
                         <h3 style="color:black"> Introduce aquí tus datos</h3>
                         <label>Nombre</label>
                         <input type="text" name="nombreCliente" id="nombreCliente" class="form-control"
@@ -34,8 +34,12 @@ if (!isset($_POST["submit"])) {
 
         $N = $_POST["nombreCliente"];
         $A = $_POST["apellidoCliente"];
-        $P = $_POST["passWordCliente"];
+        $PSC = $_POST["passWordCliente"];
         $Codigo = $_POST["codigoAdmin"];
+
+        $P=md5($PSC);
+ 
+
 
         if ($Codigo == '776655') {
 

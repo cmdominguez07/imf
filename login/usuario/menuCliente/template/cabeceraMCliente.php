@@ -4,12 +4,17 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!--Favicon-->
   <title>Green Leaves</title>
+  <link rel="icon" type="image/x-icon" href="./img/favicon-removebg-preview.png">
+  <!--link bootstrap-->
   <link rel="stylesheet" href="./css/bootstrap.min.css" />
   <link rel="stylesheet" href="./css/bootstrap.css" />
+  <!--css-->
   <link rel='stylesheet' type='text/css' media='screen' href='./css/styleOpcCliente.css'>
-  <link rel="icon" type="image/x-icon" href="../img/favicon.ico">
-  <script src="./template/jquery-3.6.0.min.js"></script>
+  <!--iconos-->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Sharp:opsz,wght,FILL,GRAD@48,700,0,0" />
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
 </head>
 
 <body>
@@ -37,7 +42,9 @@
             </li>
             <li class="nav-item">
               <a class="nav-link mx-5"
-                href="/TFG/proyectoGreen/login/usuario/menuCliente/clienteOpciones/devolucionPlantas.php">Carrito</a>
+                href="/TFG/proyectoGreen/login/usuario/menuCliente/clienteOpciones/devolucionPlantas.php"><span style="font-size: 30px;" class="material-symbols-sharp">
+shopping_cart
+</span></a>
             </li>
             <li class="nav-item">
               <a class="nav-link mx-5"
@@ -51,11 +58,8 @@
           </ul>
 
           <div class="navbar-mx-5 VolverDerecha">
-            <li>
-              <a href="../../index.php" style="text-decoration:none;"><span
-                  style="color: white; font-size: 16px;">&#8592; Salir</span></a>
-            </li>
-
+            <a href="../../index.php" style="text-decoration:none;"><span style="color: white; font-size: 16px;">&#8592;
+                Salir</span></a>
           </div>
 
     </nav>
