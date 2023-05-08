@@ -20,7 +20,7 @@
 <body>
   <div id="contenido1">
 
-    <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary position-fixed container-fluid">
       <div class="container-fluid">
         <img src="./img/1logoV.png" class="px-2" style="width:150px"></td>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarColor01"

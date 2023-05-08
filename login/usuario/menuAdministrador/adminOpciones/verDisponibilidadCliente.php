@@ -1,7 +1,7 @@
 <?php
 session_start();
-require_once("conexion.php");
-require_once("./template/cabecera.php");
+require("conexion.php");
+require("./template/cabecera.php");
 /*echo "<h5 class='mt-2' style='color:white'>".$_SESSION['nombreCliente']."</h5>";*/
 $_SESSION['passWordCliente'];
 $_SESSION['id_cliente'];
@@ -16,7 +16,7 @@ if (isset($_POST["submit"])) {
 
 	} else {
 		?>
-		<div class="navbar-mx-5 VolverDerecha">
+		<div class="navbar-mx-5 VolverDerecha ">
 			<a href='./verClientes.php' style='text-decoration:none;'><span style='color: white; font-size: 18px;'>&#8592;
 					Volver</span></a>
 		</div>
@@ -40,10 +40,10 @@ if (isset($_POST["submit"])) {
 				Volver</span></a>
 	</div>
 	</nav>
-	<div class="container pt-5">
-		<div class="row pt-5">
-			<div class="col-12 pt5">
-				<table class="table table-striped">
+	<div class="container pt-5 container-fluid contenido1 ">
+		<div class="row">
+			<div class="col-12 pt-5 container-fluid d-flex justify-content-center align-items-center ">
+				<table class="table table-striped ">
 					<thead class=" thead-inverse">
 						<tr>
 							<th>Referencia</th>

@@ -1,9 +1,8 @@
-   
-   </div>
+
 
  <footer id="footer" class="bg-light text-center text-white m-0">
     <!-- Grid container -->
-    <div class="container p-4 pb-0">
+    <div class="container p-4 mb-0 pb-0">
       <!-- Section: Social media -->
       <section class="m-4 p-0">
         <!-- RRSS -->
@@ -28,7 +27,7 @@
     </div>
     <!-- Copyright -->
   </footer>
-  <script src="./template/jquery-validation-1.19.5/dist/jquery.validate.min.js"></script>
+  <script src="./template/jquery-validation-1.19.5/dist/jquery.validate.js"></script>
 <script src="./template/jquery-validation-1.19.5/dist/additional-methods.js"></script>
 <script src="./template/formValidation.js"></script>
 <script src="./template/formValidationActualizaciones.js"></script>

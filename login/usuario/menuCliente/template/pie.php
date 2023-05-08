@@ -1,35 +1,25 @@
-<p id="pInicio" class="text-left" style="color:grey">Ut sed quam lacinia, aliquet orci pretium, fringilla justo. Cras
-  volutpat orci ut viverra convallis. Etiam malesuada sodales risus sit amet sollicitudin. Integer hendrerit mauris
-  felis, ut malesuada metus tincidunt vitae. Donec ac sodales ligula, at imperdiet erat. Aenean rutrum aliquet magna sit
-  amet viverra. Quisque sodales, orci at euismod laoreet, justo lectus consequat nulla, quis luctus leo sapien at
-  libero. Donec ligula ipsum, imperdiet ut tellus bibendum, maximus vestibulum est. Mauris vel justo sed felis iaculis
-  tristique ac eu urna. Cras feugiat condimentum tortor, quis tempor est hendrerit nec. Sed quis leo vel leo sodales
-  rutrum. Mauris iaculis id lorem ac efficitur. Fusce consequat nibh tellus. Cras ultrices sed odio et maximus. Ut
-  dignissim mattis diam at ullamcorper.
+<br>
+<div id="pInicio" class="text-left pt-3" style=" font-size:20px">
 
-  Phasellus at molestie turpis. Mauris nisi metus, dapibus eget tincidunt vitae, convallis eget dui. Nunc vel turpis
-  augue. Duis eget aliquet orci, ut rhoncus magna. Etiam sagittis leo a ligula euismod posuere. Morbi pretium, tortor id
-  eleifend lobortis, erat libero dictum ipsum, at eleifend magna velit quis dolor. Vestibulum commodo volutpat arcu
-  sodales sagittis. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.
-  Suspendisse laoreet feugiat risus, non placerat libero fringilla ac. Proin placerat orci eros, quis gravida purus
-  consectetur sit amet. Nulla a lacus pretium sapien ultrices congue. Integer viverra lacinia nisi id lobortis.
-  Vestibulum sed tincidunt dolor, at faucibus metus. Ut sed quam lacinia, aliquet orci pretium, fringilla justo. Cras
-  volutpat orci ut viverra convallis. Etiam malesuada sodales risus sit amet sollicitudin. Integer hendrerit mauris
-  felis, ut malesuada metus tincidunt vitae. Donec ac sodales ligula, at imperdiet erat. Aenean rutrum aliquet magna sit
-  amet viverra. Quisque sodales, orci at euismod laoreet, justo lectus consequat nulla, quis luctus leo sapien at
-  libero. Donec ligula ipsum, imperdiet ut tellus bibendum, maximus vestibulum est. Mauris vel justo sed felis iaculis
-  tristique ac eu urna. Cras feugiat condimentum tortor, quis tempor est hendrerit nec. Sed quis leo vel leo sodales
-  rutrum. Mauris iaculis id lorem ac efficitur. Fusce consequat nibh tellus. Cras ultrices sed odio et maximus. Ut
-  dignissim mattis diam at ullamcorper.
 
-  Phasellus at molestie turpis. Mauris nisi metus, dapibus eget tincidunt vitae, convallis eget dui.</div>
+<h1 id="caja1BV">Bienvenido/a a nuestro jardín Online. Aquí encontrarás toda una gama de plantas para decorar tu hogar e incluso tus platos.</h1>
+
+<p id="caja57BV">Date la oportunidad de disfrutar de todos los beneficios que da la naturaleza sin moverte de casa.
+
+Disponemos de un buzón digital donde podrás sentirte libre de pedir asesoramiento para el cuidado o la compatibilidad del clima de tu zona y, así, escoger bien qué plantas se adaptan mejor a ti.
+También puedes solicitar plantas que no tengamos en catálogo, pues haremos lo posible por que crezca cerca de ti.</p>
+
+<p id="caja77BV"> Nuestro propósito es acerte llegar de forma sencilla y asequible una gran variedad de plantas que dan vida a nuestro planeta.
+</p>
+<h3 id="cajaBBV">Green Leaves. Creado Por Naturaleza.</h3>
+</div></div>
   </div>
   <br>
 
 <div class="container-fluid ">
 
   <div class="container-fluid">
-    <h2 id="caja2" class="text-secondary text-center">Nuestros productos</h2>
+    <h2 id="caja2" class="text-secondary text-center">Nuestros Productos</h2>
   </div>
   <div class=" row d-flex m-5 d-flex justify-content-center align-items-center">
 
@@ -37,7 +27,7 @@
       <div class="card-header d-flex justify-content-center"> <img style="width:150px" src="img/nenufarFavicon1.jpg"
           alt=""></div>
       <div class="card-body">
-        <h4 class="card-title d-flex justify-content-center">Plantas de interior</h4>
+        <h4 class="card-title d-flex justify-content-center">Plantas de Interior</h4>
         <div class="justify-content-center">
           <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
             content.</p>

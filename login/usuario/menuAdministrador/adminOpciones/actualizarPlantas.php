@@ -17,15 +17,9 @@ $_SESSION['id_cliente'];
 </nav>
 
 <div class="container-fluid pt-5 fnd">
-  <div class="row mx-0  d-flex justify-content-center align-items-center f">
-    <div class="col-12 pt-5 my-3 w-75 f">
-      <table class="table mx-5">
+ 
 
         <?php
-
-
-
-
 
         /*echo "holo " . $_GET['idplanta'];*/
         if (!isset($_POST["Actualizar1"])) {
@@ -33,11 +27,16 @@ $_SESSION['id_cliente'];
           $consulta = "select * from plantas where idplanta='$I'";
           $paquete = $db->query($consulta);
 
+?>
+          <form method='POST' name='validarActualizar' class='form-vertical pt-5 mx-3' action='plantasActConExito.php'
+          enctype='multipart/form-data' autocomplete='off' >
+
+          <?php
           while ($fila = $paquete->fetch_array()) {
-            ?>
-            <form method='POST'  name='actual' class='form-vertical mx-5' action='plantasActConExito.php' enctype='multipart/form-data'
-              autocomplete='off'>
-              <tr>
+            
+ 
+?>
+         
 
                 <input type='hidden' class='form-control my-1' name='idplanta' value='<?php echo $I ?>'>
                 <br>
@@ -71,16 +70,14 @@ $_SESSION['id_cliente'];
                 </div>
                 <input type="file" class="form-control my-2" id="archivo" name="archivo" accept="image/*">
 
-                <td><input type='submit' class='btn btn-success  my-2' name='Actualizar1' value='Actualizar'> </td>
-
-              </tr>
-            </form>
+               <input type='submit' class='btn btn-success  my-2' name='Actualizar1' value='Actualizar'> 
+       
 
             <?php
           }
         }
         ?>
-
+     </form>
         </tbody>
       </table>
     </div>

@@ -1,21 +1,23 @@
 <?php
-require_once("conexion.php");
+require("conexion.php");
 
-require_once("./template/cabecera.php");
+require("template/cabecera.php");
 session_start();
-echo "<h5 style='color:white'>" . $_SESSION['nombreCliente'] . "</h5>";
+/*echo "<h5 style='color:white'>" . $_SESSION['nombreCliente'] . "</h5>";*/
 $_SESSION['passWordCliente'];
 $idid = $_SESSION['id_cliente'];
 
 $N = $_SESSION['nombreCliente'];
-$C = md5($_SESSION['passWordCliente']);
+$C = base64_encode($_SESSION['passWordCliente']);
 
 ?>
-
+    <a href='../menuClientes.php' style='text-decoration:none;color:white;'><span font-size: 18px;>&#8592;
+                        Volver</span></a>
 </nav>
-<div class="container mt-3">
+
+<div class="container-fluid pt-3 contenido1">
   <div class="row">
-    <div class="col-12">
+    <div class="col-12 container-fluid">
       <table class="table table-striped">
         <thead class=" thead-inverse">
           <tr>
@@ -44,39 +46,40 @@ $C = md5($_SESSION['passWordCliente']);
                       class='form-control-plaintext'></td>
                   <td><input type='text' name='apellido' value='<?php echo $fila['apellidoCliente']; ?>' readonly
                       class='form-control-plaintext'></td>
-                  <td><input type='password' name='passWord' value='<?php echo md5($fila['passWordCliente']); ?>' readonly
+                  <td><input type='password' name='passWord' value='<?php echo base64_decode($fila['passWordCliente']); ?>' readonly
                       class='form-control-plaintext'></td>
                   <td> <input type='submit' class='btn btn-danger' name='submit' value='Borrar'> </td>
-                  <td> <a href='../menuClientes.php' style='text-decoration:none;'><span font-size: 18px;>&#8592;
-                        Volver</span></a></td>
+               
 
                   <?php
 
             }
-            ?>
-
-          </tbody>
-          <div>
-          </div>
-      </div>
-      <?php
+           
           } else {
 
             $consulta = "DELETE FROM clientesclub WHERE id_cliente='$idid' ";
             $paquete = $db->query($consulta);
+           
             ?>
 
-      <body>
+   
+        <html><body>
         <h4>Cuenta eliminada</h4>
-        <tr>
-          <td> <a href='../../../index.php' style='text-decoration:none;'><span font-size: 30px;'>&#8592;</span></a>Menú
-            principal</a></td>
-        </tr>
-
+        <meta http-equiv="Refresh" content="0.51;url=/TFG/proyectoGreen/login/index.php">
+        </body></html>
         <?php
 
           }
+          ?>
 
-          require_once("./template/pie.php");
+          </tbody>
+          </table>
+          </div>
+          </div>
+          </div>
+       
+   
+      <?php
+          require("template/pie.php");
           $db->close();
           ?>

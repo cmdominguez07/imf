@@ -25,7 +25,7 @@ if (!isset($_POST['submit'])) {
       </li>-->
   </nav>
 
-  <div class="container-fluid mt-2">
+  <div class="container-fluid contenido1 pt-2">
     <div class="row">
       <div class="col-12">
         <table class="table table-striped">
@@ -57,7 +57,7 @@ if (!isset($_POST['submit'])) {
                       class='form-control-plaintext'></td>
                   <td><input type='text' name='precio' value='<?php echo $fila['precio']; ?>' readonly
                       class='form-control-plaintext'></td>
-                  <td><img style='width:200px'
+                  <td><img style='width:100px'
                       src='../../menuAdministrador/adminOpciones/<?php echo $fila['ruta_imagen']; ?>'> </td>
                   <td><input type='hidden' name='numeroEjemplares' value='<?php echo $fila['numeroEjemplares']; ?>' readonly
                       class='form-control-plaintext'></td>
@@ -104,14 +104,14 @@ if (!isset($_POST['submit'])) {
     ?>
     <li class="mx-5">
       <a href="./reservaPlantaInterior.php" style="text-decoration:none;"><span
-          style="color: white; font-size: 20px;">&#8592; Volver</span></a>
+          style="color: white; font-size: 18px;">&#8592; Volver</span></a>
     </li>
     <!--<li>
         <a type="submit" class='btn btn-secondary mx-2' name="submit" value="Consultar" onclick=location.href="adminOpciones/verDisponibilidad.php">Consultar disponibilidad</a>
         </li>-->
     </div>
     </nav>
-    <div class="container mt-3">
+    <div class="container pt-3 h-100">
       <div class="row">
         <div class="col-12">
           <table class="table table-striped">

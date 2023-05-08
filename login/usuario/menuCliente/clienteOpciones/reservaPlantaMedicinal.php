@@ -20,7 +20,7 @@ if (!isset($_POST['submit'])) {
         Volver</span></a>
   </nav>
 
-  <div class="container-fluid mt-2">
+  <div class="contenido1 container-fluid mt-2">
     <div class="row">
       <div class="col-12">
         <table class="table table-striped">
@@ -52,7 +52,7 @@ if (!isset($_POST['submit'])) {
                       class='form-control-plaintext'></td>
                   <td><input type='text' name='precio' value='<?php echo $fila['precio']; ?>' readonly
                       class='form-control-plaintext'></td>
-                  <td><img style='width:200px'
+                  <td><img style='width:100px'
                       src='../../menuAdministrador/adminOpciones/<?php echo $fila['ruta_imagen']; ?>'> </td>
                   <td><input type='hidden' name='numeroEjemplares' value='<?php echo $fila['numeroEjemplares']; ?>' readonly
                       class='form-control-plaintext'></td>

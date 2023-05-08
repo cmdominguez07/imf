@@ -9,7 +9,7 @@ $_SESSION['passWordCliente'];
 $_SESSION['id_cliente'];
 $N = $_SESSION['nombreCliente'];
 $idC = $_SESSION['id_cliente'];
-$C = md5($_SESSION['passWordCliente']);
+$C = base64_encode($_SESSION['passWordCliente']);
 
 ?>
 <div>
@@ -53,16 +53,13 @@ $C = md5($_SESSION['passWordCliente']);
               <br>
               <td> <label class='col-sm-2 control-label  m-1'>Contraseña</label></td>
 
-              <td><input type='password' class='form-control' name='passWordAct'
-                  value='<?php echo md5($fila['passWordCliente']); ?>'></td>
-
+              <td><input type='text' class='form-control' name='passWordAct'
+                  value='<?php echo base64_decode($fila['passWordCliente']); ?>'></td>
+                 <!-- $password >= base64_encode ($_GET["password"]);-->
 
               <br>
               <td><input type='submit' class='btn btn-success' name='submit' value='Actualizar'></td>
             </tr>
-
-
-
             <?php
         }
         ?>
@@ -76,7 +73,7 @@ if (isset($_POST['submit'])) {
   $I = $_POST["id"];
   $N = $_POST["nombreAct"];
   $A = $_POST["apellidoAct"];
-  $P = md5($_POST["passWordAct"]);
+  $P = base64_encode($_POST["passWordAct"]);
 
   $consulta = "UPDATE clientesclub SET nombreCliente='$N',apellidoCliente='$A',passWordCliente='$P' WHERE id_cliente='$I' ";
   $paquete = $db->query($consulta);

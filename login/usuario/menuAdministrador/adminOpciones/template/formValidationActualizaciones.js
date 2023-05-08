@@ -4,8 +4,11 @@ $(function () {
   // Initialize form validation on the registration form.
 
   // It has the name attribute "registration"
+  $( document ).ready(function() {
+    console.log( "ready!" );
 
-  $("form[name='actual']").validate({
+
+  $("form[name='validarActualizar']").validate({
 
     // Specify validation rules
 
@@ -18,9 +21,8 @@ $(function () {
       // on the right side
 
       nombrePlanta: {
+        required:true,
         lettersonly: true,
-        required: false,
-        number: false,
         minlength: 3,
         maxlength: 15
 
@@ -34,8 +36,6 @@ $(function () {
       },
 
       precio: {
-
-        required: true,
         number: true,
 
       }
@@ -79,6 +79,6 @@ $(function () {
       form.submit();
 
     }
-
+  });
   });
 });

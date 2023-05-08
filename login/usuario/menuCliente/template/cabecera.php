@@ -24,7 +24,7 @@
 <body>
   <div id="contenido1">
 
-    <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary position-fixed">
       <div class="container-fluid">
         <img src="./img/1logoV.png" class="px-2" style="width:150px"></td>
 

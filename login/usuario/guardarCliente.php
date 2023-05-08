@@ -37,17 +37,32 @@ if (!isset($_POST["submit"])) {
         $PSC = $_POST["passWordCliente"];
         $Codigo = $_POST["codigoAdmin"];
 
-        $P=md5($PSC);
- 
+        $P = base64_encode($PSC);
+
 
 
         if ($Codigo == '776655') {
 
                 $consulta = "INSERT INTO clientesclub (id_cliente,nombreCliente,apellidoCliente,tipoCliente,passWordCliente) VALUES (' ','$N','$A','Administrador','$P') ";
                 $paquete = $db->query($consulta);
+                ?>
+                <div class=" pt-5">
+                        <h4>Cuenta de Administrador creada</h4>
+                </div>
+                <meta http-equiv="Refresh" content="0.9;url=/TFG/proyectoGreen/login/index.php">
+
+                <?php
         } else {
                 $consulta = "INSERT INTO clientesclub (id_cliente,nombreCliente,apellidoCliente,tipoCliente,passWordCliente) VALUES (' ','$N','$A','Cliente','$P') ";
                 $paquete = $db->query($consulta);
+
+                ?>
+                <div class=" pt-5">
+                        <h4>Cuenta de usuario creada</h4>
+                </div>
+                <meta http-equiv="Refresh" content="0.9;url=/TFG/proyectoGreen/login/index.php">
+
+                <?php
         }
 
         ?>
@@ -55,6 +70,7 @@ if (!isset($_POST["submit"])) {
                 <tr>
                         <td>
                                 <h3>Datos agregados</h3>
+                                <meta http-equiv="Refresh" content="0.9;url=/TFG/proyectoGreen/login/index.php">
                         </td>
                 </tr>
         </table>

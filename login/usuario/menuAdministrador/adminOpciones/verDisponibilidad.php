@@ -38,14 +38,12 @@ if (isset($_POST["buscar"])) {
 	?>
 
 	<div class="navbar-mx-5 VolverDerecha">
-		<li>
 			<a href='./borrarPlantas.php' style='text-decoration:none;'><span style='color: white; font-size: 18px;'>&#8592;
 					Volver</span></a>
-		</li>
-	</div>
+	
 	</nav>
 
-	<div class="container py-5 d-flex justify-content-center align-items-center h-100">
+	<div class="container-fluid contenido1 py-5 d-flex justify-content-center align-items-center h-100">
 		<div class="row">
 			<div class="col-12 my-5 py-5">
 				<table class="table table-striped mt-3 px-2">

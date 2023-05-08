@@ -6,11 +6,74 @@
     
 }
 
+#caja1BV {
+  display: flex;
+  /*  background: url("../img/_import_60d03363031ba5.08549514.mov");
+  background-size: cover;*/
+  background-color: #ee959981;
+  color:white;
+  margin-top: 5px;
+  margin-left: 10px;
+  margin-right: 10px;
+  justify-content: center;
+  align-items: center;
+  padding:50px;
+}
+
+nav{
+  z-index: 25;
+}
+#caja57BV {
+  display: flex;
+  /*  background: url("../img/_import_60d03363031ba5.08549514.mov");
+  background-size: cover;*/
+
+  color:#ee9599;
+  margin-top: 50px;
+  margin-left: 250px;
+  margin-right: 0;
+  justify-content: center;
+  align-items: center;
+  padding:10px;
+}
+
+
+#caja77BV {
+  display: flex;
+  /*  background: url("../img/_import_60d03363031ba5.08549514.mov");
+  background-size: cover;*/
+  background-color: #ee959981;
+  color:#ee9599;
+  margin-top: 50px;
+  margin-left: 0;
+  margin-right: 250px;
+  justify-content: center;
+  align-items: center;
+  padding:10px;
+}
+
+
+#cajaBBV {
+  display: flex;
+  /*  background: url("../img/_import_60d03363031ba5.08549514.mov");
+  background-size: cover;*/
+  background-color: #ffffff87;
+  color:#78c2ad;
+
+  margin-top: 80px;
+  margin-left: 300px;
+  margin-right: 300px;
+ text-align: center;
+  align-items: center;
+  padding:50px;
+}
+
 #pInicio {
 
-    padding-left: 200px;
-    padding-right: 200px;
+    padding-left: 100px;
+    padding-right: 100px;
     text-align: justify;
+    min-height: 150px;
 
 }
 #inicioBV2{

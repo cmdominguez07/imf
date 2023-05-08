@@ -39,7 +39,7 @@ if (!isset($_POST["submit"])) {
     $consulta = "select * from clientesClub";
     $paquete = $db->query($consulta);
 
-    $new_password=md5($_POST['passWordCliente']);
+    $new_password=base64_encode($_POST['passWordCliente']);
 
     $encontrado = 0;
 
@@ -49,7 +49,7 @@ if (!isset($_POST["submit"])) {
       $CBD=$fila['passWordCliente'];
 
 
-      if ($_SESSION['nombreCliente'] == $fila['nombreCliente'] and (md5($new_password) == md5($CBD))) {
+      if ($_SESSION['nombreCliente'] == $fila['nombreCliente'] and (base64_encode($new_password) == base64_encode($CBD))) {
         $encontrado = 1;
 
         echo "intro" . $CBD ."  bd ". $new_password;

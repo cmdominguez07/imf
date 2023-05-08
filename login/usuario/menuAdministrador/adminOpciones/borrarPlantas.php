@@ -19,11 +19,11 @@ $_SESSION['id_cliente'];
 </div>
 </div>
 </nav>
-<div class="container py-5 d-flex justify-content-center align-items-center h-100">
+<div class="container-fluid d-flex justify-content-center align-items-center contenido1">
   <div class="row">
-    <div class="col-12 my-5 py-5">
-      <table class="table table-striped mt-3 px-2">
-        <thead class=" thead-inverse pt-5">
+    <div class="col-12">
+      <table class="table table-striped  px-2">
+        <thead class=" thead-inverse">
           <tr>
             <th>ID</th>
             <th>Nombre</th>
@@ -73,9 +73,9 @@ $_SESSION['id_cliente'];
 
         </table>
       </div>
-    </div>
+  
 
-    <?php
+  <?php
           }
 
           if (isset($_POST['Editar'])) {
@@ -93,17 +93,17 @@ $_SESSION['id_cliente'];
 
             ?>
 
-    <meta http-equiv="Refresh"
-      content="0.3;url=/TFG/proyectoGreen/login/usuario/menuAdministrador/adminOpciones/borrarPlantas.php">
-    <div class="navbar-mx-5 VolverDerecha">
-      <a href='./borrarPlantas.php' style='text-decoration:none;'><span style='color: white; font-size: 18px;'>&#8592;
-          Volver</span></a>
-    </div>
-    </nav>
+  <meta http-equiv="Refresh"
+    content="0.3;url=/TFG/proyectoGreen/login/usuario/menuAdministrador/adminOpciones/borrarPlantas.php">
+  <div class="navbar-mx-5 VolverDerecha">
+    <a href='./borrarPlantas.php' style='text-decoration:none;'><span style='color: white; font-size: 18px;'>&#8592;
+        Volver</span></a>
+  </div>
+  </nav>
 
-    <h3>Eliminado</h3>
+  <h3>Eliminado</h3>
 
-    <?php
+  <?php
 
           }
 

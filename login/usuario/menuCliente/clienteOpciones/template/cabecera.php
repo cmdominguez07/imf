@@ -19,7 +19,7 @@
 </head>
 
 <body>
-  <div id="contenido1">
+  <div id=" container-fluid">
     <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
       <div class="container-fluid">
         <img src="./img/1logoV.png" class="mx-2" style="width:150px"></td>
