@@ -1,23 +1,30 @@
  body,
  html {
-   margin: 0;
-   padding: 0;
- }
-
- #contenido1 {
-    height: 1090px;
-    width: 100%;
-
- }
- .contenido1 {
-   min-height: 600px;
-   width: 100%;
-
-}
- #footer {
-    width: 100%;
     margin: 0;
     padding: 0;
+    height: 100%;
+    font-family: lato;
+ }
+
+
+ #contenido1 {
+    height: 600vh;
+    width: 100%;
+
+ }
+
+ #footer {
+    width: 100%;
+    padding: 0;
+    left: 0;
+    position: relative;
+    margin: 0 auto;
+ }
+
+ body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
  }
 
  form .error {

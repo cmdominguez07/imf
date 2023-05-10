@@ -17,12 +17,11 @@ $_SESSION['id_cliente'];
   <a href='../menuAdministrador.php' style='text-decoration:none;'><span style='color: white; font-size: 18px;'>&#8592;
       Volver</span></a>
 </div>
-</div>
 </nav>
 <div class="container-fluid d-flex justify-content-center align-items-center contenido1">
   <div class="row">
     <div class="col-12">
-      <table class="table table-striped  px-2">
+      <table class="table table-striped">
         <thead class=" thead-inverse">
           <tr>
             <th>ID</th>

@@ -1,14 +1,14 @@
 <?php
 require("conexion.php");
 
-require("./template/cabecera.php");
+require("./template/cabecera1.php");
 
 session_start();
 /*echo "Usuario: " . $_SESSION['nombreCliente'];*/
 $_SESSION['passWordCliente'];
 $idC = $_SESSION['id_cliente'];
 $N = $_SESSION['nombreCliente'];
-$C = $_SESSION['passWordCliente'];
+$C = base64_encode($_SESSION['passWordCliente']);
 $idC = $_SESSION['id_cliente'];
 $contador = 0;
 

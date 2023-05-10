@@ -21,7 +21,7 @@
 </head>
 
 <body>
-  <div id="contenido1" class="container-fluid fd m-0">
+  <div id="contenido1" class="container-fluid fd m-0 p-0">
     <nav class="container-fluid navbar navbar-expand-lg navbar-dark bg-primary position-fixed m-0">
       <div class="container-fluid">
         <img src="./img/1logoV.png" class="mx-2" style="width:150px"></td>

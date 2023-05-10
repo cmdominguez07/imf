@@ -17,11 +17,13 @@ $C = base64_encode($_SESSION['passWordCliente']);
     Volver</span></a>
 </div>
 </nav>
+
+
 <div class="container pt-5 w-50">
   <div class="row">
     <div class="col-12 pt-5">
 
-
+    <h4 class="px-3"> Modifica tus datos </h4>
       <tbody>
 
         <?php

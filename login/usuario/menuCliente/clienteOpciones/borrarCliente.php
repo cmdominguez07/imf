@@ -1,7 +1,7 @@
 <?php
 require("conexion.php");
 
-require("template/cabecera.php");
+require("template/cabecera1.php");
 session_start();
 /*echo "<h5 style='color:white'>" . $_SESSION['nombreCliente'] . "</h5>";*/
 $_SESSION['passWordCliente'];

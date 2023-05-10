@@ -1,8 +1,24 @@
-body {
-    margin: 0;
-    padding: 0;
-    height: 100%;
+body,
+html {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  font-family: lato;
+ }
 
+
+#contenido1 {
+height: 600vh;
+   width: 100%;
+
+}
+
+#footer {
+   width: 100%;
+   padding: 0;
+   left: 0;
+   position:relative;
+   margin:0 auto;
 }
 
 #caja1BV {
