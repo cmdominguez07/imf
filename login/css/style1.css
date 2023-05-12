@@ -10,7 +10,7 @@ html {
 #contenido1 {
 height: 600vh;
    width: 100%;
-
+   background: linear-gradient(135deg, #0f147355 25%, transparent 25%) -23px 0/ 46px 46px, linear-gradient(225deg, #0f1473 25%, transparent 25%) -23px 0/ 46px 46px, linear-gradient(315deg, #0f147355 25%, transparent 25%) 0px 0/ 46px 46px, linear-gradient(45deg, #0f1473 25%, #dfdfe5 25%) 0px 0/ 46px 46px;
 }
 
 #footer {

@@ -27,7 +27,7 @@
     <div id="caja2" class="container-fluid my-5">
       <h2 class="text-secondary text-center">Motivos para tener una planta en el hogar</h2>
     </div>
-    <div class="col-lg-3 card text-white bg-primary tarjetas rounded-0 mb-3 m-2" style="max-width: 20rem;">
+    <div class="col-lg-3 card text-white bg-primary tarjetas rounded-0 mb-3 m-2 py-1" style="max-width: 20rem;">
       <div class="card-header">1</div>
       <div class="card-body">
         <h4 class="card-title">Aromatizantes naturales</h4>
@@ -36,7 +36,7 @@
         </p>
       </div>
     </div>
-    <div class="col-lg-3 card text-white bg-primary tarjetas rounded-0 mb-3 m-2" style="max-width: 20rem;">
+    <div class="col-lg-3 card text-white bg-primary tarjetas rounded-0 mb-3 m-2 py-1" style="max-width: 20rem;">
       <div class="card-header"> 2</div>
       <div class="card-body">
         <h4 class="card-title">Mejoran el estado anímico</h4>
@@ -44,15 +44,17 @@
           estado anímico y reduce la depresión.</p>
       </div>
     </div>
-    <div class="col-lg-3 card text-white bg-primary tarjetas rounded-0 mb-3 m-2" style="max-width: 20rem;">
+    <div class="col-lg-3 card text-white bg-primary tarjetas rounded-0 mb-3 m-2 py-3" style="max-width: 20rem;">
       <div class="card-header"> 3</div>
       <div class="card-body">
         <h4 class="card-title"> Ayudan a respirar mejor</h4>
         <p class="card-text">Las plantas aumentan la humedad y reducen la sequedad del ambiente, por lo tanto, nos ayuda
-          a respirar mejor.</p>
+          a respirar mejor.
+        </p>
+         
       </div>
     </div>
-    <div class=" col-lg-3 card text-white bg-primary tarjetas rounded-0 mb-3 m-2" style="max-width: 20rem;">
+    <div class=" col-lg-3 card text-white bg-primary tarjetas rounded-0 mb-3 m-2 py-1" style="max-width: 20rem;">
       <div class="card-header"> 4</div>
       <div class="card-body">
         <h4 class="card-title">Remedios Naturales Eficaces</h4>
@@ -63,15 +65,15 @@
   </div>
 
   <div class="container-fluid row d-flex justify-content-center align-items-center">
-    <div class="col-lg-3 card text-white bg-primary tarjetas rounded-0 mb-3 m-2" style="max-width: 20rem;">
+    <div class="col-lg-3 card text-white bg-primary tarjetas rounded-0 mb-3 m-2 py-3" style="max-width: 20rem;">
       <div class="card-header"> 5</div>
       <div class="card-body">
         <h4 class="card-title">Mejor productividad</h4>
         <p class="card-text">Gracias al proceso de la fotosíntesis las plantas observen el dióxido de carbono y liberan
-          oxígeno en presencia del sol, de esta manera pueden sintetizar glucosa</p>
+          oxígeno en presencia del sol, de esta manera pueden sintetizar glucosa<br></p>
       </div>
     </div>
-    <div class="col-lg-3 card text-white bg-primary tarjetas rounded-0 mb-3 m-2" style="max-width: 20rem;">
+    <div class="col-lg-3 card text-white bg-primary tarjetas rounded-0 mb-3 m-2 py-1" style="max-width: 20rem;">
       <div class="card-header"> 6</div>
       <div class="card-body">
         <h4 class="card-title">Reducen el estrés</h4>
@@ -79,7 +81,7 @@
           mental, reducen la presión sanguínea y cuidarlas tiene un efecto relajante.</p>
       </div>
     </div>
-    <div class="col-lg-3 card text-white bg-primary tarjetas rounded-0 mb-3 m-2" style="max-width: 20rem;">
+    <div class="col-lg-3 card text-white bg-primary tarjetas rounded-0 mb-3 m-2 py-1" style="max-width: 20rem;">
       <div class="card-header"> 7</div>
       <div class="card-body">
         <h4 class="card-title">Reducen el ruido</h4>
@@ -87,7 +89,7 @@
           flexible, reduciendo así la intensidad de las ondas [sonoras] incidentes</p>
       </div>
     </div>
-    <div class=" col-lg-3 card text-white bg-primary tarjetas rounded-0 mb-3 m-2" style="max-width: 20rem;">
+    <div class=" col-lg-3 card text-white bg-primary tarjetas rounded-0 mb-3 m-2 py-1" style="max-width: 20rem;">
       <div class="card-header"> 8</div>
       <div class="card-body">
         <h4 class="card-title">Purifican el aire</h4>

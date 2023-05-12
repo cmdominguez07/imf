@@ -2,13 +2,33 @@ body,
 html {
     height: 100%;
 }
+nav{
+  z-index: 50;
+}
 
 #contenido1 {
     min-height: 80%;
     margin: 0;
     padding: 0;
+    margin: 0;
+    padding: 0;
+    z-index:-50;
+}
+.cont{
+    background-image: url("../img/fondoacuarela.jpg");
+    background-size: cover;
+    background-position: center center;
+    opacity: calc(0.8);
+   
+}
+
+
+
+#parafondo{
 
 }
+
+
 /*hover enlaces*/
 a:hover { 
     text-decoration: overline underline; 
@@ -27,11 +47,21 @@ b #fotoInicio {
 }
 
 #fondo {
-    background: url("../img/depositphotos_1132122-stock-photo-beautiful-jasmine.jpg") no-repeat;
+
+    background: url("../img/fondologinlat.jpg") no-repeat;
     background-size: cover;
+    background-position: center;
     width: 100%;
     height: 600px;
     z-index: 3;
+   
+      min-height: 80%;
+      margin: 0;
+      padding: 0;
+      margin: 0;
+      padding: 0;
+
+    
 }
 
 form .error {

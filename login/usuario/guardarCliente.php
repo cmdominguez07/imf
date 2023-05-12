@@ -5,25 +5,25 @@ require_once("./template/cabeceraLoginYGuardar.php");
 if (!isset($_POST["submit"])) {
 
         ?>
-
-        <form class="d-flex justify-content-left align-items-center p-5" method="post" action="guardarCliente.php"
+<div class="cont">
+        <form class="d-flex justify-content-left align-items-center p-5 mx-2" method="post" action="guardarCliente.php"
                 name="registration">
-                <img src="./img/Captura.png" class="w-25 p-5 m-5">
-                <div class="row d-flex justify-content-left align-items-center p-5 py-2">
+                <img src="./img/Captura.png" class="w-25 p-5 m-5 rounded-circle">
+                <div class="row d-flex justify-content-left align-items-center p-5 my-5 py-4">
                         <h3 style="color:black"> Introduce aquí tus datos</h3>
-                        <label>Nombre</label>
-                        <input type="text" name="nombreCliente" id="nombreCliente" class="form-control"
+                        <label class="label label-primary my-1">Nombre</label>
+                        <input type="text" name="nombreCliente" id="nombreCliente" class="form-control my-1"
                                 placeholder="Nombre Usuario" required />
-                        <label>Apellido</label>
-                        <input type="text" name="apellidoCliente" id="apellidoCliente" class="form-control"
+                        <label class="label label-primary my-1">Apellido</label>
+                        <input type="text" name="apellidoCliente" id="apellidoCliente" class="form-control my-1"
                                 placeholder="Apellido Usuario" required />
-                        <label>Contraseña</label>
-                        <input type="password" name="passWordCliente" id="passWordCliente" class="form-control"
+                        <label class="label label-primary">Contraseña</label>
+                        <input type="password" name="passWordCliente" id="passWordCliente" class="form-control my-1"
                                 placeholder="Escribir contraseña" required />
-                        <label>Código nuevo Administrador</label>
-                        <input type="number" name="codigoAdmin" id="codigoAdmin" class="form-control" placeholder="123" />
+                        <label class="label label-primary my-1">Código nuevo Administrador</label>
+                        <input type="number" name="codigoAdmin" id="codigoAdmin" class="form-control my-1" placeholder="123" />
                         <br>
-                        <input type="submit" name="submit" class="btn btn-secondary w-25" value="Enviar">
+                        <input type="submit" name="submit" class="btn btn-secondary w-25 my-3" value="Enviar">
                 </div>
         </form>
         </div>
