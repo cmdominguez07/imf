@@ -2,6 +2,7 @@
 session_start();
 require("conexion.php");
 require("./template/cabecera.php");
+require("./template/accesibilidad.php");
 /*echo "<h5 class='mt-2' style='color:white'>".$_SESSION['nombreCliente']."</h5>";*/
 $_SESSION['passWordCliente'];
 $_SESSION['id_cliente'];
@@ -40,15 +41,16 @@ if (isset($_POST["submit"])) {
 				Volver</span></a>
 	</div>
 	</nav>
-	<div class="container pt-5 container-fluid contenido1 ">
+	<div class="container pt-5 container-fluid contenido1 w-50 ">
 		<div class="row">
 			<div class="col-12 pt-5 container-fluid d-flex justify-content-center align-items-center ">
 				<table class="table table-striped ">
 					<thead class=" thead-inverse">
 						<tr>
-							<th>Referencia</th>
+						<th>Id</th>
 							<th>Nombre</th>
-							<th>Código</th>
+							<th>Apellido</th>
+							<th>Contraseña</th>
 						</tr>
 					</thead>
 					<tbody>
@@ -59,16 +61,18 @@ if (isset($_POST["submit"])) {
 
 							?>
 							<tr>
-								<!--echo "<td>".$fila['idplanta'],"</td>";-->
+							<td>
+                  <?php echo $fila['id_cliente']; ?>
+                </td>
 								<td>
 									<?php echo $fila['nombreCliente']; ?>
 								</td>
 								<td>
 									<?php echo $fila['apellidoCliente']; ?>
 								</td>
-								<td>
-									<?php echo $fila['passWordCliente']; ?>
-								</td>
+								<td><input type='password' name='nombre' value='<?php echo $fila['passWordCliente']
+                  ; ?>' readonly class='form-control-plaintext'>
+                </td>
 							</tr>
 							<?php
 						}

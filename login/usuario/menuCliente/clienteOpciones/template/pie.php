@@ -1,5 +1,6 @@
-
-</div></div></div>
+</div>
+  </div>
+  </div>
 <footer id="footer" class="bg-light text-center text-white m-0 container-fluid">
   <!-- Grid container -->
   <div class="container-fluid pt-4 mb-0 pb-0">
@@ -30,6 +31,7 @@
 <script src="./template/jquery-validation-1.19.5/dist/jquery.validate.js"></script>
 <script src="./template/jquery-validation-1.19.5/dist/additional-methods.js"></script>
 <script src="./template/formValidationAct.js"></script>
+<script src="./template/accesibilidad.js"></script>
 <script>
 
   /*paypal.Buttons({

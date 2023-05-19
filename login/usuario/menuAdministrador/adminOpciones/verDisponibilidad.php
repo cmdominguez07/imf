@@ -2,6 +2,7 @@
 session_start();
 require_once("conexion.php");
 require_once("./template/cabecera.php");
+require("./template/accesibilidad.php");
 /*echo "<h5 class='mt-2' style='color:white'>".$_SESSION['nombreCliente']."</h5>";*/
 $_SESSION['passWordCliente'];
 $_SESSION['id_cliente'];
@@ -43,9 +44,9 @@ if (isset($_POST["buscar"])) {
 	
 	</nav>
 
-	<div class="container-fluid contenido1 py-5 d-flex justify-content-center align-items-center h-100">
+	<div class="container-fluid contenido1 py-5">
 		<div class="row">
-			<div class="col-12 my-5 py-5">
+			<div class="col-12 my-5 py-5  d-flex justify-content-center align-items-center h-100">
 				<table class="table table-striped mt-3 px-2">
 					<thead class=" thead-inverse pt-5">
 						<tr>

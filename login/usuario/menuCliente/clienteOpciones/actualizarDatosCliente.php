@@ -1,7 +1,8 @@
 <?php
 
 require("conexion.php");
-require("./template/cabecera1.php");
+require("./template/cabecera.php");
+require("./template/accesibilidad.php");
 session_start();
 
 
@@ -19,12 +20,9 @@ $C = base64_encode($_SESSION['passWordCliente']);
 </nav>
 
 
-<div class="container pt-5 w-50">
-  <div class="row">
-    <div class="col-12 pt-5">
+<div class="container contenido1 pt-5 w-50">
 
     <h4 class="px-3"> Modifica tus datos </h4>
-      <tbody>
 
         <?php
 
@@ -66,10 +64,7 @@ $C = base64_encode($_SESSION['passWordCliente']);
         }
         ?>
         </form>
-
-    </div>
-  </div>
-</div>
+ 
 <?php
 if (isset($_POST['submit'])) {
   $I = $_POST["id"];
@@ -84,7 +79,6 @@ if (isset($_POST['submit'])) {
   $paquete = $db->query($consulta);
 
   echo ' <meta http-equiv="Refresh" content=".51;url=/TFG/proyectoGreen/login/usuario/loginCliente.php">';
-
 
 
 }

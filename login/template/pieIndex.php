@@ -171,6 +171,7 @@
   <!--script-->
   <script src="./template/jquery-3.6.0.min.js"></script>
   <script src="./template/mainJs.js"></script>
+  <script src="./template/accesibilidad.js"></script>
   </body>
 
   </html>

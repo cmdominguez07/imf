@@ -29,8 +29,7 @@ También puedes solicitar plantas que no tengamos en catálogo, pues haremos lo 
       <div class="card-body">
         <h4 class="card-title d-flex justify-content-center">Plantas de Interior</h4>
         <div class="justify-content-center">
-          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
-            content.</p>
+          <p class="card-text">Descubre aquí las plantas de interior más resistentes para tu casa.</p>
 
           <input type="submit" class="btn btn-secondary" name="catalogo" value="Ver catálogo"
             onclick=location.href="//localhost/TFG/proyectoGreen/login/usuario/menuCliente/clienteOpciones/reservaPlantaInterior.php">
@@ -43,8 +42,7 @@ También puedes solicitar plantas que no tengamos en catálogo, pues haremos lo 
       <div class="card-body">
         <h4 class="card-title d-flex justify-content-center">Plantas de exterior</h4>
         <div class="justify-content-center">
-          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
-            content.</p>
+          <p class="card-text">Las plantas de exterior más resistentes y bonitas</p>
 
           <input type="submit" class="btn btn-secondary" name="catalogo" value="Ver catálogo"
             onclick=location.href="//localhost/TFG/proyectoGreen/login/usuario/menuCliente/clienteOpciones/reservaPlantaExterior.php">
@@ -57,8 +55,7 @@ También puedes solicitar plantas que no tengamos en catálogo, pues haremos lo 
       <div class="card-body">
         <h4 class="card-title d-flex justify-content-center">Plantas medicinales</h4>
         <div class="justify-content-center">
-          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
-            content.</p>
+          <p class="card-text">Plantas para tratar enfermedades de personas o animales </p>
 
           <input type="submit" class="btn btn-secondary" name="catalogo" value="Ver catálogo"
             onclick=location.href="//localhost/TFG/proyectoGreen/login/usuario/menuCliente/clienteOpciones/reservaPlantaMedicinal.php">
@@ -67,16 +64,11 @@ También puedes solicitar plantas que no tengamos en catálogo, pues haremos lo 
     </div>
   </div>
 </div>
-
-
-
-<div class="container-fluid d-flex m-0">
+<div class="container-fluid d-flex m-0 ">
   <div class="col-lg-6">
-    <h1 class="mt-5">Contacto</h1>
-    <p class="text-primary text-left m-0">Ut sed quam lacinia, aliquet orci pretium,eget aliquet orci, ut rhnt dolor, at
-      faucibus metus iquet orci pretium,eget aliquet orci, ut rhnt dolor, at faucibus metus iquet orci pretium,eget
-      aliquet orci, ut rhnt dolor, at faucibus metus
-      iquet orci pretium,eget aliquet orci, ut rhnt dolor, at faucibus metus.</p>
+    <h1 class="mt-3 text-center">Contacto</h1>
+    <h5 class="text-primary text-center p-5">Si tienes alguna duda sobre el cuidado de las plantas, tipos de planta que crecerán mejor con el entorno que puedes ofrecerles, recetas y tomas de las plantas medicinales o cualquier otra consulta ¡no dudes en consultarnos!</h5>
+    <h3 class="text-primary text-center py-5 fw-bold">¡Nos encataría porder ayudarte!</h3>
   </div>
   <?php
   if (!isset($_POST["submit"])) {
@@ -94,7 +86,7 @@ También puedes solicitar plantas que no tengamos en catálogo, pues haremos lo 
 
         <br><label for="TextArea" class="form-label mt-4">Aquí su consulta</label>
         <textarea class="form-control TextArea" name='TextArea' id="TextArea" rows="3"></textarea>
-        <input id="caja3" type='submit' class='class="btn btn-primary my-5' name='submit' value='Enviar'>
+        <input id="caja3" type='submit' class='btn btn-primary my-5' name='submit' value='Enviar'>
 
       </form>
 
@@ -154,6 +146,8 @@ También puedes solicitar plantas que no tengamos en catálogo, pues haremos lo 
 <script src="./template/jquery-validation-1.19.5/dist/jquery.validate.min.js"></script>
   <script src="./template/jquery-validation-1.19.5/dist/additional-methods.js"></script>
 <script src="./template/formValidationMsg.js"></script>
+<script src="./template/accesibilidad.js"></script>
+
 </body>
 
 </html>

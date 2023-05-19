@@ -13,6 +13,8 @@
   <link rel="stylesheet" href="./css/bootstrap.css" />
   <!--css-->
   <link rel='stylesheet' type='text/css' media='screen' href='./css/style1.css'>
+   <!--css para plugin accesibilidad-->
+   <link rel='stylesheet' type='text/css' media='screen' href='./css/accesibilidadCSS.css'>
   <!--iconos-->
   <link rel="stylesheet"
     href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
@@ -28,10 +30,6 @@
     <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
       <div class="container-fluid">
         <img src="./img/1logoV.png" class="mx-2" style="width:150px"></td>
-        <div class="navbar-mx-5" id="navbarColor01">
-          <ul class="navbar-nav me-auto">
-            <p class="nav-link active mx-5">Menú
-              <span class="visually-hidden">(current)</span>
+            <p class="nav-link mx-5 text-center text-white">Menú
             </p>
-        </div>
-      </div>
+

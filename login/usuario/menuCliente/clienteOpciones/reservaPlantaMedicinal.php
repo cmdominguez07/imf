@@ -1,6 +1,7 @@
 <?php
-require_once("conexion.php");
-require_once("./template/cabecera.php");
+require("conexion.php");
+require("./template/cabecera.php");
+require("./template/accesibilidad.php");
 session_start();
 /*<h5 style='color:white'>" . $_SESSION['nombreCliente'] . "</h5>";*/
 $_SESSION['passWordCliente'];
@@ -16,11 +17,16 @@ if (!isset($_POST['submit'])) {
   $paquete = $db->query($consulta);
 
   ?>
-    <a href="../menuClientes.php" style="text-decoration:none;"><span style="color: white; font-size: 20px;">&#8592;
+
+    <a href="../menuClientes.php" style="text-decoration:none;"><span style="color: white; font-size: 18px;">&#8592;
         Volver</span></a>
+
+  <!--<li>
+      <a type="submit" class='btn btn-secondary mx-2' name="submit" value="Consultar" onclick=location.href="adminOpciones/verDisponibilidad.php">Consultar disponibilidad</a>
+      </li>-->
   </nav>
 
-  <div class="contenido1 container-fluid mt-2">
+  <div class="container-fluid contenido1 pt-2">
     <div class="row">
       <div class="col-12">
         <table class="table table-striped">
@@ -30,8 +36,9 @@ if (!isset($_POST['submit'])) {
               <th>Nombre</th>
               <th>Ref.</th>
               <th>Tipo</th>
+              <th>Cantidad</th>
               <th>Precio</th>
-              <th>Imagen</th>
+              <th></th>
             </tr>
           </thead>
           <tbody>
@@ -43,19 +50,19 @@ if (!isset($_POST['submit'])) {
                 <tr>
                   <td> <input type='hidden' name='idplanta' value='<?php echo $fila['idplanta']; ?>' readonly
                       class='form-control-plaintext'> </td>
-
                   <td><input type='text' name='nombre' value='<?php echo $fila['nombrePlanta']; ?>' readonly
                       class='form-control-plaintext'></td>
                   <td><input type='text' name='codigo' value='<?php echo $fila['codigoPlanta']; ?>' readonly
                       class='form-control-plaintext'></td>
                   <td><input type='text' name='TipoPlanta' value='<?php echo $fila['TipoPlanta']; ?>' readonly
                       class='form-control-plaintext'></td>
+                      <td><input type='text' name='numeroEjemplares' value='<?php echo $fila['numeroEjemplares']; ?>' readonly
+                      class='form-control-plaintext'></td>
                   <td><input type='text' name='precio' value='<?php echo $fila['precio']; ?>' readonly
                       class='form-control-plaintext'></td>
                   <td><img style='width:100px'
                       src='../../menuAdministrador/adminOpciones/<?php echo $fila['ruta_imagen']; ?>'> </td>
-                  <td><input type='hidden' name='numeroEjemplares' value='<?php echo $fila['numeroEjemplares']; ?>' readonly
-                      class='form-control-plaintext'></td>
+                      
                   <td><input type='submit' class='btn btn-primary' name='submit' value='Añadir a la cesta'></td>
                 </tr>
               </form>
@@ -64,16 +71,19 @@ if (!isset($_POST['submit'])) {
             }
             ?>
         </table>
-      </div>
-    </div>
-  </div>
+       
   <?php
 } else {
 
 
   $contadorNumPlantas = $_POST["numeroEjemplares"];
   $I = $_POST["idplanta"];
-
+  ?>
+  <a href="./reservaPlantaMedicinal.php" style="text-decoration:none;"><span
+  style="color: white; font-size: 18px;">&#8592; Volver</span></a>
+</div>
+</nav>
+<?php
   $consulta = "select * from plantas WHERE idplanta='$I'";
   $paquete = $db->query($consulta);
   //$paquete=mysqli_query($conexion, $consulta);
@@ -83,6 +93,9 @@ if (!isset($_POST['submit'])) {
 
     $N = $fila['nombrePlanta'];
     $L = $fila['codigoPlanta'];
+    $T = $fila['TipoPlanta'];
+    $R = $fila['ruta_imagen'];
+ 
   }
   if ($contadorNumPlantas > 0) {
 
@@ -90,65 +103,65 @@ if (!isset($_POST['submit'])) {
 
     $consulta = "UPDATE plantas SET numeroEjemplares='$contadorNumPlantas' WHERE idplanta='$I' ";
     $paquete = $db->query($consulta);
-    //$paquete=mysqli_query($conexion, $consulta);
 
-    $consulta = "select * from plantas WHERE idplanta='$I' ";
-    $paquete = $db->query($consulta);
-    //$paquete=mysqli_query($conexion, $consulta);
 
     ?>
-    <li class="mx-5">
-      <a href="./reservaPlantaMedicinal.php" style="text-decoration:none;"><span
-          style="color: white; font-size: 20px;">&#8592; Volver</span></a>
-    </li>
-    <!--<li>
-        <a type="submit" class='btn btn-secondary mx-2' name="submit" value="Consultar" onclick=location.href="adminOpciones/verDisponibilidad.php">Consultar disponibilidad</a>
-        </li>-->
-    </div>
-    </nav>
-    <div class="container mt-3">
-      <div class="row">
-        <div class="col-12">
-          <table class="table table-striped">
-            <thead class=" thead-inverse">
+    <div class="container-fluid contenido1 pt-2">
+    <div class="row">
+      <div class="col-12">
+        <table class="table table-striped">
+          <thead class=" thead-inverse">
               <tr>
                 <th> </th>
                 <th>Nombre</th>
                 <th>Código</th>
+                <th>Tipo</th>
+                <th></th>
               </tr>
             </thead>
             <tbody>
               <td>
-                <h4>Planta reservada: </h4>
-              </td><br>
+                <h4>Añadida al carrito: </h4>
+              </td>
               <td>
                 <?php echo "$N"; ?>
               </td>
               <td>
                 <?php echo "$L"; ?>
               </td>
-              </tr>
+              <td>
+                <?php echo "$T"; ?>
+              </td>
+              <td>
+              <td><img style='width:100px'
+                      src='../../menuAdministrador/adminOpciones/<?php echo $R; ?>'>
+              </td>
+  </tr>
+              <tbody>
           </table>
-
+ 
           <?php
-          
+
           $consulta = "INSERT INTO conector (f_idplanta, f_idCliente) VALUES ('$I', '$idC')";
           $paquete = $db->query($consulta);
     //$paquete=mysqli_query($conexion, $consulta);
 
   } else {
-    ?>
-          <table width=400>
+    ?>  
+  <div class="container-fluid contenido1 pt-2">
+    <div class="row">
+      <div class="col-12">
+        <table class="table table-striped">
             <tr>
               <td> El producto que has elegido no está disponible.</td>
             </tr>
-            <td> <a href='../menuCliente/menuClientes.php' style='text-decoration:none;'><span font-size:
-                  20px;>&#8592;</span></a></td>
           </table>
+          <meta http-equiv="Refresh" content="1;url=/TFG/proyectoGreen/login/usuario/menuCliente/clienteOpciones/reservaPlantaMedicinal.php">
           <?php
   }
 }
 
-require_once("./template/pie.php");
+
+require("./template/pie.php");
 $db->close();
 ?>

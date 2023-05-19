@@ -26,10 +26,10 @@
     </div>
     <!-- Copyright -->
 </footer>
-
 <script src="./template/jquery-validation-1.19.5/dist/jquery.validate.min.js"></script>
 <script src="./template/jquery-validation-1.19.5/dist/additional-methods.js"></script>
 <script src="./template/formValidation.js"></script>
+<script src="./template/accesibilidad.js"></script>
 </body>
 
 </html>

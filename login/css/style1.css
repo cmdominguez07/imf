@@ -4,21 +4,26 @@ html {
   padding: 0;
   height: 100%;
   font-family: lato;
- }
+
+}
 
 
-#contenido1 {
-height: 600vh;
-   width: 100%;
-   background: linear-gradient(135deg, #0f147355 25%, transparent 25%) -23px 0/ 46px 46px, linear-gradient(225deg, #0f1473 25%, transparent 25%) -23px 0/ 46px 46px, linear-gradient(315deg, #0f147355 25%, transparent 25%) 0px 0/ 46px 46px, linear-gradient(45deg, #0f1473 25%, #dfdfe5 25%) 0px 0/ 46px 46px;
+.contenido1 {
+  height: 70vh;
+  width: 100%;
+ 
 }
 
 #footer {
-   width: 100%;
-   padding: 0;
-   left: 0;
-   position:relative;
-   margin:0 auto;
+  width: 100%;
+  padding: 0;
+  left: 0;
+  position: relative;
+  margin: 0 auto;
+}
+
+nav {
+  z-index: 3;
 }
 
 #caja1BV {

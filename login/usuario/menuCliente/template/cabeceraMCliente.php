@@ -12,9 +12,13 @@
   <link rel="stylesheet" href="./css/bootstrap.css" />
   <!--css-->
   <link rel='stylesheet' type='text/css' media='screen' href='./css/styleOpcCliente.css'>
+   <!--css para plugin accesibilidad-->
+   <link rel='stylesheet' type='text/css' media='screen' href='./css/accesibilidadCSS.css'>
   <!--iconos-->
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Sharp:opsz,wght,FILL,GRAD@48,700,0,0" />
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+  <script src="./template/jquery-3.6.0.min.js"></script>
+  
 </head>
 
 <body>

@@ -1,31 +1,31 @@
- body,
- html {
-    margin: 0;
-    padding: 0;
-    height: 100%;
-    font-family: lato;
- }
+body,
+html {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  font-family: lato;
+
+}
 
 
- #contenido1 {
-    height: 600vh;
-    width: 100%;
+.contenido1 {
+  height: 70vh;
+  width: 100%;
+ 
+}
 
- }
+#footer {
+  width: 100%;
+  padding: 0;
+  left: 0;
+  position: relative;
+  margin: 0 auto;
+}
 
- #footer {
-    width: 100%;
-    padding: 0;
-    left: 0;
-    position: relative;
-    margin: 0 auto;
- }
+nav {
+  z-index: 3;
+}
 
- body {
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
- }
 
  form .error {
 

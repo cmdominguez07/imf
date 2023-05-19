@@ -1,17 +1,12 @@
 <?php
-
-
 require("conexion.php");
 require("./template/cabecera.php");
+require("./template/accesibilidad.php");
 session_start();
 /*echo "Usuario: " . $_SESSION['nombreCliente'];*/
 $_SESSION['passWordCliente'];
 $_SESSION['id_cliente'];
-
 $I = $_POST["idplanta"];
-
-
-
 
 
 if (!empty($_POST["nombrePlanta"])) {
@@ -76,7 +71,7 @@ $paquete = $db->query($consulta);
 </div>
 </nav>
 
-<div class="row pt-5 alto">
+<div class="row pt-5 contenido1 alto">
   <div class="col-12 pt-5 ">
     <table class="table table-striped ">
       <thead class=" thead-inverse">

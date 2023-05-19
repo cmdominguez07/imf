@@ -3,6 +3,7 @@ session_start();
 ob_start();
 require_once("conexion.php");
 require_once("./template/cabecera.php");
+require("./template/accesibilidad.php");
 
 /*echo "<h5 style='color:white'>". $_SESSION['nombreCliente']."</h5>";*/
 $_SESSION['passWordCliente'];
@@ -18,10 +19,10 @@ $_SESSION['id_cliente'];
       Volver</span></a>
 </div>
 </nav>
-<div class="container-fluid d-flex justify-content-center align-items-center contenido1">
-  <div class="row">
-    <div class="col-12">
-      <table class="table table-striped">
+<div class="container-fluid d-flex justify-content-center pt-5 align-items-center contenido1">
+  <div class="row pt-2">
+    <div class="col-12 pt-5">
+      <table class="table table-striped pt-2">
         <thead class=" thead-inverse">
           <tr>
             <th>ID</th>

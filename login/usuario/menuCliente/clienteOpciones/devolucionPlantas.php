@@ -1,7 +1,7 @@
 <?php
 require("conexion.php");
-
-require("./template/cabecera1.php");
+require("./template/cabecera.php");
+require("./template/accesibilidad.php");
 
 session_start();
 /*echo "Usuario: " . $_SESSION['nombreCliente'];*/
@@ -32,9 +32,9 @@ if (!isset($_POST['submit'])) {
               <th></th>
               <th>Nombre</th>
               <th>Ref.</th>
-              <th>Precio</th>
+              <th>Precio (€)</th>
               <th>Tipo</th>
-              <th>Imagen</th>
+              <th></th>
             </tr>
           </thead>
           <tbody>
@@ -44,7 +44,7 @@ if (!isset($_POST['submit'])) {
               ?>
               <form method='POST' action='devolucionPlantas.php'>
                 <tr>
-                  <td> <input type='text' name='idplanta' value='<?php echo $fila['idplanta']
+                  <td> <input type='hidden' name='idplanta' value='<?php echo $fila['idplanta']
                   ; ?>' readonly class='form-control-plaintext'> </td>
                   <td><input type='text' name='nombre' value='<?php echo $fila['nombrePlanta']
                   ; ?>' readonly class='form-control-plaintext'></td>
@@ -58,9 +58,9 @@ if (!isset($_POST['submit'])) {
                   ; ?>' readonly class='form-control-plaintext'></td>
                   <td><input type='hidden' name='id_reservado' value='<?php echo $fila['id_reservado']
                   ; ?>' readonly class='form-control-plaintext'></td>
-                  <?php echo "<td><img style='width:200px' src='../../menuAdministrador/adminOpciones/" . $fila['ruta_imagen'] . "'</td>"; ?>
+                  <?php echo "<td><img style='width:100px' src='../../menuAdministrador/adminOpciones/" . $fila['ruta_imagen'] . "'</td>"; ?>
                   <td>
-                    <input type='submit' name='Devolver' value='Devolver' class='btn btn-danger'>
+                    <input type='submit' name='Devolver' value='Anular' class='btn btn-danger'>
                   </td>
                 </tr>
               </form>
@@ -77,12 +77,14 @@ if (!isset($_POST['submit'])) {
   <?php
   if ($contador == 0) {
 
+    echo   '<div class="container contenido1 mt-3">';
     echo ' <table class="table table-striped">';
     echo "<tr>";
     echo "<td>No hay plantas en el carrito.</td>";
     echo "</tr>";
     echo "</tbody>";
     echo "</table>";
+    echo "</div>";
   }
 
   if ($contador > 0) {
@@ -97,7 +99,7 @@ if (!isset($_POST['submit'])) {
 
     ?>
 
-    <div class="container mt-3">
+    <div class="container contenido1 mt-3">
       <div class="row">
         <div class="col-12">
           <table class="table table-striped">
@@ -114,8 +116,6 @@ if (!isset($_POST['submit'])) {
                 <td>
                   <div id="paypal-button-container"></div>
                   <input type='submit' name='pagar' value='pagar' class='btn btn-info'>
-
-
 
                   <script>
                     paypal.Buttons({
@@ -174,9 +174,6 @@ if (!isset($_POST['submit'])) {
             </form>
           </tbody>
         </table>
-      </div>
-    </div>
-  </div>
 
   <?php
 
@@ -185,7 +182,7 @@ if (!isset($_POST['submit'])) {
 if (isset($_POST['pagar'])) {
 
   //$totalC = $total;?idplanta='$totalC'
-  echo ' <meta http-equiv="Refresh" content="0.5;url=/TFG/proyectoGreen/login/usuario/menuCliente/clienteOpciones/paypalPago.php">';
+  echo ' <meta http-equiv="Refresh" content="0.2;url=/TFG/proyectoGreen/login/usuario/menuCliente/clienteOpciones/paypalPago.php">';
 }
 
 if (isset($_POST['Devolver'])) {

@@ -6,6 +6,7 @@
  */
 include("conexion.php");
 include("./template/cabecera.php");
+require("./template/accesibilidad.php");
 session_start();
 echo "<li class='mx-5'>Usuario: " . $_SESSION['nombreCliente'] . ".  </li>";
 ?>

@@ -1,7 +1,8 @@
 <?php
 session_start();
-require_once("conexion.php");
-require_once("./template/cabeceraLoginYGuardar.php");
+require("conexion.php");
+require("./template/cabeceraLoginYGuardar.php");
+require("./template/accesibilidad.php");
 ?>
 
 
@@ -78,6 +79,6 @@ if (!isset($_POST["submit"])) {
     }
   }
 }
-require_once("./template/pieLoginYGuardar.php");
+require("./template/pieLoginYGuardar.php");
 $db->close();
 ?>

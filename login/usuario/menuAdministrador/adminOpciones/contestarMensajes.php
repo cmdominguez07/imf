@@ -1,6 +1,7 @@
 <?php
 include("conexion.php");
 include("./template/cabecera.php");
+require("./template/accesibilidad.php");
 session_start();
 /*echo "<h5 style='color:white'>" . $_SESSION['nombreCliente'] . "</h5>";*/
 $_SESSION['passWordCliente'];

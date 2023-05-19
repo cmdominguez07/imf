@@ -1,6 +1,7 @@
 <?php
-include("conexion.php");
-include("./template/cabecera.php");
+require("conexion.php");
+require("./template/cabecera.php");
+require("./template/accesibilidad.php");
 session_start();
 /*echo "<h5 style='color:white'>" . $_SESSION['nombreCliente'] . "</h5>";*/
 $_SESSION['passWordCliente'];
@@ -10,18 +11,17 @@ $_SESSION['id_cliente'];
 
 if (!isset($_POST["submit"])) {
     ?>
-    <div class="navbar-mx-2 VolverDerecha">
+    <div class="navbar-mx-2 VolverDerecha ">
         <a href='../menuAdministrador.php' style='text-decoration:none;'><span
                 style='color: white; font-size: 18px;'>&#8592; Volver</span></a>
     </div>
     </nav>
-    <div class="container-fluid pt-5 fnd d-flex justify-content-center align-items-center">
-        <div class="row container-fluid mx-5">
-            <form id="form" class="form-horizontal mx-1 my-5 f" method="post" action="guardarPlantas.php"
-                enctype="multipart/form-data" autocomplete="off" name="introducirPlanta">
-
-                <table>
-                    <h2 class="text-primary pt-4">Introduzca producto:</h2>
+ 
+ 
+<div class="container-fluid pt-5 fnd">
+            <form id="form" class="form-vertical pt-5 mx-1" method="post" action="guardarPlantas.php"
+                enctype="multipart/form-data" autocomplete="off" name="introducirPlanta"> 
+                    <h2 class="text-primary pt-3">Introduzca producto:</h2>
                     <div class="form-group">
                         <label for="nombrePlanta" class="col-sm-2 control-label"> Nombre</label>
                         <div class="col-sm-10">
@@ -73,13 +73,12 @@ if (!isset($_POST["submit"])) {
                         <label for="archivo" class="col-sm-2 control-label"> Archivo</label>
                         <div class="col-sm-10">
                             <input type="file" class="form-control" id="archivo" name="archivo" accept="image/*">
-                        </div>
                     </div>
-                    <input type="submit" class="btn btn-primary my-3" name="submit" value="guardar">
-                </table>
+                    <input type="submit" class="btn btn-primary my-4" name="submit" value="guardar">
+
             </form>
         </div>
-    </div>
+   
     <?php
 
 } else {
@@ -103,9 +102,11 @@ if (!isset($_POST["submit"])) {
         $paquete = $db->query($consulta);
         ?>
         </nav>
+ 
+        <div class="container-fluid contenido1 pt-5">
 
-
-        <h3>Datos agregados</h3>
+        <h3 class="pt-5 text-center">Datos agregados</h3>
+    </div>
         <?php
         //$permitidos = array("image/gif", "image/png", "image/jpg"); 
 
@@ -122,6 +123,6 @@ if (!isset($_POST["submit"])) {
     <?php
 
 }
-require_once("./template/pie.php");
+require("./template/pie.php");
 $db->close();
 ?>

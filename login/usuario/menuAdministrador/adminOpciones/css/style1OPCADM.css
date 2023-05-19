@@ -23,7 +23,7 @@ html {
 }
 
 nav {
-  z-index: 3;
+  z-index: 13;
 }
 
 .f,
@@ -51,8 +51,8 @@ form .error {
 
 .fnd {
   margin: 0;
-  padding: 0;
-
+  padding-left: 300px;
+  padding-right: 300px;
   background-image: url("../img/fondo8.jpg");
   background-size: cover;
   background-position: center center;

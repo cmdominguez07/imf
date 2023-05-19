@@ -2,6 +2,7 @@
 //////////////////////////////////////////////////////Ver si sirve----------------------
 require_once("conexion.php");
 require_once("./template/cabecera.php");
+require("./template/accesibilidad.php");
 session_start();
 echo "Usuario: " . $_SESSION['nombreCliente'];
 $_SESSION['passWordCliente'];

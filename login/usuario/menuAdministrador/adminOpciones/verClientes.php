@@ -2,6 +2,7 @@
 session_start();
 require_once("conexion.php");
 require_once("./template/cabecera.php");
+require("./template/accesibilidad.php");
 
 /*echo "<h5 style='color:white'>" . $_SESSION['nombreCliente'] . "</h5>";*/
 $_SESSION['passWordCliente'];
@@ -21,14 +22,15 @@ $paquete = $db->query($consulta);
       Volver</span></a>
 </div>
 </nav>
-<div class="container pt-5">
+<div class="container pt-5 w-50">
   <div class="row">
-    <div class="col-12 pt-5">
+    <div class="col-12 pt-5 d-flex align-items-center">
       <table class="table table-striped pt-5">
         <thead class=" thead-inverse">
           <tr>
-            <th>Referencia</th>
+            <th>Id</th>
             <th>Nombre</th>
+            <th>Apellido</th>
             <th>Contraseña</th>
           </tr>
         </thead>
@@ -47,7 +49,10 @@ $paquete = $db->query($consulta);
                   <?php echo $fila['nombreCliente']; ?>
                 </td>
                 <td>
-                  <?php echo $fila['passWordCliente']; ?>
+                  <?php echo $fila['apellidoCliente']; ?>
+                </td>
+                <td><input type='password' name='nombre' value='<?php echo $fila['passWordCliente']
+                  ; ?>' readonly class='form-control-plaintext'>
                 </td>
               </tr>
 

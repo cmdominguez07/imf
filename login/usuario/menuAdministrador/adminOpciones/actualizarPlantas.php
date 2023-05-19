@@ -3,6 +3,7 @@
 
 require("conexion.php");
 require("template/cabecera.php");
+require("template/accesibilidad.php");
 session_start();
 $_SESSION['nombreCliente'];
 $_SESSION['passWordCliente'];
@@ -70,7 +71,7 @@ $_SESSION['id_cliente'];
                 </div>
                 <input type="file" class="form-control my-2" id="archivo" name="archivo" accept="image/*">
 
-               <input type='submit' class='btn btn-success  my-2' name='Actualizar1' value='Actualizar'> 
+               <input type='submit' class='btn btn-success  my-3' name='Actualizar1' value='Actualizar'> 
        
 
             <?php

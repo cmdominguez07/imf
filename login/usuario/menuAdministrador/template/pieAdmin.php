@@ -28,7 +28,7 @@
     </div>
     <!-- Copyright -->
   </footer>
-
+  <script src="./template/accesibilidad.js"></script>
 </body>
 
 </html>

@@ -1,6 +1,7 @@
 <?php
 include("conexion.php");
 include("./template/cabeceraAdmin.php");
+include("./template/accesibilidad.php");
 session_start();
 
 ?>
@@ -26,6 +27,8 @@ session_start();
           onclick=location.href="/TFG/proyectoGreen/login/usuario/menuAdministrador/adminOpciones/guardarPlantas.php">
         <input type="submit" class='btn btn-success botonI mt-4' name="submit" value="Mensajes de Usuarios"
           onclick=location.href="/TFG/proyectoGreen/login/usuario/menuAdministrador/adminOpciones/vermensajes.php">
+          <input type="submit" class='btn btn-success botonI mt-4' name="submit" value="Visitar Tienda Online"
+          onclick=location.href="../../usuario/menuCliente/menuClientes.php">
         <p>Codigo para añadir administador: '776655'</p>
       </div>
 

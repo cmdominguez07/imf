@@ -1,7 +1,7 @@
 <?php
 include("conexion.php");
-
 include("./template/cabecera.php");
+require("./template/accesibilidad.php");
 
 session_start();
 echo "Usuario: " . $_SESSION['nombreCliente'];

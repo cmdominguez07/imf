@@ -1,6 +1,7 @@
 <?php
-include("conexion.php");
-include("./template/cabeceraMCLiente.php");
+require("conexion.php");
+require("./template/cabeceraMCLiente.php");
+require("./template/accesibilidad.php");
 session_start();
 
 
@@ -24,6 +25,6 @@ session_start();
 
 
       $idC = $_SESSION['id_cliente'];
-      include("./template/pie.php");
+      require("./template/pie.php");
       $db->close();
       ?>

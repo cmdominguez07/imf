@@ -1,6 +1,7 @@
 <?php
 
-require_once("./template/cabeceraIndex.php");
+require("./template/cabeceraIndex.php");
+require("./template/accesibilidad.php");
 
 ?>
 
