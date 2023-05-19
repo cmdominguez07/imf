@@ -19,13 +19,11 @@ if (isset($_POST["buscar"])) {
     if ($N != "") {
         $consulta = "SELECT * FROM plantas WHERE nombrePlanta LIKE '%$N%' AND TipoPlanta='Exterior'";
         $paquete = $db->query($consulta);
-
     }
 }
 
 ?>
-<a href="../menuClientes.php" style="text-decoration:none;"><span
-        style="color: white; font-size: 18px;">&#8592;
+<a href="../menuClientes.php" style="text-decoration:none;"><span style="color: white; font-size: 18px;">&#8592;
         Volver</span></a>
 </div>
 </nav>
@@ -53,26 +51,25 @@ if (!isset($_POST['Reservar'])) {
                     <form method='POST' action='buscadorPlantaExterior.php'
                         class="container-fluid d-flex justify-content-center align-items-center p-3 mt-2">
                         <tr>
-                            <td> <input type='text' name='idplanta' value='<?php echo $fila['idplanta']
-                            ; ?>' readonly class='form-control-plaintext'> </td>
-                            <td><input type='text' name='nombre' value='<?php echo $fila['nombrePlanta']
-                            ; ?>' readonly class='form-control-plaintext'></td>
-                            <td><input type='text' name='codigo' value='<?php echo $fila['codigoPlanta']
-                            ; ?>' readonly class='form-control-plaintext'></td>
-                            <td><input type='text' name='precio' value='<?php echo $fila['precio']
-                            ; ?>' readonly class='form-control-plaintext'></td>
-                            <td><input type='text' name='TipoPlanta' value='<?php echo $fila['TipoPlanta']
-                            ; ?>' readonly class='form-control-plaintext'></td>
-                            <td><input type='text' name='numeroEjemplares' value='<?php echo $fila['numeroEjemplares']
-                            ; ?>' readonly class='form-control-plaintext'></td>
-                            <td><img style='width:100px' src='../../menuAdministrador/adminOpciones/<?php
-                            echo $fila['ruta_imagen']; ?> '></td>
+                            <td> <input type='text' name='idplanta' value='<?php echo $fila['idplanta']; ?>' readonly
+                                    class='form-control-plaintext'> </td>
+                            <td><input type='text' name='nombre' value='<?php echo $fila['nombrePlanta']; ?>' readonly
+                                    class='form-control-plaintext'></td>
+                            <td><input type='text' name='codigo' value='<?php echo $fila['codigoPlanta']; ?>' readonly
+                                    class='form-control-plaintext'></td>
+                            <td><input type='text' name='precio' value='<?php echo $fila['precio']; ?>' readonly
+                                    class='form-control-plaintext'></td>
+                            <td><input type='text' name='TipoPlanta' value='<?php echo $fila['TipoPlanta']; ?>' readonly
+                                    class='form-control-plaintext'></td>
+                            <td><input type='text' name='numeroEjemplares' value='<?php echo $fila['numeroEjemplares']; ?>'
+                                    readonly class='form-control-plaintext'></td>
+                            <td><img style='width:100px'
+                                    src='../../menuAdministrador/adminOpciones/<?php
+                                    echo $fila['ruta_imagen']; ?> '></td>
                             <td>
                                 <input type='submit' name='Reservar' value='Añadir al carrito' class='btn btn-info'>
                             </td>
-
                         </tr>
-
                         <?php
 
                 }
@@ -82,8 +79,6 @@ if (!isset($_POST['Reservar'])) {
         </table>
 
         <?php
-
-
         if ($cnt == 0) {
             ?>
 
@@ -105,8 +100,6 @@ if (!isset($_POST['Reservar'])) {
     $consulta = "select * from plantas WHERE idplanta='$I'";
     $paquete = $db->query($consulta);
 
-
-
     while ($fila = $paquete->fetch_array()) {
 
         $N = $fila['nombrePlanta'];
@@ -114,7 +107,6 @@ if (!isset($_POST['Reservar'])) {
         $T = $fila['TipoPlanta'];
         $P = $fila['precio'];
         $R = $fila['ruta_imagen'];
-
     }
     if ($contadorNumPlantas > 0) {
 
@@ -122,7 +114,6 @@ if (!isset($_POST['Reservar'])) {
 
         $consulta = "UPDATE plantas SET numeroEjemplares='$contadorNumPlantas' WHERE idplanta='$I' ";
         $paquete = $db->query($consulta);
-
 
         ?>
         <div class="container-fluid row contenido1 p-3">
@@ -137,7 +128,6 @@ if (!isset($_POST['Reservar'])) {
                         <th></th>
                     </tr>
                 </thead>
-
                 <tbody>
                     <td>
                         <h4>Añadida al carrito: </h4>
@@ -164,15 +154,14 @@ if (!isset($_POST['Reservar'])) {
         <meta http-equiv="Refresh"
             content="1;url=/TFG/proyectoGreen/login/usuario/menuCliente/clienteOpciones/reservaPlantaExterior.php">
         <?php
-
         $consulta = "INSERT INTO conector (f_idplanta, f_idCliente) VALUES ('$I', '$idC')";
         $paquete = $db->query($consulta);
     } else {
         ?>
-       <div class="container-fluid contenido1">
-       <h3 class="text-center pt-5">No disponible</h3>
-       <meta http-equiv="Refresh"
-            content="1;url=/TFG/proyectoGreen/login/usuario/menuCliente/clienteOpciones/reservaPlantaExterior.php">
+        <div class="container-fluid contenido1">
+            <h3 class="text-center pt-5">No disponible</h3>
+            <meta http-equiv="Refresh"
+                content="1;url=/TFG/proyectoGreen/login/usuario/menuCliente/clienteOpciones/reservaPlantaExterior.php">
         </div>
         </div>
         <?php

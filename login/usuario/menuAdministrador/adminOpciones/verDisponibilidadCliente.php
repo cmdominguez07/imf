@@ -47,7 +47,7 @@ if (isset($_POST["submit"])) {
 				<table class="table table-striped ">
 					<thead class=" thead-inverse">
 						<tr>
-						<th>Id</th>
+							<th>Id</th>
 							<th>Nombre</th>
 							<th>Apellido</th>
 							<th>Contraseña</th>
@@ -61,9 +61,9 @@ if (isset($_POST["submit"])) {
 
 							?>
 							<tr>
-							<td>
-                  <?php echo $fila['id_cliente']; ?>
-                </td>
+								<td>
+									<?php echo $fila['id_cliente']; ?>
+								</td>
 								<td>
 									<?php echo $fila['nombreCliente']; ?>
 								</td>
@@ -71,8 +71,8 @@ if (isset($_POST["submit"])) {
 									<?php echo $fila['apellidoCliente']; ?>
 								</td>
 								<td><input type='password' name='nombre' value='<?php echo $fila['passWordCliente']
-                  ; ?>' readonly class='form-control-plaintext'>
-                </td>
+								; ?>' readonly class='form-control-plaintext'>
+								</td>
 							</tr>
 							<?php
 						}

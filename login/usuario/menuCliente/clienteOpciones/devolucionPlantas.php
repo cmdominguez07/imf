@@ -4,7 +4,7 @@ require("./template/cabecera.php");
 require("./template/accesibilidad.php");
 
 session_start();
-/*echo "Usuario: " . $_SESSION['nombreCliente'];*/
+
 $_SESSION['passWordCliente'];
 $idC = $_SESSION['id_cliente'];
 $N = $_SESSION['nombreCliente'];
@@ -21,7 +21,6 @@ if (!isset($_POST['submit'])) {
   <a href="../menuClientes.php" style="text-decoration:none;"><span style="color: white; font-size: 18px;">&#8592;
       Volver</span></a>
   </div>
-
   </nav>
   <div class="container mt-2">
     <div class="row">
@@ -68,16 +67,14 @@ if (!isset($_POST['submit'])) {
             <?php
             }
             ?>
-
         </table>
       </div>
     </div>
   </div>
-
   <?php
   if ($contador == 0) {
 
-    echo   '<div class="container contenido1 mt-3">';
+    echo '<div class="container contenido1 mt-3">';
     echo ' <table class="table table-striped">';
     echo "<tr>";
     echo "<td>No hay plantas en el carrito.</td>";
@@ -96,7 +93,6 @@ if (!isset($_POST['submit'])) {
 
       $total = $total + $fila['precio'];
     }
-
     ?>
 
     <div class="container contenido1 mt-3">
@@ -116,7 +112,6 @@ if (!isset($_POST['submit'])) {
                 <td>
                   <div id="paypal-button-container"></div>
                   <input type='submit' name='pagar' value='pagar' class='btn btn-info'>
-
                   <script>
                     paypal.Buttons({
                       // Order is created on the server and the order id is returned
@@ -165,7 +160,6 @@ if (!isset($_POST['submit'])) {
                       }
                     }).render('#paypal-button-container');
                   </script>
-
                 </td>
               </form>
               <?php
@@ -175,7 +169,7 @@ if (!isset($_POST['submit'])) {
           </tbody>
         </table>
 
-  <?php
+        <?php
 
 }
 

@@ -107,13 +107,13 @@ $paquete = $db->query($consulta);
 
         ?>
       </tbody>
-      </table>
-      <div>
-      </div>
-   
+    </table>
+    <div>
+    </div>
 
-  <?php
 
-  require_once("./template/pie.php");
-  $db->close();
-  ?>
+    <?php
+
+    require_once("./template/pie.php");
+    $db->close();
+    ?>

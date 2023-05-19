@@ -13,10 +13,11 @@ $N = $_SESSION['nombreCliente'];
 $C = $_SESSION['passWordCliente'];
 
 ?>
-	<div class="navbar-mx-5 VolverDerecha">
-				<a href='../menuAdministrador.php' style='text-decoration:none;'><span style='color: white; font-size: 20px;'>&#8592;
-						Volver</span></a>
-		</div>
+<div class="navbar-mx-5 VolverDerecha">
+    <a href='../menuAdministrador.php' style='text-decoration:none;'><span
+            style='color: white; font-size: 20px;'>&#8592;
+            Volver</span></a>
+</div>
 </nav>
 <div class="contenido1 pt-5 container-fluid">
     <div class="row">

@@ -3,7 +3,6 @@ session_start();
 require("conexion.php");
 require("./template/cabecera.php");
 require("./template/accesibilidad.php");
-/*echo "<h5 class='mt-2' style='color:white'>".$_SESSION['nombreCliente']."</h5>";*/
 
 $_SESSION['passWordCliente'];
 $_SESSION['id_cliente'];
@@ -17,14 +16,12 @@ if (isset($_POST["buscar"])) {
     $N = $_POST["nombrePlanta"];
 
     if ($N != "") {
-        $consulta = "SELECT * FROM plantas WHERE nombrePlanta LIKE '%$N%' AND TipoPlanta='Interior'";
+        $consulta = "SELECT * FROM plantas WHERE nombrePlanta LIKE '%$N%' AND TipoPlanta='Medicinal'";
         $paquete = $db->query($consulta);
     }
 }
-
 ?>
-<a href="../reservaPlantaInterior.php" style="text-decoration:none;"><span
-        style="color: white; font-size: 18px;">&#8592;
+<a href="../menuClientes.php" style="text-decoration:none;"><span style="color: white; font-size: 18px;">&#8592;
         Volver</span></a>
 </div>
 </nav>
@@ -49,7 +46,7 @@ if (!isset($_POST['Reservar'])) {
                 while ($fila = $paquete->fetch_array()) {
                     $cnt = $cnt + 1;
                     ?>
-                    <form method='POST' action='buscadorPlantasCliente.php'
+                    <form method='POST' action='buscadorPlantaMedicinal.php'
                         class="container-fluid d-flex justify-content-center align-items-center p-3 mt-2">
                         <tr>
                             <td> <input type='text' name='idplanta' value='<?php echo $fila['idplanta']
@@ -76,18 +73,16 @@ if (!isset($_POST['Reservar'])) {
                 </form>
             </tbody>
         </table>
-
         <?php
-
-
         if ($cnt == 0) {
             ?>
 
             <h3 class="text-center pt-5">Búsqueda finalizada</h3>
         </div>
         </div>
+
         <meta http-equiv="Refresh"
-            content="1;url=/TFG/proyectoGreen/login/usuario/menuCliente/clienteOpciones/reservaPlantaInterior.php">
+            content="1;url=/TFG/proyectoGreen/login/usuario/menuCliente/clienteOpciones/reservaPlantaMedicinal.php">
         <?php
         }
 } else {
@@ -107,7 +102,6 @@ if (!isset($_POST['Reservar'])) {
         $T = $fila['TipoPlanta'];
         $P = $fila['precio'];
         $R = $fila['ruta_imagen'];
-
     }
     if ($contadorNumPlantas > 0) {
 
@@ -128,7 +122,6 @@ if (!isset($_POST['Reservar'])) {
                         <th></th>
                     </tr>
                 </thead>
-
                 <tbody>
                     <td>
                         <h4>Añadida al carrito: </h4>
@@ -153,19 +146,18 @@ if (!isset($_POST['Reservar'])) {
             </table>
         </div>
         <meta http-equiv="Refresh"
-            content="1;url=/TFG/proyectoGreen/login/usuario/menuCliente/clienteOpciones/reservaPlantaInterior.php">
+            content="1;url=/TFG/proyectoGreen/login/usuario/menuCliente/clienteOpciones/reservaPlantaMedicinal.php">
         <?php
-
         $consulta = "INSERT INTO conector (f_idplanta, f_idCliente) VALUES ('$I', '$idC')";
         $paquete = $db->query($consulta);
     } else {
         ?>
         <div class="container-fluid contenido1">
             <h3 class="text-center pt-5">No disponible</h3>
+            <meta http-equiv="Refresh"
+                content="1;url=/TFG/proyectoGreen/login/usuario/menuCliente/clienteOpciones/reservaPlantaMedicinal.php">
         </div>
         </div>
-        <meta http-equiv="Refresh"
-            content="1;url=/TFG/proyectoGreen/login/usuario/menuCliente/clienteOpciones/reservaPlantaInterior.php">
         <?php
     }
 }

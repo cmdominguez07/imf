@@ -16,69 +16,67 @@ if (!isset($_POST["submit"])) {
                 style='color: white; font-size: 18px;'>&#8592; Volver</span></a>
     </div>
     </nav>
- 
- 
-<div class="container-fluid pt-5 fnd">
-            <form id="form" class="form-vertical pt-5 mx-1" method="post" action="guardarPlantas.php"
-                enctype="multipart/form-data" autocomplete="off" name="introducirPlanta"> 
-                    <h2 class="text-primary pt-3">Introduzca producto:</h2>
-                    <div class="form-group">
-                        <label for="nombrePlanta" class="col-sm-2 control-label"> Nombre</label>
-                        <div class="col-sm-10">
-                            <input type="text" class="form-control" id="nombrePlanta" name="nombrePlanta" required>
-                        </div>
-                    </div>
-                    <div class="form-group">
-                        <label for="codigoPlanta" class="col-sm-2 control-label"> Código</label>
-                        <div class="col-sm-10">
-                            <input type="number" minlength="2" maxlength="4" class="form-control" id="codigoPlanta"
-                                name="codigoPlanta" required>
-                            <p>Máximo de 9999</p>
-                        </div>
-                    </div>
-                    <div class="form-group">
-                        <label for="numeroEjemplares" class="col-sm-2 control-label"> Cantidad</label>
-                        <div class="col-sm-10">
-                            <input type="number" minlength="1" maxlength="3" class="form-control" id="numeroEjemplares"
-                                name="numeroEjemplares" required>
-                            <p>Cantidad válida entre 0 y 999</p>
-                        </div>
-                    </div>
-                    <div class="form-group">
-                        <label for="precio" class="col-sm-2 control-label"> Precio (€)</label>
-                        <div class="col-sm-10">
-                            <input type="number" minlength="1" maxlength="5" class="form-control" id="precio" name="precio"
-                                required>
-                        </div>
-                    </div>
-                    <div class="form-group">
-                        <legend class="mt-4">Tipo de planta</legend>
-                        <div class="form-check">
-                            <input class="form-check-input" type="radio" name="tipoPlanta" id="optionsRadios1"
-                                value="Interior" checked="">
-                            <label class="form-check-label" for="optionsRadios1">Interior </label>
-                        </div>
-                        <div class="form-check">
-                            <input class="form-check-input" type="radio" name="tipoPlanta" id="optionsRadios2"
-                                value="Exterior">
-                            <label class="form-check-label" for="optionsRadios2">Exterior</label>
-                        </div>
-                        <div class="form-check disabled">
-                            <input class="form-check-input" type="radio" name="tipoPlanta" id="optionsRadios3"
-                                value="Medicinal">
-                            <label class="form-check-label" for="optionsRadios3">Medicinal</label>
-                        </div>
-                    </div>
-                    <div class="form-group">
-                        <label for="archivo" class="col-sm-2 control-label"> Archivo</label>
-                        <div class="col-sm-10">
-                            <input type="file" class="form-control" id="archivo" name="archivo" accept="image/*">
-                    </div>
-                    <input type="submit" class="btn btn-primary my-4" name="submit" value="guardar">
 
-            </form>
-        </div>
-   
+
+    <div class="container-fluid pt-5 fnd">
+        <form id="form" class="form-vertical pt-5 mx-1" method="post" action="guardarPlantas.php"
+            enctype="multipart/form-data" autocomplete="off" name="introducirPlanta">
+            <h2 class="text-primary pt-3">Introduzca producto:</h2>
+            <div class="form-group">
+                <label for="nombrePlanta" class="col-sm-2 control-label"> Nombre</label>
+                <div class="col-sm-10">
+                    <input type="text" class="form-control" id="nombrePlanta" name="nombrePlanta" required>
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="codigoPlanta" class="col-sm-2 control-label"> Código</label>
+                <div class="col-sm-10">
+                    <input type="number" minlength="2" maxlength="4" class="form-control" id="codigoPlanta"
+                        name="codigoPlanta" required>
+                    <p>Máximo de 9999</p>
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="numeroEjemplares" class="col-sm-2 control-label"> Cantidad</label>
+                <div class="col-sm-10">
+                    <input type="number" minlength="1" maxlength="3" class="form-control" id="numeroEjemplares"
+                        name="numeroEjemplares" required>
+                    <p>Cantidad válida entre 0 y 999</p>
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="precio" class="col-sm-2 control-label"> Precio (€)</label>
+                <div class="col-sm-10">
+                    <input type="number" minlength="1" maxlength="5" class="form-control" id="precio" name="precio"
+                        required>
+                </div>
+            </div>
+            <div class="form-group">
+                <legend class="mt-4">Tipo de planta</legend>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="tipoPlanta" id="optionsRadios1" value="Interior"
+                        checked="">
+                    <label class="form-check-label" for="optionsRadios1">Interior </label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="tipoPlanta" id="optionsRadios2" value="Exterior">
+                    <label class="form-check-label" for="optionsRadios2">Exterior</label>
+                </div>
+                <div class="form-check disabled">
+                    <input class="form-check-input" type="radio" name="tipoPlanta" id="optionsRadios3" value="Medicinal">
+                    <label class="form-check-label" for="optionsRadios3">Medicinal</label>
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="archivo" class="col-sm-2 control-label"> Archivo</label>
+                <div class="col-sm-10">
+                    <input type="file" class="form-control" id="archivo" name="archivo" accept="image/*">
+                </div>
+                <input type="submit" class="btn btn-primary my-4" name="submit" value="guardar">
+
+        </form>
+    </div>
+
     <?php
 
 } else {
@@ -102,11 +100,11 @@ if (!isset($_POST["submit"])) {
         $paquete = $db->query($consulta);
         ?>
         </nav>
- 
+
         <div class="container-fluid contenido1 pt-5">
 
-        <h3 class="pt-5 text-center">Datos agregados</h3>
-    </div>
+            <h3 class="pt-5 text-center">Datos agregados</h3>
+        </div>
         <?php
         //$permitidos = array("image/gif", "image/png", "image/jpg"); 
 

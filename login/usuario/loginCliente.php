@@ -40,20 +40,20 @@ if (!isset($_POST["submit"])) {
     $consulta = "select * from clientesClub";
     $paquete = $db->query($consulta);
 
-    $new_password=base64_encode($_POST['passWordCliente']);
+    $new_password = base64_encode($_POST['passWordCliente']);
 
     $encontrado = 0;
 
     while ($fila = $paquete->fetch_array()) {
 
-      
-      $CBD=$fila['passWordCliente'];
+
+      $CBD = $fila['passWordCliente'];
 
 
       if ($_SESSION['nombreCliente'] == $fila['nombreCliente'] and (base64_encode($new_password) == base64_encode($CBD))) {
         $encontrado = 1;
 
-        echo "intro" . $CBD ."  bd ". $new_password;
+        echo "intro" . $CBD . "  bd " . $new_password;
         $_SESSION['id_cliente'] = $fila['id_cliente'];
 
 

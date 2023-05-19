@@ -73,9 +73,9 @@ $_SESSION['id_cliente'];
 
         </table>
       </div>
-  
 
-  <?php
+
+      <?php
           }
 
           if (isset($_POST['Editar'])) {
@@ -93,17 +93,17 @@ $_SESSION['id_cliente'];
 
             ?>
 
-  <meta http-equiv="Refresh"
-    content="0.3;url=/TFG/proyectoGreen/login/usuario/menuAdministrador/adminOpciones/borrarPlantas.php">
-  <div class="navbar-mx-5 VolverDerecha">
-    <a href='./borrarPlantas.php' style='text-decoration:none;'><span style='color: white; font-size: 18px;'>&#8592;
-        Volver</span></a>
-  </div>
-  </nav>
+      <meta http-equiv="Refresh"
+        content="0.3;url=/TFG/proyectoGreen/login/usuario/menuAdministrador/adminOpciones/borrarPlantas.php">
+      <div class="navbar-mx-5 VolverDerecha">
+        <a href='./borrarPlantas.php' style='text-decoration:none;'><span style='color: white; font-size: 18px;'>&#8592;
+            Volver</span></a>
+      </div>
+      </nav>
 
-  <h3>Eliminado</h3>
+      <h3>Eliminado</h3>
 
-  <?php
+      <?php
 
           }
 

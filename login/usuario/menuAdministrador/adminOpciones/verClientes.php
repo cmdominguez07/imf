@@ -52,7 +52,7 @@ $paquete = $db->query($consulta);
                   <?php echo $fila['apellidoCliente']; ?>
                 </td>
                 <td><input type='password' name='nombre' value='<?php echo $fila['passWordCliente']
-                  ; ?>' readonly class='form-control-plaintext'>
+                ; ?>' readonly class='form-control-plaintext'>
                 </td>
               </tr>
 

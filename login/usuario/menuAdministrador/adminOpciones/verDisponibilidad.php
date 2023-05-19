@@ -39,69 +39,69 @@ if (isset($_POST["buscar"])) {
 	?>
 
 	<div class="navbar-mx-5 VolverDerecha">
-			<a href='./borrarPlantas.php' style='text-decoration:none;'><span style='color: white; font-size: 18px;'>&#8592;
-					Volver</span></a>
-	
-	</nav>
+		<a href='./borrarPlantas.php' style='text-decoration:none;'><span style='color: white; font-size: 18px;'>&#8592;
+				Volver</span></a>
 
-	<div class="container-fluid contenido1 py-5">
-		<div class="row">
-			<div class="col-12 my-5 py-5  d-flex justify-content-center align-items-center h-100">
-				<table class="table table-striped mt-3 px-2">
-					<thead class=" thead-inverse pt-5">
-						<tr>
-							<th>ID</th>
-							<th>Nombre</th>
-							<th>Código</th>
-							<th>Precio</th>
-							<th>Tipo</th>
-							<th>Imagen</th>
-						</tr>
-					</thead>
-					<tbody>
-						<?php
+		</nav>
+
+		<div class="container-fluid contenido1 py-5">
+			<div class="row">
+				<div class="col-12 my-5 py-5  d-flex justify-content-center align-items-center h-100">
+					<table class="table table-striped mt-3 px-2">
+						<thead class=" thead-inverse pt-5">
+							<tr>
+								<th>ID</th>
+								<th>Nombre</th>
+								<th>Código</th>
+								<th>Precio</th>
+								<th>Tipo</th>
+								<th>Imagen</th>
+							</tr>
+						</thead>
+						<tbody>
+							<?php
 
 
-						while ($fila = $paquete->fetch_array()) {
+							while ($fila = $paquete->fetch_array()) {
+								?>
+								<form method='POST' action='borrarPlantas.php'
+									class="container-fluid d-flex justify-content-center align-items-center mt-2">
+									<tr>
+										<td> <input type='text' name='idplanta' value='<?php echo $fila['idplanta']
+										; ?>' readonly class='form-control-plaintext'> </td>
+										<td><input type='text' name='nombre' value='<?php echo $fila['nombrePlanta']
+										; ?>' readonly class='form-control-plaintext'></td>
+										<td><input type='text' name='codigo' value='<?php echo $fila['codigoPlanta']
+										; ?>' readonly class='form-control-plaintext'></td>
+										<td><input type='text' name='precio' value='<?php echo $fila['precio']
+										; ?>' readonly class='form-control-plaintext'></td>
+										<td><input type='text' name='TipoPlanta' value='<?php echo $fila['TipoPlanta']
+										; ?>' readonly class='form-control-plaintext'></td>
+										<td><img style='width:100px' src='<?php
+										echo $fila['ruta_imagen']; ?> '></td>
+										<td>
+											<input type='submit' name='Editar' value='Editar' class='btn btn-info'>
+										</td>
+										<td>
+											<input type='submit' name='Borrar' value='Borrar' class='btn btn-danger'>
+										</td>
+									</tr>
+								</form>
+							</tbody>
+							<?php
+							}
+							if (isset($_POST['Editar'])) {
+
+								$IPP = $_POST['idplanta'];
+								header("Location:/TFG/proyectoGreen/login/usuario/menuAdministrador/adminOpciones/borrarPlantas.php?idplanta=$IPP");
+							}
 							?>
-							<form method='POST' action='borrarPlantas.php'
-								class="container-fluid d-flex justify-content-center align-items-center mt-2">
-								<tr>
-									<td> <input type='text' name='idplanta' value='<?php echo $fila['idplanta']
-									; ?>' readonly class='form-control-plaintext'> </td>
-									<td><input type='text' name='nombre' value='<?php echo $fila['nombrePlanta']
-									; ?>' readonly class='form-control-plaintext'></td>
-									<td><input type='text' name='codigo' value='<?php echo $fila['codigoPlanta']
-									; ?>' readonly class='form-control-plaintext'></td>
-									<td><input type='text' name='precio' value='<?php echo $fila['precio']
-									; ?>' readonly class='form-control-plaintext'></td>
-									<td><input type='text' name='TipoPlanta' value='<?php echo $fila['TipoPlanta']
-									; ?>' readonly class='form-control-plaintext'></td>
-									<td><img style='width:100px' src='<?php
-									echo $fila['ruta_imagen']; ?> '></td>
-									<td>
-										<input type='submit' name='Editar' value='Editar' class='btn btn-info'>
-									</td>
-									<td>
-										<input type='submit' name='Borrar' value='Borrar' class='btn btn-danger'>
-									</td>
-								</tr>
-							</form>
-						</tbody>
-						<?php
-						}
-						if (isset($_POST['Editar'])) {
 
-							$IPP = $_POST['idplanta'];
-							header("Location:/TFG/proyectoGreen/login/usuario/menuAdministrador/adminOpciones/borrarPlantas.php?idplanta=$IPP");
-						}
-						?>
-
-				</table>
+					</table>
+				</div>
 			</div>
-		</div>
 
-		<?php
+			<?php
 
 
 }
