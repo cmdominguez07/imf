@@ -13,6 +13,7 @@
   <link rel="stylesheet" href="./css/bootstrap.css" />
   <!--css-->
   <link rel='stylesheet' type='text/css' media='screen' href='./css/style1.css'>
+  <!--css para plugin accesibilidad-->
   <link rel='stylesheet' type='text/css' media='screen' href='./css/accesibilidadCSS.css'>
   <!--iconos-->
   <link rel="stylesheet"

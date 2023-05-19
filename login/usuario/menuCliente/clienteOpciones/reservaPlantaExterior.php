@@ -6,6 +6,8 @@ session_start();
 /*<h5 style='color:white'>" . $_SESSION['nombreCliente'] . "</h5>";*/
 $_SESSION['passWordCliente'];
 $_SESSION['id_cliente'];
+
+
 $NombreC = $_SESSION['nombreCliente'];
 $C = $_SESSION['passWordCliente'];
 $idC = $_SESSION['id_cliente'];
@@ -16,8 +18,13 @@ if (!isset($_POST['submit'])) {
 
   ?>
 
+<form method="post" class="d-flex justify-content-center align-items-center" action="buscadorPlantaExterior.php">
+  <input type="text" class="form-control " name="nombrePlanta" required>
+  <input type="submit" class="btn btn-secondary mx-1 material-symbols-rounded" name="buscar" value="search">
+</form>
     <a href="../menuClientes.php" style="text-decoration:none;"><span style="color: white; font-size: 18px;">&#8592;
         Volver</span></a>
+
   </nav>
 
   <div class="container-fluid contenido1 pt-2">

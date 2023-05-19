@@ -18,12 +18,13 @@ if (!isset($_POST['submit'])) {
 
   ?>
 
+<form method="post" class="d-flex justify-content-center align-items-center" action="buscadorPlantasCliente.php">
+  <input type="text" class="form-control " name="nombrePlanta" required>
+  <input type="submit" class="btn btn-secondary mx-1 material-symbols-rounded" name="buscar" value="search">
+</form>
     <a href="../menuClientes.php" style="text-decoration:none;"><span style="color: white; font-size: 18px;">&#8592;
         Volver</span></a>
 
-  <!--<li>
-      <a type="submit" class='btn btn-secondary mx-2' name="submit" value="Consultar" onclick=location.href="adminOpciones/verDisponibilidad.php">Consultar disponibilidad</a>
-      </li>-->
   </nav>
 
   <div class="container-fluid contenido1 pt-2">

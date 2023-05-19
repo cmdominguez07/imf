@@ -118,7 +118,7 @@ if (!isset($_POST["submit"])) {
     ?>
 
     <meta http-equiv='Refresh'
-        content='4;url=/TFG/proyectoGreen/login/usuario/menuAdministrador/adminOpciones/guardarPlantas.php'>
+        content='2;url=/TFG/proyectoGreen/login/usuario/menuAdministrador/adminOpciones/guardarPlantas.php'>
 
     <?php
 
